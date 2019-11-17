@@ -1,0 +1,52 @@
+.table {
+    text-align: justify;
+}
+
+.td-btn {
+    width: 15%;
+}
+
+.fa-edit {
+    color: white;
+}
+
+.search-form {
+    margin-bottom: 15px;
+}
+
+.btn-agregar {
+    margin-bottom: 15px;
+}
+
+.logo {
+    font-family: Kaushan Script, Helvetica Neue, Helvetica, Arial, cursive;
+    font-size: 25px;
+}
+
+.panzotti-nav {
+    background: #282828;
+}
+
+.panzotti-color {
+    color: #ffffff;
+}
+
+.pulse {
+    overflow: visible;
+    position: relative;
+}
+
+.panzotti-card{
+    background: #f7f7f7;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.overflow{
+    overflow: hidden;
+}
+
+.text-responsive {
+    font-size: calc(100% + 1vw + 1vh);
+}
+  
+
