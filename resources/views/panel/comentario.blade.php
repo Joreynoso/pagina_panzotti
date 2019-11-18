@@ -30,7 +30,7 @@
 @else
 <!-- tabla -->
 <div class="table-responsive">
-<table class="table table-bordered p-3 mb-5 rounded panzotti-card">
+<table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#id</th>

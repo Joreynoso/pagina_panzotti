@@ -16,9 +16,17 @@ class ClienteController extends Controller
     //leer
     public function leer()
     {
-        $clientes = Cliente::paginate(10);
+        $clientes = Cliente::paginate(5);
 
         return view('panel.cliente', compact('clientes'));
+    }
+
+    //detalle
+    public function detalle($id){
+
+        $nota = Cliente::findOrFail($id);
+
+        return view('panel.cliente', compact('nota'));
     }
 
     //acceder alta

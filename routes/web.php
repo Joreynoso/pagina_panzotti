@@ -1,15 +1,9 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
+//--------------------------------------------------------------------------
+// Pagina web panzotti pastas
+//--------------------------------------------------------------------------
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -32,6 +26,8 @@ Route::get('/cliente', 'ClienteController@mostrar')->name('cliente');
 
 Route::get('/cliente', 'ClienteController@leer')->name('cliente');
 
+Route::get('/cliente/{id}', 'ClienteController@detalle')->name('detalle');
+
 Route::get('/cliente_alta', 'ClienteController@acceder')->name('cliente_alta');
 
 Route::post('/', 'ClienteController@alta')->name('alta');
@@ -45,6 +41,10 @@ Route::get('/comentario', 'ComentarioController@mostrar')->name('comentario');
 
 Route::get('/comentario', 'ComentarioController@leer')->name('comentario');
 
+
+//--------------------------------------------------------------------------
+// Pagina Principal
+//--------------------------------------------------------------------------
 
 
 

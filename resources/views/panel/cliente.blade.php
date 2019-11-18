@@ -14,20 +14,20 @@
 
 <!-- mensaje -->
 @if (Session::has('mensaje'))
-  <div class="alert alert-success" role="alert">
-    {{Session::get('mensaje')}}
-  </div>
+<div class="alert alert-success" role="alert">
+  {{Session::get('mensaje')}}
+</div>
 @elseif (Session::has('error'))
-  <div class="alert alert-warning" role="alert">
-    {{Session::get('error')}}
-  </div>
+<div class="alert alert-warning" role="alert">
+  {{Session::get('error')}}
+</div>
 @endif
 
 <!-- nuevo -->
-<a href="{{route('cliente_alta')}}" class="btn btn-primary mb-2" href="#" role="button">nuevo</a>
+<a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">nuevo cliente</a>
 
 <!-- buscador -->
-<form class="search-form">
+<form class="search-form mb-2">
   <div class="input-group">
     <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div><input
       type="text" placeholder="buscar.." class="form-control" />
@@ -45,8 +45,9 @@
 
 @else
 <!-- tabla -->
+<p class="cantidad">Cantidad de Clientes: {{$clientes->total()}}</p>
 <div class="table-responsive">
-  <table class="table table-bordered p-3 mb-5 rounded panzotti-card">
+  <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#id</th>
@@ -66,10 +67,11 @@
         <td>{{$item->domicilio}}</td>
         <td>{{$item->tel}}</td>
         <td class="td-btn">
-          <a href="" title="detalle" class="btn btn-info"><i class="fa fa-eye"></i></a>
-          <a href="{{route('editar', $item)}}" title="editar" class="btn btn-warning"><i
-              class="fa fa-edit icon-white "></i></a>
-          <button title="eliminar" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+          <a href="{{route('editar', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+
+          <form class="d-inline-block" action="">
+            <button title="borarr" class="btn btn-link"><i class="fa fa-trash red"></i></button>
+          </form>
         </td>
       </tr>
       @endforeach

@@ -3,24 +3,11 @@
 }
 
 .td-btn {
-    width: 15%;
+    width: 5%;
 }
 
 .fa-edit {
     color: white;
-}
-
-.search-form {
-    margin-bottom: 15px;
-}
-
-.btn-agregar {
-    margin-bottom: 15px;
-}
-
-.logo {
-    font-family: Kaushan Script, Helvetica Neue, Helvetica, Arial, cursive;
-    font-size: 25px;
 }
 
 .panzotti-nav {
@@ -31,13 +18,8 @@
     color: #ffffff;
 }
 
-.pulse {
-    overflow: visible;
-    position: relative;
-}
-
 .panzotti-card{
-    background: #f7f7f7;
+    background: #fafafa;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -47,6 +29,19 @@
 
 .text-responsive {
     font-size: calc(100% + 1vw + 1vh);
+}
+
+.cantidad{
+    color: rgb(194, 194, 194);
+}
+
+.red{
+    color:#F44336;;
+}
+
+
+.yellow{
+    color: #FFC107;
 }
   
 
