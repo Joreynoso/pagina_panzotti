@@ -26,13 +26,13 @@ Route::get('/cliente', 'ClienteController@leer')->name('cliente');
 
 Route::get('/cliente_alta', 'ClienteController@acceder')->name('cliente_alta');
 
-Route::post('/', 'ClienteController@alta')->name('alta');
+Route::post('/altaCliente', 'ClienteController@alta')->name('altaCliente');
 
-Route::get('/cliente_editar/{id}', 'ClienteController@editar')->name('editar');
+Route::get('/cliente_editar/{id}', 'ClienteController@editar')->name('editarCliente');
 
-Route::put('/cliente_editar/{id}', 'ClienteController@update')->name('update');
+Route::put('/cliente_editar/{id}', 'ClienteController@update')->name('updateCliente');
 
-Route::delete('/baja/{id}', 'ClienteController@baja')->name('baja');
+Route::delete('/bajaCliente/{id}', 'ClienteController@baja')->name('bajaCliente');
 
 //comentario
 Route::get('/comentario', 'ComentarioController@mostrar')->name('comentario');
@@ -44,26 +44,26 @@ Route::get('/tipomov', 'TipoMovimientoController@leer')->name('tipomov');
 
 Route::get('/tipomov_alta', 'TipoMovimientoController@acceder')->name('tipomov_alta');
 
-Route::post('/', 'TipoMovimientoController@alta')->name('alta');
+Route::post('/altaTipomov', 'TipoMovimientoController@alta')->name('altaTipomov');
 
-Route::get('/tipomov_editar/{id}', 'TipoMovimientoController@editar')->name('editar');
+Route::get('/tipomov_editar/{id}', 'TipoMovimientoController@editar')->name('editarTipomov');
 
-Route::put('/tipomov_editar/{id}', 'TipoMovimientoController@update')->name('update');
+Route::put('/tipomov_editar/{id}', 'TipoMovimientoController@update')->name('updateTipomov');
 
-Route::delete('/baja/{id}', 'TipoMovimientoController@baja')->name('baja');
+Route::delete('/bajaTipomov/{id}', 'TipoMovimientoController@baja')->name('bajaTipomov');
 
 //proveedor
 Route::get('/proveedor', 'ProveedorController@leer')->name('proveedor');
 
 Route::get('/proveedor_alta', 'ProveedorController@acceder')->name('proveedor_alta');
 
-Route::post('/', 'ProveedorController@alta')->name('alta');
+Route::post('/altaProveedor', 'ProveedorController@alta')->name('altaProveedor');
 
-Route::get('/proveedor_editar/{id}', 'ProveedorController@editar')->name('editar');
+Route::get('/proveedor_editar/{id}', 'ProveedorController@editar')->name('editarProveedor');
 
-Route::put('/proveedor_editar/{id}', 'ProveedorController@update')->name('update');
+Route::put('/proveedor_editar/{id}', 'ProveedorController@update')->name('updateProveedor');
 
-Route::delete('/baja/{id}', 'ProveedorController@baja')->name('baja');
+Route::delete('/bajaProveedor/{id}', 'ProveedorController@baja')->name('bajaProveedor');
 
 //--------------------------------------------------------------------------
 // Pagina Principal

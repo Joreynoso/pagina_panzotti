@@ -14,7 +14,7 @@
 <h1>Proveedor| <small> editar </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('update', $proveedor->id) }}" method="POST">
+<form action="{{ route('updateProveedor', $proveedor->id) }}" method="POST">
     @method('PUT')
     @csrf
 

@@ -14,7 +14,7 @@
 <h1>clientes| <small> alta </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('alta') }}" method="POST">
+<form action="{{ route('altaCliente') }}" method="POST">
   @csrf
 
   @error('nombre')

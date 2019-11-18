@@ -14,7 +14,7 @@
 <h1>Proveedor| <small> alta </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('alta') }}" method="POST">
+<form action="{{ route('altaProveedor') }}" method="POST">
   @csrf
 
   @error('nombre')
@@ -53,7 +53,8 @@
   <input type="text" name="cuit" placeholder="cuit/cuil" class="form-control mb-2">
   <input type="text" name="mail" placeholder="email" class="form-control mb-2">
 
-  <button type="submit" class="btn btn-success">agregar tipo movimiento</button>
+  <button type="submit" class="btn btn-success">agregar proveedor</button>
+  
 </form>
 
 @endsection

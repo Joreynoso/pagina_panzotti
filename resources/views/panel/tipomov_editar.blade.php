@@ -14,7 +14,7 @@
 <h1>Tipo Movimiento| <small> editar </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('update', $tipomovimiento->id) }}" method="POST">
+<form action="{{ route('updateTipomov', $tipomovimiento->id) }}" method="POST">
     @method('PUT')
     @csrf
 

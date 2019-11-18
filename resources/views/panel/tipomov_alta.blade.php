@@ -14,7 +14,7 @@
 <h1>Tipo Movimiento| <small> alta </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('alta') }}" method="POST">
+<form action="{{ route('altaTipomov') }}" method="POST">
   @csrf
 
   @error('nombre')

@@ -70,9 +70,9 @@
         <td>{{$item->cuit}}</td>
         <td>{{$item->mail}}</td>
         <td class="td-btn">
-          <a href="{{route('editar', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+          <a href="{{route('editarProveedor', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-          <form action="{{route('baja',$item)}}" class="d-inline"method="POST">
+          <form action="{{route('bajaProveedor',$item)}}" class="d-inline"method="POST">
             @method('DELETE')
             @csrf
             <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
