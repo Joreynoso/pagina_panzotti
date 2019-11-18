@@ -14,7 +14,7 @@
 
 
 <!-- buscador -->
-<form class="search-form">
+<form class="search-form mb-2">
     <div class="input-group">
         <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div><input type="text" placeholder="buscar.." class="form-control" />
         <div class="input-group-append"><button class="btn-buscar btn btn-outline-secondary" type="button">Buscar</button></div>

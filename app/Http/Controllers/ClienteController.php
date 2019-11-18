@@ -8,25 +8,12 @@ use App\Cliente;
 
 class ClienteController extends Controller
 {
-    public function mostrar()
-    {
-        return view('panel.cliente');
-    }
-
     //leer
     public function leer()
     {
         $clientes = Cliente::paginate(5);
 
         return view('panel.cliente', compact('clientes'));
-    }
-
-    //detalle
-    public function detalle($id){
-
-        $nota = Cliente::findOrFail($id);
-
-        return view('panel.cliente', compact('nota'));
     }
 
     //acceder alta
@@ -90,6 +77,15 @@ class ClienteController extends Controller
         $clienteUpdate->save();
 
         return redirect('cliente')->with('mensaje', 'Cliente actualizado con exito!');
+    }
+
+    //baja
+    public function baja($id){
+
+        $clienteEliminar = Cliente::findOrFail($id);
+        $clienteEliminar->delete();
+
+        return redirect('cliente')->with('mensaje', 'Cliente eliminado con exito!');
     }
     
 }

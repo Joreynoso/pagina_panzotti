@@ -53,7 +53,7 @@
         <!-- Sidebar -->
         <ul class="sidebar navbar-nav panzotti-nav">
             <li class="nav-item">
-                <a href="{{ route('principal')}}" class="nav-link" href="index.html">
+                <a href="{{ route('principal')}}" class="nav-link">
                     <i class="fas fa-home"></i>
                     <span>Inicio</span>
                 </a>
@@ -76,17 +76,17 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a href="{{route('cliente')}}" class="nav-link" href="charts.html">
+                <a href="{{route('cliente')}}" class="nav-link">
                     <i class="fas fa-users"></i>
                     <span>Clientes</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                <a href="{{route('tipomov')}}" class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-sync"></i>
+                    <span>Tipo Movimiento</span></a>
             </li>
             <li class="nav-item">
-                <a href="{{route('comentario')}}" class="nav-link" href="tables.html">
+                <a href="{{route('comentario')}}" class="nav-link">
                     <i class="fas fa-comments"></i>
                     <span>Comentarios</span></a>
             </li>

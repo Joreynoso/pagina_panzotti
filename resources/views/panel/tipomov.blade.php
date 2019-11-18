@@ -7,10 +7,10 @@
   <li class="breadcrumb-item">
     <a href="index.html">Panel</a>
   </li>
-  <li class="breadcrumb-item active">Clientes</li>
+  <li class="breadcrumb-item active">Tipo Movimiento</li>
 </ol>
 
-<h1>clientes| <small> administar </small></h1>
+<h1>Tipo Movimiento| <small> administar </small></h1>
 
 <!-- mensaje -->
 @if (Session::has('mensaje'))
@@ -24,8 +24,8 @@
 @endif
 
 <!-- nuevo -->
-<a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">
-  <i class="fa fa-plus mr-2 fa-xs"></i>nuevo cliente
+<a href="{{route('tipomov_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+  <i class="fa fa-plus mr-2 fa-xs"></i>nuevo tipo movimiento
 </a>
 
 <!-- buscador -->
@@ -38,35 +38,29 @@
   </div>
 </form>
 
-<!-- existen clientes? -->
-@if ($clientes->count() == 0)
+<!-- existen elementos? -->
+@if ($tipomovimientos->count() == 0)
 <div class="alert alert-info">
-  no existe ningun cliente, agrega uno.
+  no existe ningun tipo movimiento, agrega uno.
 </div>
 
 @else
 <!-- tabla -->
-<p class="cantidad">Cantidad de Clientes: {{$clientes->total()}}</p>
+<p class="cantidad">Cantidad de Tipo Movimiento: {{$tipomovimientos->total()}}</p>
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#id</th>
         <th scope="col">nombre</th>
-        <th scope="col">apellido</th>
-        <th scope="col">domicilio</th>
-        <th scope="col">tel</th>
         <th scope="col">acciones</th>
       </tr>
     </thead>
     <tbody>
-      @foreach ($clientes as $item)
+      @foreach ($tipomovimientos as $item)
       <tr>
         <td>{{$item->id}}</td>
         <td>{{$item->nombre}}</td>
-        <td>{{$item->apellido}}</td>
-        <td>{{$item->domicilio}}</td>
-        <td>{{$item->tel}}</td>
         <td class="td-btn">
           <a href="{{route('editar', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
@@ -81,7 +75,7 @@
     </tbody>
   </table>
 
-  {{ $clientes->links() }}
+  {{ $tipomovimientos->links() }}
 </div>
 
 @endif
