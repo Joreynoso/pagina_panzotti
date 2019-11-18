@@ -1,0 +1,60 @@
+@extends('panel.plantilla_admin')
+
+@section('section_admin')
+
+<!-- ruta  -->
+<ol class="breadcrumb">
+    <li class="breadcrumb-item">
+        <a href="index.html">Panel</a>
+    </li>
+    <li class="breadcrumb-item active"><a href="">Proveedor</a></li>
+    <li class="breadcrumb-item active">editar</li>
+</ol>
+
+<h1>Proveedor| <small> editar </small></h1>
+
+<!-- formulario -->
+<form action="{{ route('update', $proveedor->id) }}" method="POST">
+    @method('PUT')
+    @csrf
+
+    @error('nombre')
+    <div class="alert alert-danger" role="alert">
+        el nombre es obligatorio.
+    </div>
+    @enderror
+
+    @error('direccion')
+    <div class="alert alert-danger" role="alert">
+        la direccion es obligatorio.
+    </div>
+    @enderror
+
+    @error('tel')
+    <div class="alert alert-danger" role="alert">
+        el telefono es obligatorio.
+    </div>
+    @enderror
+
+    @error('cuit')
+    <div class="alert alert-danger" role="alert">
+        el cuit/cuil es obligatorio.
+    </div>
+    @enderror
+
+    @error('mail')
+    <div class="alert alert-danger" role="alert">
+        el email es obligatorio.
+    </div>
+    @enderror
+
+    <input value="{{ $proveedor->nombre }}" type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+    <input value="{{ $proveedor->direccion }}" type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
+    <input value="{{ $proveedor->tel }}" type="text" name="tel" placeholder="tel" class="form-control mb-2">
+    <input value="{{ $proveedor->cuit }}" type="text" name="cuit" placeholder="cuit" class="form-control mb-2">
+    <input value="{{ $proveedor->mail }}" type="text" name="mail" placeholder="mail" class="form-control mb-2">
+    
+    <button type="submit" class="btn btn-warning text-white">guardar cambios</button>
+</form>
+
+@endsection

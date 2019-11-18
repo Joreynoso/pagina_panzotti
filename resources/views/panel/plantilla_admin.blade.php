@@ -90,6 +90,11 @@
                     <i class="fas fa-comments"></i>
                     <span>Comentarios</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('proveedor')}}" class="nav-link">
+                    <i class="fas fa-truck"></i>
+                    <span>Proveedores</span></a>
+            </li>
         </ul>
 
         <div id="content-wrapper">

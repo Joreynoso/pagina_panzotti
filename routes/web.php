@@ -52,6 +52,19 @@ Route::put('/tipomov_editar/{id}', 'TipoMovimientoController@update')->name('upd
 
 Route::delete('/baja/{id}', 'TipoMovimientoController@baja')->name('baja');
 
+//proveedor
+Route::get('/proveedor', 'ProveedorController@leer')->name('proveedor');
+
+Route::get('/proveedor_alta', 'ProveedorController@acceder')->name('proveedor_alta');
+
+Route::post('/', 'ProveedorController@alta')->name('alta');
+
+Route::get('/proveedor_editar/{id}', 'ProveedorController@editar')->name('editar');
+
+Route::put('/proveedor_editar/{id}', 'ProveedorController@update')->name('update');
+
+Route::delete('/baja/{id}', 'ProveedorController@baja')->name('baja');
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------

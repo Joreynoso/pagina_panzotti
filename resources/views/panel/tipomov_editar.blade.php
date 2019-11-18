@@ -11,7 +11,7 @@
     <li class="breadcrumb-item active">editar</li>
 </ol>
 
-<h1>clientes| <small> editar </small></h1>
+<h1>Tipo Movimiento| <small> editar </small></h1>
 
 <!-- formulario -->
 <form action="{{ route('update', $tipomovimiento->id) }}" method="POST">
