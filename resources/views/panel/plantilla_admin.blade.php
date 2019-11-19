@@ -95,6 +95,11 @@
                     <i class="fas fa-truck"></i>
                     <span>Proveedores</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('empleado')}}" class="nav-link">
+                    <i class="fas fa-user-tie"></i>
+                    <span>Empleados</span></a>
+            </li>
         </ul>
 
         <div id="content-wrapper">
