@@ -65,6 +65,19 @@ Route::put('/proveedor_editar/{id}', 'ProveedorController@update')->name('update
 
 Route::delete('/bajaProveedor/{id}', 'ProveedorController@baja')->name('bajaProveedor');
 
+//empleado
+Route::get('/empleado', 'EmpleadoController@leer')->name('empleado');
+
+Route::get('/empleado_alta', 'EmpleadoController@acceder')->name('empleado_alta');
+
+Route::post('/altaEmpleado', 'EmpleadoController@alta')->name('altaEmpleado');
+
+Route::get('/empleado_editar/{id}', 'EmpleadoController@editar')->name('editarEmpleado');
+
+Route::put('/proveedor_editar/{id}', 'EmpleadoController@update')->name('updateEmpleado');
+
+Route::delete('/bajaEmpleado/{id}', 'EmpleadoController@baja')->name('bajaEmpleado');
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------

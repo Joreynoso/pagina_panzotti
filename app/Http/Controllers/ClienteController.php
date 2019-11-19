@@ -17,14 +17,13 @@ class ClienteController extends Controller
     }
 
     //acceder alta
-    public function acceder()
-    {
+    public function acceder(){
+
         return view('panel.cliente_alta');
     }
     
     //alta
-    public function alta(Request $request)
-    {
+    public function alta(Request $request){
 
         //return $request->all();  verificar los datos antes de almacenarlos
 
