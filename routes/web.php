@@ -78,6 +78,20 @@ Route::put('/proveedor_editar/{id}', 'EmpleadoController@update')->name('updateE
 
 Route::delete('/bajaEmpleado/{id}', 'EmpleadoController@baja')->name('bajaEmpleado');
 
+
+//tipomateriaprima
+Route::get('/tipomp', 'TipoMateriaPrimaController@leer')->name('tipomp');
+
+Route::get('/tipomp_alta', 'TipoMateriaPrimaController@acceder')->name('tipomp_alta');
+
+Route::post('/altaTipomp', 'TipoMateriaPrimaController@alta')->name('altaTipomp');
+
+Route::get('/tipomp_editar/{id}', 'TipoMateriaPrimaController@editar')->name('editarTipomp');
+
+Route::put('/tipomp_editar/{id}', 'TipoMateriaPrimaController@update')->name('updateTipomp');
+
+Route::delete('/bajaTipomp/{id}', 'TipoMateriaPrimaController@baja')->name('bajaTipomp');
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------
