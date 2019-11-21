@@ -3,45 +3,44 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App;
 use App\MateriaPrima;
 use App\Proveedor;
+use App\TipoMateriaPrima;
 
 class MateriaPrimaController extends Controller
 {
-     //leer
-     public function leer()
-     {
-         $materiaprimas = MateriaPrima::paginate(5);
+    //leer
+    public function leer()
+    {
+        $materiaprimas = MateriaPrima::paginate(5);
 
-         return view('panel.materiaprima', compact('materiaprimas'));
-     }
+        return view('panel.materiaprima', compact('materiaprimas'));
+    }
 
     //acceder alta
-    public function acceder(){
+    public function acceder()
+    {
+        $tipomateriaprimas = TipoMateriaPrima::all();
 
-        return view('panel.materiaprima_alta');
+        $proveedores = Proveedor::all();
+
+        return view('panel.materiaprima_alta', compact('tipomateriaprimas', 'proveedores'));
     }
 
     //alta
-    public function alta(Request $request){
+    public function alta(Request $request) {
+        
+        //return $request->all();
 
-        //return $request->all();  verificar los datos antes de almacenarlos
+        $nuevaMateriaPrima = new MateriaPrima;
 
-        //validacion
-        $request->validate([
-            'nombre' => 'required',
-        ]);
+        $nuevaMateriaPrima->nombre = $request->nombre;
+        $nuevaMateriaPrima->tipomateriaprima_id = $request->input('tipomateriaprima_id');
+        $nuevaMateriaPrima->proveedor_id = $request->input('proveedor_id');
 
-        $nuevamateriaprima = new Cliente;
+        $nuevaMateriaPrima->save();
 
-        $nuevamateriaprima->nombre = $request->nombre;
-        $nuevamateriaprima->apellido = $request->apellido;
-        $nuevamateriaprima->domicilio = Proveedor()->id;
-        $nuevamateriaprima->tel = $request->tel;
-
-        $nuevamateriaprima->save();
-
-        return redirect('cliente')->with('mensaje', 'Cliente agregado con exito!');
+        return redirect('materiaprima')->with('mensaje', 'Materia Prima agregado con exito!');
     }
+
 }

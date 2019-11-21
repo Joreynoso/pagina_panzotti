@@ -14,39 +14,50 @@
 <h1>clientes| <small> alta </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('altaCliente') }}" method="POST">
-  @csrf
+<div class="card">
+  <div class="card-body">
+    <form class="form-group" action="{{ route('altaCliente') }}" method="POST">
+      @csrf
 
-  @error('nombre')
-  <div class="alert alert-danger" role="alert">
-    el nombre es obligatorio.
+      @error('nombre')
+      <div class="alert alert-danger" role="alert">
+        el nombre es obligatorio.
+      </div>
+      @enderror
+
+      @error('apellido')
+      <div class="alert alert-danger" role="alert">
+        el apellido es obligatorio.
+      </div>
+      @enderror
+
+      @error('domicilio')
+      <div class="alert alert-danger" role="alert">
+        el domicilio es obligatorio.
+      </div>
+      @enderror
+
+      @error('tel')
+      <div class="alert alert-danger" role="alert">
+        el telefono es obligatorio.
+      </div>
+      @enderror
+
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" placeholder="ingrese nombre.." class="form-control mb-2">
+
+      <label for="apellido">Apellido</label>
+      <input type="text" name="apellido" placeholder="ingrese apellido.." class="form-control mb-2">
+
+      <label for="domicilio">Domicilio</label>
+      <input type="text" name="domicilio" placeholder="ingrese domicilio.." class="form-control mb-2">
+
+      <label for="telefono">Telefono</label>
+      <input type="text" name="tel" placeholder="ingrese telefono.." class="form-control mb-2">
+
+      <button type="submit" class="btn btn-success mt-3">agregar cliente</button>
+    </form>
   </div>
-  @enderror
-
-  @error('apellido')
-  <div class="alert alert-danger" role="alert">
-    el apellido es obligatorio.
-  </div>
-  @enderror
-
-  @error('domicilio')
-  <div class="alert alert-danger" role="alert">
-    el domicilio es obligatorio.
-  </div>
-  @enderror
-
-  @error('tel')
-  <div class="alert alert-danger" role="alert">
-    el telefono es obligatorio.
-  </div>
-  @enderror
-
-  <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
-  <input type="text" name="apellido" placeholder="apellido" class="form-control mb-2">
-  <input type="text" name="domicilio" placeholder="domicilio" class="form-control mb-2">
-  <input type="text" name="tel" placeholder="tel" class="form-control mb-2">
-
-  <button type="submit" class="btn btn-success">agregar cliente</button>
-</form>
+</div>
 
 @endsection

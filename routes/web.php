@@ -92,6 +92,13 @@ Route::put('/tipomp_editar/{id}', 'TipoMateriaPrimaController@update')->name('up
 
 Route::delete('/bajaTipomp/{id}', 'TipoMateriaPrimaController@baja')->name('bajaTipomp');
 
+//materiaprima
+Route::get('/materiaprima', 'MateriaPrimaController@leer')->name('materiaprima');
+
+Route::get('/materiaprima_alta', 'MateriaPrimaController@acceder')->name('materiaprima_alta');
+
+Route::post('/altaMateriaPrima', 'MateriaPrimaController@alta')->name('altaMateriaPrima');
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------

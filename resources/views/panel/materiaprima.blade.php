@@ -24,7 +24,7 @@
 @endif
 
 <!-- nuevo -->
-<a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+<a href="{{route('materiaprima_alta')}}" class="btn btn-info mb-2" href="#" role="button">
   <i class="fa fa-plus mr-2 fa-xs"></i>nuevo materia prima
 </a>
 
@@ -38,34 +38,33 @@
   </div>
 </form>
 
-<!-- existen clientes? -->
-@if ($clientes->count() == 0)
+<!-- existen elementos? -->
+@if ($materiaprimas->count() == 0)
 <div class="alert alert-info">
   no existe ninguna materia prima, agrega uno.
 </div>
 
 @else
 <!-- tabla -->
-<p class="cantidad">Cantidad de Materia Prima: {{$clientes->total()}}</p>
+<p class="cantidad">Cantidad de Materia Prima: {{$materiaprimas->total()}}</p>
 <div class="table-responsive">
   <table class="table table-bordered table-hover">
     <thead class="thead-dark">
       <tr>
         <th scope="col">#id</th>
         <th scope="col">nombre</th>
-        <th scope="col">id-tipo materia prima</th>
-        <th scope="col">id-probeedor</th>>
+        <th scope="col">tipo materia</th>
+        <th scope="col">proveedor</th>
         <th scope="col">acciones</th>
       </tr>
     </thead>
     <tbody>
-      @foreach ($clientes as $item)
+      @foreach ($materiaprimas as $item)
       <tr>
         <td>{{$item->id}}</td>
         <td>{{$item->nombre}}</td>
-        <td>{{$item->apellido}}</td>
-        <td>{{$item->domicilio}}</td>
-        <td>{{$item->tel}}</td>
+        <td>{{$item->tipomateriaprima_id}}</td>
+        <td>{{$item->proveedor_id}}</td>
         <td class="td-btn">
           <a href="{{route('editarCliente', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
@@ -80,7 +79,7 @@
     </tbody>
   </table>
 
-  {{ $clientes->links() }}
+  {{ $materiaprimas->links() }}
 </div>
 
 @endif

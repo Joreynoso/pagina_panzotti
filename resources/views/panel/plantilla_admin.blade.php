@@ -100,6 +100,11 @@
                     <i class="fas fa-user-tie"></i>
                     <span>Empleados</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('materiaprima')}}" class="nav-link">
+                    <i class="fas fa-cube"></i>
+                    <span>Materia Prima</span></a>
+            </li>
         </ul>
 
         <div id="content-wrapper">
