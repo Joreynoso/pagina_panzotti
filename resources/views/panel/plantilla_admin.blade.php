@@ -110,6 +110,12 @@
                     <i class="fas fa-cube"></i>
                     <span>Materia Prima</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('mpplanillaingresoegresos')}}" class="nav-link">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Planilla Ingreso/Egreso</span></a>
+            </li>
+
         </ul>
 
         <div id="content-wrapper">
