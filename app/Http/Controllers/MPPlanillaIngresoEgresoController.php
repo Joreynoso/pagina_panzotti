@@ -42,8 +42,8 @@ class MPPlanillaIngresoEgresoController extends Controller
 
         $nuevaMPPlanillaIngresoEgreso->fecha = $request->fecha;
         $nuevaMPPlanillaIngresoEgreso->observacion = $request->observacion;
-        $nuevaMPPlanillaIngresoEgreso->tipo_movimientos_id = $request->input('tipo_movimientos_id');
-        $nuevaMPPlanillaIngresoEgreso->empleados_id = $request->input('empleados_id');
+        $nuevaMPPlanillaIngresoEgreso->tipomovimiento_id = $request->input('tipomovimiento_id');
+        $nuevaMPPlanillaIngresoEgreso->empleado_id = $request->input('empleado_id');
 
         $nuevaMPPlanillaIngresoEgreso->save();
 

@@ -15,6 +15,7 @@
     <i class="fa fa-plus mr-2 fa-xs"></i>nueva nota
 </a>
 
+
 <!-- notas -->
 <div class="row">
     <div class="col-xl-3 col-sm-6 mb-3">

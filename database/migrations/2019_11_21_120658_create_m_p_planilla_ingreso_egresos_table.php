@@ -17,11 +17,11 @@ class CreateMPPlanillaIngresoEgresosTable extends Migration
             $table->bigIncrements('id');
             $table->String('fecha');
             $table->String('observacion');
-            $table->bigInteger('tipo_movimiento_id')->unsigned();
+            $table->bigInteger('tipomovimiento_id')->unsigned();
             $table->bigInteger('empleado_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('tipo_movimiento_id')->references('id')->on('tipo_movimientos');
+            $table->foreign('tipomovimiento_id')->references('id')->on('tipo_movimientos');
             $table->foreign('empleado_id')->references('id')->on('empleados');
         });
     }

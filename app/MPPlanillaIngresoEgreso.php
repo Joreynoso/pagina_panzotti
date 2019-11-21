@@ -8,11 +8,11 @@ class MPPlanillaIngresoEgreso extends Model
 {
     public function tipomovimiento()
     {
-        return $this->hasOne('App\TipoMovimiento', 'id', 'tipo_movimientos_id');
+        return $this->hasOne('App\TipoMovimiento', 'id', 'tipomovimiento_id');
     }
 
     public function empleado()
     {
-        return $this->hasOne('App\Empleado', 'id', 'empleados_id');
+        return $this->hasOne('App\Empleado', 'id', 'empleado_id');
     }
 }

@@ -39,7 +39,7 @@
 
             <div class="form-group">
                 <label for="mpplanillaingresoegreso">seleccione un tipo de movimiento</label>
-                <select class="form-control" id="tipo_movimientos_id" name="tipo_movimientos_id">
+                <select class="form-control" id="tipomovimiento_id" name="tipomovimiento_id">
                     @foreach ($tipomovimientos as $item)
                     <option value="{{$item->id}}"> {{$item->nombre}} </option>
                     @endforeach
@@ -48,7 +48,7 @@
 
             <div class="form-group">
                 <label for="mpplanillaingresoegreso">seleccionar un empleado</label>
-                <select class="form-control" id="" name="empleados_id" name="empleados_id">
+                <select class="form-control" id="" name="empleado_id" name="empleado_id">
                     @foreach ($empleados as $item)
                     <option value="{{$item->id}}"> {{$item->nombre}} </option>
                     @endforeach
