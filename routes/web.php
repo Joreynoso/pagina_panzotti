@@ -123,6 +123,21 @@ Route::put('/materiaprima_editar/{id}', 'MateriaPrimaController@update')->name('
 Route::delete('/bajaMateriaPrima/{id}', 'MateriaPrimaController@baja')->name('bajaMateriaPrima');
 
 
+// planilla ingreso/egreso
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/mpplanillaingresoegreso', 'MPPlanillaIngresoEgresoController@leer')->name('mpplanillaingresoegresos');
+
+Route::get('/mpplanillaingresoegreso_alta', 'MPPlanillaIngresoEgresoController@acceder')->name('mpplanillaingresoegresos_alta');
+
+Route::post('/altampplanillaingresoegreso', 'MPPlanillaIngresoEgresoController@alta')->name('altampplanillaingresoegresos');
+
+Route::get('/mpplanillaingresoegreso_editar/{id}', 'MPPlanillaIngresoEgresoController@editar')->name('editarmpplanillaingresoegresos');
+
+Route::put('/mpplanillaingresoegreso_editar/{id}', 'MPPlanillaIngresoEgresoController@update')->name('updatempplanillaingresoegresos');
+
+Route::delete('/bajampplanillaingresoegreso/{id}', 'MPPlanillaIngresoEgresoController@baja')->name('bajampplanillaingresoegresos');
+
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------
