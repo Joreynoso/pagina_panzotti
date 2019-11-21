@@ -68,9 +68,9 @@
         <td>{{$item->tipomovimiento->nombre}}</td>
         <td>{{$item->empleado->nombre}}</td>
         <td class="td-btn">
-          <a href="" title="editar"><i class="fa fa-pen yellow"></i></a>
+          <a href="{{route('editarmpplanillaingresoegresos', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-          <form action="" class="d-inline"method="POST">
+          <form action="{{route('bajampplanillaingresoegresos',$item)}}" class="d-inline"method="POST">
             @method('DELETE')
             @csrf
             <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
