@@ -11,10 +11,13 @@
   <li class="breadcrumb-item active">Alta</li>
 </ol>
 
-<h1>clientes| <small> alta </small></h1>
+<h3 class="breadcrumb">Clientes | Alta</h3>
 
 <!-- formulario -->
-<div class="card">
+<div class="card shadow-lg">
+  <div class="card-header clearfix">
+    <div class="card-title">Formulario Clientes</div>
+  </div>
   <div class="card-body">
     <form class="form-group" action="{{ route('altaCliente') }}" method="POST">
       @csrf
