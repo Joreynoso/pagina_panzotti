@@ -105,6 +105,11 @@
                     <i class="fas fa-cube"></i>
                     <span>Materia Prima</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('tipomp')}}" class="nav-link">
+                    <i class="fas fa-weight"></i>
+                    <span>Tipo Materia Prima</span></a>
+            </li>
         </ul>
 
         <div id="content-wrapper">
