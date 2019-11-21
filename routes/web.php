@@ -22,6 +22,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/principal', 'AdminController@mostrar')->name('principal');
 
+// notas
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/notas', 'NotaController@leer')->name('notas');
 
 // cliente
 // ────────────────────────────────────────────────────────────────────────────────

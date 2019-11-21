@@ -18,12 +18,12 @@
     color: #ffffff;
 }
 
-.panzotti-card{
+.panzotti-card {
     background: #fafafa;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 10px 0 rgba(0, 0, 0, 0.19);
 }
 
-.overflow{
+.overflow {
     overflow: hidden;
 }
 
@@ -31,21 +31,152 @@
     font-size: calc(100% + 1vw + 1vh);
 }
 
-.cantidad{
+.cantidad {
     color: rgb(194, 194, 194);
     margin-block-start: 0%;
 }
 
-.red{
-    color:#F44336;;
+.red {
+    color: #F44336;
+    ;
 }
 
-
-.yellow{
+.yellow {
     color: #FFC107;
 }
 
-.breadcrumb{
-    background: rgb(231, 231, 231);
+.card {
+    margin-bottom: 15px;
+}
+
+.breadcrumb {
     opacity: 0.7;
+    font-size: 20px;
+}
+
+span:hover {
+    color: rgb(140, 174, 207);
+}
+
+.azul {
+    color: rgb(140, 174, 207);
+}
+
+.sidebar .nav-item .nav-link:hover {
+    color: rgb(140, 174, 207);
+    ;
+}
+
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 .btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-radius: 35px;
+    border: 2px solid rgba(0, 70, 147, 0.75);
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #28a745;
+    border-radius: 35px;
+    border: 1px solid rgba(21, 87, 36, 0.75);
+}
+
+.btn-secondary {
+    color: #fff;
+    background-color: #868e96;
+    border-radius: 35px;
+    border: 1px solid rgba(134, 142, 150, 0.75);
+}
+
+.btn-info {
+    color: #fff;
+    background-color: #17a2b8;
+    border-radius: 35px;
+    border: 1px solid rgba(23, 162, 184, 0.75);
+}
+
+.btn-dark {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    border-radius: 35px;
+    border: 1px solid rgba(52, 58, 64, 0.75);
+}
+
+.btn-danger {
+    color: #fff;
+    background-color: #dc3545;
+    border-radius: 35px;
+    border: 1px solid rgba(220, 53, 69, 0.75);
+}
+
+.btn-warning {
+    color: #212529;
+    background-color: #ffc107;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 193, 7, 0.75);
+}
+
+.btn-light {
+    color: #212529;
+    background-color: #f8f9fa;
+    border-radius: 35px;
+    border: 1px solid rgba(248, 249, 250, 0.75);
+}
+
+.card {
+    border-radius: 10px;
+}
+
+th {
+    color: rgb(80, 97, 126);
+    ;
+}
+
+.table thead th {
+    padding: 10px 2px;
+}
+
+.table th, .table td {
+    padding: 5px;
+}
+
+.gris {
+    color: rgb(121, 121, 121);
+}
+
+.blockquote-custom {
+    position: relative;
+    font-size: 1.1rem;
+}
+
+.blockquote-custom-icon {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -15px;
+    left: 30px;
+}
+
+.border-top {
+    border-top: 1px solid #7e7c7c !important;
+}
+
+.nota-color {
+    background: #FAF8BF;
+    opacity: 0.9;
+}
+
+.nota-color2 {
+    background: rgb(247, 227, 245);
+    opacity: 0.9;
+}
+
+.nota-color3 {
+    background: rgb(231, 247, 230);
+    opacity: 0.9;
 }

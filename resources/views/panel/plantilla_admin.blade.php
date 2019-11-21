@@ -54,7 +54,7 @@
         <ul class="sidebar navbar-nav panzotti-nav">
             <li class="nav-item">
                 <a href="{{ route('principal')}}" class="nav-link">
-                    <i class="fas fa-home"></i>
+                    <i class="fas fa-home azul"></i>
                     <span>Inicio</span>
                 </a>
             </li>
@@ -74,6 +74,11 @@
                     <a class="dropdown-item" href="404.html">404 Page</a>
                     <a class="dropdown-item active" href="blank.html">Blank Page</a>
                 </div>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('notas')}}" class="nav-link">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>MisNotas</span></a>
             </li>
             <li class="nav-item">
                 <a href="{{route('cliente')}}" class="nav-link">
@@ -131,7 +136,8 @@
             <footer class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Todos los derechos reservados a José Reynoso y Jorge Albornos. 2019</span>
+                        <span>hecho con <i class="fas fa-heart red"></i>
+                        y mucho <i class="fas fa-coffee"></i> para Pastas Panzotti. (2019)</span>
                     </div>
                 </div>
             </footer>
