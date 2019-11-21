@@ -18,10 +18,13 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Panel administracion
 //--------------------------------------------------------------------------
 
-//principal
+// principal
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/principal', 'AdminController@mostrar')->name('principal');
 
-//cliente
+
+// cliente
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/cliente', 'ClienteController@leer')->name('cliente');
 
 Route::get('/cliente_alta', 'ClienteController@acceder')->name('cliente_alta');
@@ -34,12 +37,16 @@ Route::put('/cliente_editar/{id}', 'ClienteController@update')->name('updateClie
 
 Route::delete('/bajaCliente/{id}', 'ClienteController@baja')->name('bajaCliente');
 
-//comentario
+
+// comentario
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/comentario', 'ComentarioController@mostrar')->name('comentario');
 
 Route::get('/comentario', 'ComentarioController@leer')->name('comentario');
 
-//tipomovimiento
+
+// tipomovimiento
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/tipomov', 'TipoMovimientoController@leer')->name('tipomov');
 
 Route::get('/tipomov_alta', 'TipoMovimientoController@acceder')->name('tipomov_alta');
@@ -52,7 +59,9 @@ Route::put('/tipomov_editar/{id}', 'TipoMovimientoController@update')->name('upd
 
 Route::delete('/bajaTipomov/{id}', 'TipoMovimientoController@baja')->name('bajaTipomov');
 
-//proveedor
+
+// proveedor
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/proveedor', 'ProveedorController@leer')->name('proveedor');
 
 Route::get('/proveedor_alta', 'ProveedorController@acceder')->name('proveedor_alta');
@@ -65,7 +74,9 @@ Route::put('/proveedor_editar/{id}', 'ProveedorController@update')->name('update
 
 Route::delete('/bajaProveedor/{id}', 'ProveedorController@baja')->name('bajaProveedor');
 
-//empleado
+
+// empleado
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/empleado', 'EmpleadoController@leer')->name('empleado');
 
 Route::get('/empleado_alta', 'EmpleadoController@acceder')->name('empleado_alta');
@@ -79,7 +90,8 @@ Route::put('/proveedor_editar/{id}', 'EmpleadoController@update')->name('updateE
 Route::delete('/bajaEmpleado/{id}', 'EmpleadoController@baja')->name('bajaEmpleado');
 
 
-//tipomateriaprima
+// tipomateriaprima
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/tipomp', 'TipoMateriaPrimaController@leer')->name('tipomp');
 
 Route::get('/tipomp_alta', 'TipoMateriaPrimaController@acceder')->name('tipomp_alta');
@@ -92,12 +104,21 @@ Route::put('/tipomp_editar/{id}', 'TipoMateriaPrimaController@update')->name('up
 
 Route::delete('/bajaTipomp/{id}', 'TipoMateriaPrimaController@baja')->name('bajaTipomp');
 
-//materiaprima
+
+// materiaprima
+// ────────────────────────────────────────────────────────────────────────────────
 Route::get('/materiaprima', 'MateriaPrimaController@leer')->name('materiaprima');
 
 Route::get('/materiaprima_alta', 'MateriaPrimaController@acceder')->name('materiaprima_alta');
 
 Route::post('/altaMateriaPrima', 'MateriaPrimaController@alta')->name('altaMateriaPrima');
+
+Route::get('/materiaprima_editar/{id}', 'MateriaPrimaController@editar')->name('editarMateriaPrima');
+
+Route::put('/materiaprima_editar/{id}', 'MateriaPrimaController@update')->name('updateMateriaPrima');
+
+Route::delete('/bajaMateriaPrima/{id}', 'MateriaPrimaController@baja')->name('bajaMateriaPrima');
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal

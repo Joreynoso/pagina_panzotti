@@ -76,6 +76,7 @@ class ClienteController extends Controller
         $clienteUpdate->save();
 
         return redirect('cliente')->with('mensaje', 'Cliente actualizado con exito!');
+
     }
 
     //baja

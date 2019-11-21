@@ -32,6 +32,11 @@ class MateriaPrimaController extends Controller
         
         //return $request->all();
 
+        //validacion
+        $request->validate([
+            'nombre' => 'required'
+        ]);
+
         $nuevaMateriaPrima = new MateriaPrima;
 
         $nuevaMateriaPrima->nombre = $request->nombre;
@@ -41,6 +46,47 @@ class MateriaPrimaController extends Controller
         $nuevaMateriaPrima->save();
 
         return redirect('materiaprima')->with('mensaje', 'Materia Prima agregado con exito!');
+    }
+
+     //acceder editar
+     public function editar($id){
+
+        $materiaprima = MateriaPrima::findOrFail($id);
+
+        $tipomateriaprimas = TipoMateriaPrima::all();
+
+        $proveedores = Proveedor::all();
+
+        return view('panel.materiaprima_editar',compact('materiaprima','tipomateriaprimas', 'proveedores'));
+    }
+
+       //update
+       public function update(Request $request, $id){
+
+        //validacion
+        $request->validate([
+            'nombre' => 'required'
+        ]);
+
+        $materiaprimaUpdate = new MateriaPrima;
+
+        $materiaprimaUpdate->nombre = $request->nombre;
+        $materiaprimaUpdate->tipomateriaprima_id = $request->input('tipomateriaprima_id');
+        $materiaprimaUpdate->proveedor_id = $request->input('proveedor_id');
+
+        $materiaprimaUpdate->save();
+
+        return redirect('materiaprima')->with('mensaje', 'Materia Prima editada con exito!');
+
+    }
+
+      //baja
+      public function baja($id){
+
+        $materiaprimaEliminar = MateriaPrima::findOrFail($id);
+        $materiaprimaEliminar->delete();
+
+        return redirect('materiaprima')->with('mensaje', 'Materia Prima eliminada con exito!');
     }
 
 }

@@ -53,8 +53,8 @@
       <tr>
         <th scope="col">#id</th>
         <th scope="col">nombre</th>
-        <th scope="col">tipo materia</th>
         <th scope="col">proveedor</th>
+        <th scope="col">tipo materia prima</th>
         <th scope="col">acciones</th>
       </tr>
     </thead>
@@ -63,12 +63,12 @@
       <tr>
         <td>{{$item->id}}</td>
         <td>{{$item->nombre}}</td>
-        <td>{{$item->tipomateriaprima_id}}</td>
-        <td>{{$item->proveedor_id}}</td>
+        <td>{{$item->proveedor->nombre}}</td>
+        <td>{{$item->tipomp->nombre}}</td>
         <td class="td-btn">
-          <a href="{{route('editarCliente', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+          <a href="{{route('editarMateriaPrima', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-          <form action="{{route('bajaCliente',$item)}}" class="d-inline"method="POST">
+          <form action="{{route('bajaMateriaPrima',$item)}}" class="d-inline"method="POST">
             @method('DELETE')
             @csrf
             <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>

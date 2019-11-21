@@ -6,5 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class MateriaPrima extends Model
 {
-    //
+    public function proveedor()
+    {
+        return $this->hasOne('App\Proveedor', 'id', 'proveedor_id');
+    }
+
+    public function tipomp()
+    {
+        return $this->hasOne('App\TipoMateriaPrima', 'id', 'tipomateriaprima_id');
+    }
+
+
 }
