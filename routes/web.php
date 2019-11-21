@@ -138,6 +138,20 @@ Route::put('/mpplanillaingresoegreso_editar/{id}', 'MPPlanillaIngresoEgresoContr
 Route::delete('/bajampplanillaingresoegreso/{id}', 'MPPlanillaIngresoEgresoController@baja')->name('bajampplanillaingresoegresos');
 
 
+// receta
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/receta', 'RecetaController@leer')->name('receta');
+
+Route::get('/receta_alta', 'RecetaController@acceder')->name('receta_alta');
+
+Route::post('/altaReceta', 'RecetaController@alta')->name('altaReceta');
+
+Route::get('/receta_editar/{id}', 'RecetaController@editar')->name('editarReceta');
+
+Route::put('/receta_editar/{id}', 'RecetaController@update')->name('updateReceta');
+
+Route::delete('/bajaReceta/{id}', 'RecetaController@baja')->name('bajaReceta');
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------
