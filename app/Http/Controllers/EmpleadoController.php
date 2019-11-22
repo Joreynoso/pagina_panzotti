@@ -14,7 +14,7 @@ class EmpleadoController extends Controller
         return view('panel.empleado', compact('empleados'));
     }
 
-    
+
     //acceder alta
     public function acceder(){
 

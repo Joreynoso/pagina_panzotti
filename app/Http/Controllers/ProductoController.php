@@ -2,27 +2,23 @@
 
 namespace App\Http\Controllers;
 
+use App\Producto;
 use Illuminate\Http\Request;
-use App\MateriaPrima;
-use App\Proveedor;
-use App\TipoMateriaPrima;
 
-class MateriaPrimaController extends Controller
+class ProductoController extends Controller
 {
     //leer
     public function leer()
     {
-        $materiaprimas = MateriaPrima::paginate(5);
+        $productos = Producto::paginate(5);
 
-        return view('panel.materiaprima', compact('materiaprimas'));
+        return view('panel.producto', compact('productos'));
     }
 
     //acceder alta
     public function acceder()
     {
-        $tipomateriaprimas = TipoMateriaPrima::all();
-
-        $proveedores = Proveedor::all();
+        $recetas = Receta::all();
 
         return view('panel.materiaprima_alta', compact('tipomateriaprimas', 'proveedores'));
     }
@@ -88,5 +84,4 @@ class MateriaPrimaController extends Controller
 
         return redirect('materiaprima')->with('mensaje', 'Materia Prima eliminada con exito!');
     }
-
 }
