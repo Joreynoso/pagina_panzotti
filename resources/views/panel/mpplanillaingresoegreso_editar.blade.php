@@ -5,13 +5,11 @@
 <!-- ruta  -->
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-bullet">
-      <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
-      <li class="breadcrumb-item"><a href="#" class="text-uppercase">Planilla Ingreso, Egreso</a></li>
-      <li aria-current="page" class="breadcrumb-item active text-uppercase">Editar</li>
+        <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+        <li class="breadcrumb-item"><a href="#" class="text-uppercase">Planilla Ingreso, Egreso</a></li>
+        <li aria-current="page" class="breadcrumb-item active text-uppercase">Editar</li>
     </ol>
-  </nav>
-  
-<h1>Planilla Ingreso/Egreso| <small> editar </small></h1>
+</nav>
 
 <!-- formulario -->
 <div class="card shadow rounded">
@@ -19,24 +17,25 @@
         <div class="card-title">Formulario Planilla de Ingresos/Egresos</div>
     </div>
     <div class="card-body">
-<form action="{{ route('updatempplanillaingresoegresos', $mpplanillaingresoegresos->id) }}" method="POST">
-    @method('PUT')
-    @csrf
+        <form action="{{ route('updatempplanillaingresoegresos', $mpplanillaingresoegresos->id) }}" method="POST">
+            @method('PUT')
+            @csrf
 
-    @error('fecha')
-    <div class="alert alert-danger" role="alert">
-        la fecha es obligatorio.
-    </div>
-    @enderror
+            @error('fecha')
+            <div class="alert alert-danger" role="alert">
+                la fecha es obligatorio.
+            </div>
+            @enderror
 
-    @error('observacion')
-    <div class="alert alert-danger" role="alert">
-        la observacion es obligatorio.
-    </div>
-    @enderror
+            @error('observacion')
+            <div class="alert alert-danger" role="alert">
+                la observacion es obligatorio.
+            </div>
+            @enderror
 
             <label for="fecha">Fecha</label>
-            <input value="{{ $mpplanillaingresoegresos->fecha }}" type="text" name="fecha" placeholder="ingrese la fecha.." class="form-control mb-2">
+            <input value="{{ $mpplanillaingresoegresos->fecha }}" type="text" name="fecha"
+                placeholder="ingrese la fecha.." class="form-control mb-2">
 
             <label value="{{ $mpplanillaingresoegresos->observacion }}" for="observacion">Observacion</label>
             <input type="text" name="observacion" placeholder="ingrese la observacion.." class="form-control mb-2">
@@ -60,7 +59,9 @@
             </div>
 
 
-    <button type="submit" class="btn btn-warning text-white">guardar cambios</button>
-</form>
+            <button type="submit" class="btn btn-warning text-white">guardar cambios</button>
+        </form>
+    </div>
+</div>
 
 @endsection

@@ -11,9 +11,6 @@
   </ol>
 </nav>
 
-
-<h3 class="breadcrumb">Recetas | Alta</h3>
-
 <!-- formulario -->
 <div class="card shadow-lg">
   <div class="card-header clearfix">

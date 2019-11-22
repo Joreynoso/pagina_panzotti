@@ -11,8 +11,6 @@
   </ol>
 </nav>
 
-<h1>Tipo Movimiento| <small> alta </small></h1>
-
 <!-- formulario -->
 <div class="card shadow rounded">
   <div class="card-header clearfix">
