@@ -28,7 +28,7 @@
   </a>
 </div>
 
-<!-- buscador y nuevo -->
+<!-- buscador -->
 <div class="row">
   <div class="col-xl-12 col-sm-12 mb-3">
     <div class="search-box">
@@ -47,15 +47,17 @@
 
 @else
 <!-- tabla -->
-<div class="card shadow rounded ">
+<div class="card mb-3 shadow">
+  <div class="card-header fondo-tabla text-white">
+    <strong>Clientes | administrar</strong>
+  </div>
   <div class="card-body">
-    <h5 class="card-title gris">Clientes | administrar</h5>
-    <p class="cantidad">Cantidad de Clientes: {{$clientes->total()}}</p>
-    <div class="table-responsive table-striped">
+    <p class="card-text">Cantidad de Clientes: {{$clientes->total()}}</p>
+    <div class="table-responsive">
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#id</th>
+            <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Apellido</th>
             <th scope="col">Domicilio</th>
@@ -71,7 +73,7 @@
             <td>{{$item->apellido}}</td>
             <td>{{$item->domicilio}}</td>
             <td>{{$item->tel}}</td>
-            <td class="td-btn">
+            <td>
               <a href="{{route('editarCliente', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
               <form action="{{route('bajaCliente',$item)}}" class="d-inline" method="POST">
                 @method('DELETE')
@@ -86,6 +88,13 @@
       {{ $clientes->links() }}
     </div>
   </div>
+</div>
+
+<!-- descargar pdf -->
+<div class="container-btn">
+  <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
+    <i class="fa fa-file-alt mr-2 fa-xs"></i>descargar pdf
+  </a>
 </div>
 
 @endif

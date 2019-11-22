@@ -72,7 +72,7 @@
         <td class="td-btn">
           <a href="{{route('editarEmpleado',$item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-          <form action="{{route('bajaEmpleado',$item)}}" class="d-inline"method="POST">
+          <form action="{{route('bajaEmpleado',$item)}}" class="d-inline" method="POST">
             @method('DELETE')
             @csrf
             <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
@@ -84,6 +84,13 @@
   </table>
 
   {{ $empleados->links() }}
+</div>
+
+<!-- descargar pdf -->
+<div class="container-btn">
+  <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
+    <i class="fa fa-file-alt mr-2 fa-xs"></i>descargar pdf
+  </a>
 </div>
 
 @endif

@@ -59,6 +59,13 @@
 
 {{ $comentarios->links() }}
 
+<!-- descargar pdf -->
+<div class="container-btn">
+  <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
+    <i class="fa fa-file-alt mr-2 fa-xs"></i>descargar pdf
+  </a>
+</div>
+
 @endif
     
 @endsection
