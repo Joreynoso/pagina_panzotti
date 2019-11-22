@@ -26,6 +26,10 @@ Route::get('/principal', 'AdminController@mostrar')->name('principal');
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/notas', 'NotaController@leer')->name('notas');
 
+Route::get('/nota_alta', 'NotaController@acceder')->name('nota_alta');
+
+Route::post('/altaNota', 'NotaController@alta')->name('altaNota');
+
 // cliente
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/cliente', 'ClienteController@leer')->name('cliente');

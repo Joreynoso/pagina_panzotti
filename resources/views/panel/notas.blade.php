@@ -11,60 +11,68 @@
 </nav>
 
 <!-- nuevo -->
-<a href="" class="btn btn-info mb-4" href="#" role="button">
+<a href="{{route('nota_alta')}}" class="btn btn-info mb-4" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
 </a>
 
+<!-- existen clientes? -->
+@if ($notas->count() == 0)
+
+<div class="alert alert-info">
+    no existe ninguna nota, agrega una.
+</div>
+
+@else
 
 <!-- notas -->
 <div class="row">
+    @foreach ($notas as $item)
+
+    <!-- urgencia = alta , nota color amarillo -->
+    @if ($item->urgencia == 'alta')
     <div class="col-xl-3 col-sm-6 mb-3">
         <blockquote class="blockquote blockquote-custom nota-color p-5 shadow rounded">
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
-            <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
-            <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
-                <cite title="Source Title">Source Title</cite>
+            <p class="mb-0 mt-2 font-italic">"{{$item->descripcion}}."</p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">urgencia: {{$item->urgencia}}
                 <br>
-                <a class="red" href="">eliminar esta nota</a>
+                <a class="red mt-2" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
 
+    @else
+
+    <!-- urgencia = media , nota color rosa -->
+    @if ($item->urgencia == 'media')
     <div class="col-xl-3 col-sm-6 mb-3">
         <blockquote class="blockquote blockquote-custom nota-color2 p-5 shadow rounded">
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
-            <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
-            <footer class="blockquote-footer text-black-50 pt-4 mt-4 border-top">Someone famous in
-                <cite title="Source Title">Source Title</cite>
+            <p class="mb-0 mt-2 font-italic">"{{$item->descripcion}}."</p>
+            <footer class="blockquote-footer text-black-50 pt-4 mt-4 border-top">urgencia: {{$item->urgencia}}
                 <br>
                 <a class="red" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
 
+    @else
+    <!-- urgencia = baja , nota color verde -->
     <div class="col-xl-3 col-sm-6 mb-3">
         <blockquote class="blockquote blockquote-custom nota-color3 p-5 shadow rounded">
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
-            <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
-            <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
-                <cite title="Source Title">Source Title</cite>
+            <p class="mb-0 mt-2 font-italic">"{{$item->descripcion}}."</p>
+            <footer class="blockquote-footer pt-4 mt-4 border-top">urgencia: {{$item->urgencia}}
                 <br>
                 <a class="red" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
 
-    <div class="col-xl-3 col-sm-6 mb-3">
-        <blockquote class="blockquote blockquote-custom nota-color p-5 shadow rounded">
-            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
-            <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
-            <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
-                <cite title="Source Title">Source Title</cite>
-                <br>
-                <a class="red" href="">eliminar esta nota</a>
-            </footer>
-        </blockquote>
-    </div>
+    @endif
+    @endif
+    @endforeach
 </div>
 
+@endif
 @endsection
