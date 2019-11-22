@@ -120,6 +120,11 @@
                     <i class="fas fa-sitemap"></i>
                     <span>Planilla Ingreso/Egreso</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('receta')}}" class="nav-link">
+                    <i class="fas fa-receipt"></i>
+                    <span>Recetas</span></a>
+            </li>
 
         </ul>
 
