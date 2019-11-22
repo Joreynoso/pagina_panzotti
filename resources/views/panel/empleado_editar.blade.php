@@ -6,9 +6,11 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-bullet">
     <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
-    <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Empleados</a></li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Editar</li>
   </ol>
 </nav>
+
 
 <h1>Empleado| <small> editar </small></h1>
 
