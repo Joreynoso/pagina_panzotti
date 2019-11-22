@@ -15,47 +15,54 @@
 <h1>Proveedor| <small> alta </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('altaProveedor') }}" method="POST">
-  @csrf
+<div class="card shadow rounded">
+  <div class="card-header clearfix">
+    <div class="card-title">Formulario Proveedor</div>
+  </div>
+  <div class="card-body">
+    <form action="{{ route('altaProveedor') }}" method="POST">
+      @csrf
 
-  @error('nombre')
-  <div class="alert alert-danger" role="alert">
-    el nombre es obligatorio.
-  </div>
-  @enderror
-  
-  @error('direccion')
-  <div class="alert alert-danger" role="alert">
-    el nombre es obligatorio.
-  </div>
-  @enderror
+      @error('nombre')
+      <div class="alert alert-danger" role="alert">
+        el nombre es obligatorio.
+      </div>
+      @enderror
 
-  @error('tel')
-  <div class="alert alert-danger" role="alert">
-    el telefono es obligatorio.
-  </div>
-  @enderror
-  
-  @error('cuit')
-  <div class="alert alert-danger" role="alert">
-    el cuit es obligatorio.
-  </div>
-  @enderror
-  
-  @error('mail')
-  <div class="alert alert-danger" role="alert">
-    el email es obligatorio.
-  </div>
-  @enderror
+      @error('direccion')
+      <div class="alert alert-danger" role="alert">
+        el nombre es obligatorio.
+      </div>
+      @enderror
 
-  <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
-  <input type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
-  <input type="text" name="tel" placeholder="telefono" class="form-control mb-2">
-  <input type="text" name="cuit" placeholder="cuit/cuil" class="form-control mb-2">
-  <input type="text" name="mail" placeholder="email" class="form-control mb-2">
+      @error('tel')
+      <div class="alert alert-danger" role="alert">
+        el telefono es obligatorio.
+      </div>
+      @enderror
 
-  <button type="submit" class="btn btn-success">agregar proveedor</button>
-  
-</form>
+      @error('cuit')
+      <div class="alert alert-danger" role="alert">
+        el cuit es obligatorio.
+      </div>
+      @enderror
+
+      @error('mail')
+      <div class="alert alert-danger" role="alert">
+        el email es obligatorio.
+      </div>
+      @enderror
+
+      <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+      <input type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
+      <input type="text" name="tel" placeholder="telefono" class="form-control mb-2">
+      <input type="text" name="cuit" placeholder="cuit/cuil" class="form-control mb-2">
+      <input type="text" name="mail" placeholder="email" class="form-control mb-2">
+
+      <button type="submit" class="btn btn-success mt-3">agregar proveedor</button>
+
+    </form>
+  </div>
+</div>
 
 @endsection

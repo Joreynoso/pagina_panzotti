@@ -11,21 +11,26 @@
   </ol>
 </nav>
 
-<h1>Tipo Materia Prima| <small> alta </small></h1>
-
 <!-- formulario -->
-<form action="{{ route('altaTipomp') }}" method="POST">
-  @csrf
-
-  @error('nombre')
-  <div class="alert alert-danger" role="alert">
-    el nombre es obligatorio.
+<div class="card shadow rounded">
+  <div class="card-header clearfix">
+    <div class="card-title">Formulario Tipo Materia Prima</div>
   </div>
-  @enderror
+  <div class="card-body">
+    <form action="{{ route('altaTipomp') }}" method="POST">
+      @csrf
 
-  <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+      @error('nombre')
+      <div class="alert alert-danger" role="alert">
+        el nombre es obligatorio.
+      </div>
+      @enderror
 
-  <button type="submit" class="btn btn-success">agregar tipo materia prima</button>
-</form>
+      <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+
+      <button type="submit" class="btn btn-success mt-3">agregar tipo materia prima</button>
+    </form>
+  </div>
+</div>
 
 @endsection

@@ -11,49 +11,54 @@
   </ol>
 </nav>
 
-<h1>Empleados| <small> alta </small></h1>
-
 <!-- formulario -->
-<form action="{{ route('altaEmpleado') }}" method="POST">
-  @csrf
-
-  @error('nombre')
-  <div class="alert alert-danger" role="alert">
-    el nombre es obligatorio.
+<div class="card shadow rounded">
+  <div class="card-header clearfix">
+    <div class="card-title">Formulario Empleado</div>
   </div>
-  @enderror
+  <div class="card-body">
+    <form action="{{ route('altaEmpleado') }}" method="POST">
+      @csrf
 
-  @error('apellido')
-  <div class="alert alert-danger" role="alert">
-    el apellido es obligatorio.
+      @error('nombre')
+      <div class="alert alert-danger" role="alert">
+        el nombre es obligatorio.
+      </div>
+      @enderror
+
+      @error('apellido')
+      <div class="alert alert-danger" role="alert">
+        el apellido es obligatorio.
+      </div>
+      @enderror
+
+      @error('direccion')
+      <div class="alert alert-danger" role="alert">
+        la direccion es obligatoria.
+      </div>
+      @enderror
+
+      @error('fingreso')
+      <div class="alert alert-danger" role="alert">
+        la fecha de ingreso es obligatoria.
+      </div>
+      @enderror
+
+      @error('observaciones')
+      <div class="alert alert-danger" role="alert">
+        agrega una observacion.
+      </div>
+      @enderror
+
+      <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+      <input type="text" name="apellido" placeholder="apellido" class="form-control mb-2">
+      <input type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
+      <input type="text" name="fingreso" placeholder="fecha ingreso" class="form-control mb-2">
+      <input type="text" name="observaciones" placeholder="observaciones" class="form-control mb-2">
+
+      <button type="submit" class="btn btn-success mt-3">agregar empleado</button>
+    </form>
   </div>
-  @enderror
-
-  @error('direccion')
-  <div class="alert alert-danger" role="alert">
-    la direccion es obligatoria.
-  </div>
-  @enderror
-
-  @error('fingreso')
-  <div class="alert alert-danger" role="alert">
-    la fecha de ingreso es obligatoria.
-  </div>
-  @enderror
-
-  @error('observaciones')
-  <div class="alert alert-danger" role="alert">
-    agrega una observacion.
-  </div>
-  @enderror
-
-  <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
-  <input type="text" name="apellido" placeholder="apellido" class="form-control mb-2">
-  <input type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
-  <input type="text" name="fingreso" placeholder="fecha ingreso" class="form-control mb-2">
-  <input type="text" name="observaciones" placeholder="observaciones" class="form-control mb-2">
-
-  <button type="submit" class="btn btn-success">agregar empleado</button>
-</form>
+</div>
 
 @endsection

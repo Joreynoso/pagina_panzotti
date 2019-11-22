@@ -10,11 +10,13 @@
       <li aria-current="page" class="breadcrumb-item active text-uppercase">Alta</li>
     </ol>
   </nav>
-  
-<h1>Materia Prima| <small> alta </small></h1>
+
 
 <!-- formulario -->
-<div class="card">
+<div class="card shadow rounded">
+    <div class="card-header clearfix">
+        <div class="card-title">Formulario Materia Prima</div>
+    </div>
     <div class="card-body">
         <form class="form-group" action="{{route('altaMateriaPrima')}}" method="POST">
             @csrf

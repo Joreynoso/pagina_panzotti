@@ -14,6 +14,11 @@
 <h1>Planilla Ingreso/Egreso| <small> editar </small></h1>
 
 <!-- formulario -->
+<div class="card shadow rounded">
+    <div class="card-header clearfix">
+        <div class="card-title">Formulario Planilla de Ingresos/Egresos</div>
+    </div>
+    <div class="card-body">
 <form action="{{ route('updatempplanillaingresoegresos', $mpplanillaingresoegresos->id) }}" method="POST">
     @method('PUT')
     @csrf

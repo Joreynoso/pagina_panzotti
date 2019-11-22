@@ -17,7 +17,7 @@
 <!-- formulario -->
 <div class="card shadow-lg">
   <div class="card-header clearfix">
-    <div class="card-title">Formulario RECETAS</div>
+    <div class="card-title">Formulario Receta</div>
   </div>
   <div class="card-body">
     <form class="form-group" action="{{ route('altaReceta') }}" method="POST">
@@ -34,8 +34,6 @@
         la descripcion es obligatoria.
       </div>
       @enderror
-
-
 
       <label for="nombre">Nombre</label>
       <input type="text" name="nombre" placeholder="ingrese nombre.." class="form-control mb-2">

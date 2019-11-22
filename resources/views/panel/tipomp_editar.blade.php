@@ -14,20 +14,27 @@
 <h1>Tipo Materia Prima| <small> editar </small></h1>
 
 <!-- formulario -->
-<form action="{{ route('updateTipomp', $tipomateriaprimas->id) }}" method="POST">
-    @method('PUT')
-    @csrf
-
-    @error('nombre')
-    <div class="alert alert-danger" role="alert">
-        el nombre es obligatorio.
+<div class="card shadow rounded">
+    <div class="card-header clearfix">
+        <div class="card-title">Formulario Tipo Materia Prima</div>
     </div>
-    @enderror
+    <div class="card-body">
+        <form action="{{ route('updateTipomp', $tipomateriaprimas->id) }}" method="POST">
+            @method('PUT')
+            @csrf
 
-    <input value="{{ $tipomateriaprimas->nombre }}" type="text" name="nombre" placeholder="nombre"
-        class="form-control mb-2">
+            @error('nombre')
+            <div class="alert alert-danger" role="alert">
+                el nombre es obligatorio.
+            </div>
+            @enderror
 
-    <button type="submit" class="btn btn-warning text-white">guardar cambios</button>
-</form>
+            <input value="{{ $tipomateriaprimas->nombre }}" type="text" name="nombre" placeholder="nombre"
+                class="form-control mb-2">
+
+            <button type="submit" class="btn btn-warning text-white mt-3">guardar cambios</button>
+        </form>
+    </div>
+</div>
 
 @endsection
