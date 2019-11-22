@@ -51,7 +51,7 @@
             <p class="mb-0 mt-2 font-italic">"{{$item->descripcion}}."</p>
             <footer class="blockquote-footer text-black-50 pt-4 mt-4 border-top">urgencia: {{$item->urgencia}}
                 <br>
-                <a class="red" href="">eliminar esta nota</a>
+                <a class="red mt-2" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
@@ -64,7 +64,7 @@
             <p class="mb-0 mt-2 font-italic">"{{$item->descripcion}}."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top">urgencia: {{$item->urgencia}}
                 <br>
-                <a class="red" href="">eliminar esta nota</a>
+                <a class="red mt-2" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
