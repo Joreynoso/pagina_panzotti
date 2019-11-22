@@ -66,10 +66,10 @@
 
 {{ $comentarios->links() }}
 
-<!-- descargar pdf -->
+<!-- exportar a pdf -->
 <div class="container-btn">
   <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
-    <i class="fa fa-file-alt mr-2 fa-xs"></i>descargar pdf
+    <i class="fa fa-file-alt mr-2 fa-xs"></i>exportar a pdf
   </a>
 </div>
 

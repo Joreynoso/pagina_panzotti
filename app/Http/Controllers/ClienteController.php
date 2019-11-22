@@ -89,9 +89,14 @@ class ClienteController extends Controller
         return redirect('cliente')->with('mensaje', 'Cliente eliminado con exito!');
     }
 
-    //descargar pdf
-    public function descargarPDF(){
+    //exportar a pdf
+    public function exporPdf(){
 
+        $clientes = Cliente::get();
+
+        $pdf = PDF::loadView('pdf.clientespdf', compact('clientes'));
+
+        return $pdf->download('clientes-panzotti-lista.pdf');
     
     }
     
