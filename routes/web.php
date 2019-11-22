@@ -40,6 +40,8 @@ Route::put('/cliente_editar/{id}', 'ClienteController@update')->name('updateClie
 
 Route::delete('/bajaCliente/{id}', 'ClienteController@baja')->name('bajaCliente');
 
+Route::get('/clientespdf', 'ClienteController@exporPdf')->name('clientespdf');
+
 
 // comentario
 // ────────────────────────────────────────────────────────────────────────────────
