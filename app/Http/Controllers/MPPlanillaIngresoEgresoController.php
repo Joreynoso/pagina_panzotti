@@ -55,9 +55,9 @@ class MPPlanillaIngresoEgresoController extends Controller
 
         $mpplanillaingresoegresos = MPPlanillaIngresoEgreso::findOrFail($id);
 
-        // $tipomovimientos = TipoMovimiento::all();
+        $tipomovimientos = TipoMovimiento::all();
 
-        // $empleados = Empleado::all();
+        $empleados = Empleado::all();
 
         return view('panel.mpplanillaingresoegreso_editar',compact('mpplanillaingresoegresos','tipomovimientos', 'empleados'));
         }

@@ -158,6 +158,21 @@ Route::put('/receta_editar/{id}', 'RecetaController@update')->name('updateReceta
 
 Route::delete('/bajaReceta/{id}', 'RecetaController@baja')->name('bajaReceta');
 
+
+// producto
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/producto', 'ProductoController@leer')->name('producto');
+
+Route::get('/producto_alta', 'ProductoController@acceder')->name('producto_alta');
+
+Route::post('/altaProducto', 'ProductoController@alta')->name('altaProducto');
+
+Route::get('/producto_editar/{id}', 'ProductoController@editar')->name('editarProducto');
+
+Route::put('/producto_editar/{id}', 'ProductoController@update')->name('updateProducto');
+
+Route::delete('/bajaProducto/{id}', 'ProductoController@baja')->name('bajaProducto');
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------

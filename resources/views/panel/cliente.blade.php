@@ -92,8 +92,13 @@
 
 <!-- exportar a pdf -->
 <div class="container-btn">
+<<<<<<< HEAD
+  <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
+    <i class="fa fa-file-alt mr-2 fa-xs"></i>descargar pdf
+=======
   <a href="{{route('clientespdf')}}" class="btn btn-success mb-3 float-right" href="#" role="button">
     <i class="fa fa-file-alt mr-2 fa-xs"></i>exportar a pdf
+>>>>>>> cd07d06daad179d3008b023fd1868a013f58ffc2
   </a>
 </div>
 

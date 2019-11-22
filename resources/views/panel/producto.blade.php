@@ -6,7 +6,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-bullet">
     <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
-    <li aria-current="page" class="breadcrumb-item active text-uppercase">Materia Prima</li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Producto</li>
   </ol>
 </nav>
 
@@ -23,7 +23,7 @@
 
 <!-- nuevo -->
 <div class="container-btn">
-  <a href="{{route('materiaprima_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+  <a href="{{route('producto_alta')}}" class="btn btn-info mb-2" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
 </div>
@@ -39,41 +39,42 @@
 </div>
 
 <!-- existen elementos? -->
-@if ($materiaprimas->count() == 0)
+@if ($productos->count() == 0)
 <div class="alert alert-info">
-  no existe ninguna materia prima, agrega uno.
+  no existe ningun producto, agrega uno.
 </div>
 
 @else
 <!-- tabla -->
 <div class="card mb-3 shadow">
         <div class="card-header fondo-tabla text-white">
-          <strong>Materia Prima | administrar</strong>
+          <strong>Producto | administrar</strong>
         </div>
 <div class="card-body">
-    <p class="card-text">Cantidad de Materia Prima: {{$materiaprimas->total()}}</p>
+    <p class="card-text">Cantidad de Productos: {{$productos->total()}}</p>
     <div class="table-responsive">
     <table class="table table-hover">
         <thead>
         <tr>
             <th scope="col">#id</th>
             <th scope="col">nombre</th>
-            <th scope="col">proveedor</th>
-            <th scope="col">tipo materia prima</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">receta</th>
             <th scope="col">acciones</th>
         </tr>
         </thead>
         <tbody>
-        @foreach ($materiaprimas as $item)
+        @foreach ($productos as $item)
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->nombre}}</td>
-            <td>{{$item->proveedor->nombre}}</td>
-            <td>{{$item->tipomp->nombre}}</td>
-            <td class="td-btn">
-            <a href="{{route('editarMateriaPrima', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+            <td>{{$item->descripcion}}</td>
+            <td>{{$item->receta->nombre}}</td>
 
-            <form action="{{route('bajaMateriaPrima',$item)}}" class="d-inline"method="POST">
+            <td class="td-btn">
+            <a href="{{route('editarProducto', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+
+            <form action="{{route('bajaProducto',$item)}}" class="d-inline"method="POST">
                 @method('DELETE')
                 @csrf
                 <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
@@ -84,14 +85,14 @@
         </tbody>
     </table>
 
-    {{ $materiaprimas->links() }}
+    {{ $productos->links() }}
     </div>
 </div>
 
-<!-- exportar a pdf -->
+<!-- descargar pdf -->
 <div class="container-btn">
   <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
-    <i class="fa fa-file-alt mr-2 fa-xs"></i>exportar a pdf
+    <i class="fa fa-file-alt mr-2 fa-xs"></i>descargar pdf
   </a>
 </div>
 
