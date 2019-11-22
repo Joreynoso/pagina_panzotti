@@ -38,6 +38,16 @@
 
 .red {
     color: #F44336;
+    float: right;
+}
+
+.red:hover {
+    text-decoration: none;
+    color: rgb(221, 120, 120);
+}
+
+.corazon {
+    color: #F44336;
     ;
 }
 
@@ -130,7 +140,6 @@ span:hover {
 
 th {
     color: rgb(80, 97, 126);
-    ;
 }
 
 .table thead th {
@@ -181,9 +190,149 @@ th {
     opacity: 0.9;
 }
 
-.p-1 {
-    padding: 0.25rem !important;
-    padding-right: 0.25rem !important;
-    padding-bottom: 0.25rem !important;
-    padding-left: 0.25rem !important;
+/*
+* ==========================================
+* breadcum
+* ==========================================
+*/
+
+/* Caret Breadcrumb */
+
+.breadcrumb {
+    font-size: 13px;
+}
+
+.breadcrumb-caret .breadcrumb-item+.breadcrumb-item::before {
+    content: '\f0da';
+    font-family: 'FontAwesome';
+}
+
+/* Bullet */
+
+.breadcrumb-bullet .breadcrumb-item+.breadcrumb-item::before {
+    content: '•';
+}
+
+.breadcrumb-arrow {
+    height: 40px;
+    line-height: 40px;
+}
+
+.breadcrumb-arrow .breadcrumb-item:first-child a {
+    border-radius: 4px 0 0 4px;
+}
+
+.breadcrumb-arrow .breadcrumb-item, .breadcrumb-arrow .breadcrumb-item a, .breadcrumb-arrow .breadcrumb-item span {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.breadcrumb-arrow .breadcrumb-item:not(:first-child) {
+    margin-left: -1px;
+}
+
+.breadcrumb-arrow .breadcrumb-item+.breadcrumb-item:before {
+    padding: 0;
+    content: "";
+}
+
+.breadcrumb-arrow .breadcrumb-item a, .breadcrumb-arrow .breadcrumb-item.active {
+    height: 40px;
+    padding: 0 10px 0 25px;
+    line-height: 40px;
+}
+
+.breadcrumb-arrow .breadcrumb-item a {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    background-color: #3bafda;
+    border: 1px solid #3bafda;
+}
+
+.breadcrumb-arrow .breadcrumb-item a:after, .breadcrumb-arrow .breadcrumb-item a:before {
+    position: absolute;
+    top: -1px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+}
+
+.breadcrumb-arrow .breadcrumb-item a:before {
+    right: -10px;
+    z-index: 3;
+    border-left-color: #3bafda;
+    border-left-style: solid;
+    border-left-width: 11px;
+}
+
+.breadcrumb-arrow .breadcrumb-item a:after {
+    right: -11px;
+    z-index: 2;
+    border-left: 11px solid #2494be;
+}
+
+.breadcrumb-arrow .breadcrumb-item a:focus, .breadcrumb-arrow li a:hover {
+    background-color: #4fc1e9;
+    border: 1px solid #4fc1e9;
+}
+
+.breadcrumb-arrow .breadcrumb-item a:focus:before, .breadcrumb-arrow li a:hover:before {
+    border-left-color: #4fc1e9;
+}
+
+.breadcrumb-arrow li.active:after, .breadcrumb-arrow li.active:before {
+    border-left-color: #2494be;
+}
+
+/*
+* ==========================================
+* buscador
+* ==========================================
+*/
+
+.search-box {
+    position: relative;
+    width: 200px;
+    float: left;
+}
+
+.search-box input {
+    height: 34px;
+    border-radius: 20px;
+    padding-left: 35px;
+    border-color: #ddd;
+    box-shadow: none;
+}
+
+.search-box input:focus {
+    border-color: #3FBAE4;
+}
+
+.search-box i {
+    color: rgb(140, 174, 207);
+    position: absolute;
+    font-size: 15px;
+    top: 10px;
+    left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    .search-box {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .container-btn a {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .jumbotron a {
+        font-size: 12px;
+    }
 }

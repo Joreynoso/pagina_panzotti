@@ -3,12 +3,12 @@
 @section('section_admin')
 
 <!-- ruta  -->
-<ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="index.html">Panel</a>
-  </li>
-  <li class="breadcrumb-item active">Clientes</li>
-</ol>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-bullet">
+    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+  </ol>
+</nav>
 
 <!-- mensaje -->
 @if (Session::has('mensaje'))
@@ -22,20 +22,21 @@
 @endif
 
 <!-- nuevo -->
-<a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">
-  <i class="fa fa-plus mr-2 fa-xs"></i>nuevo cliente
-</a>
-
-<!-- buscador -->
-<div class="input-group mb-2 border rounded-pill p-1">
-  <div class="input-group-prepend border-0">
-    <button id="button-addon4" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
-  </div>
-  <input type="search" placeholder="Que estas buscando?" aria-describedby="button-addon4"
-    class="form-control bg-none border-0">
+<div class="container-btn">
+  <a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo cliente
+  </a>
 </div>
-</form>
 
+<!-- buscador y nuevo -->
+<div class="row">
+  <div class="col-xl-12 col-sm-12 mb-3">
+    <div class="search-box">
+      <i class="fa fa-search"></i>
+      <input type="text" class="form-control" placeholder="Buscar..">
+    </div>
+  </div>
+</div>
 
 <!-- existen clientes? -->
 @if ($clientes->count() == 0)
@@ -46,7 +47,7 @@
 
 @else
 <!-- tabla -->
-<div class="card bg-white rounded shadow">
+<div class="card shadow rounded ">
   <div class="card-body">
     <h5 class="card-title gris">Clientes | administrar</h5>
     <p class="cantidad">Cantidad de Clientes: {{$clientes->total()}}</p>

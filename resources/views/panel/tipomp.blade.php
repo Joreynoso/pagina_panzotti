@@ -3,12 +3,12 @@
 @section('section_admin')
 
 <!-- ruta  -->
-<ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="index.html">Panel</a>
-  </li>
-  <li class="breadcrumb-item active">Tipo Materia Prima</li>
-</ol>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-bullet">
+    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+  </ol>
+</nav>
 
 <h1>Tipo Materia Prima| <small> administar </small></h1>
 
@@ -64,7 +64,7 @@
         <td class="td-btn">
           <a href="{{route('editarTipomp', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-          <form action="{{route('bajaTipomp',$item)}}" class="d-inline"method="POST">
+          <form action="{{route('bajaTipomp',$item)}}" class="d-inline" method="POST">
             @method('DELETE')
             @csrf
             <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>

@@ -136,7 +136,7 @@
             <footer class="sticky-footer">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>hecho con <i class="fas fa-heart red"></i>
+                        <span>hecho con <i class="fas fa-heart corazon"></i>
                         y mucho <i class="fas fa-coffee"></i> para Pastas Panzotti. (2019)</span>
                     </div>
                 </div>

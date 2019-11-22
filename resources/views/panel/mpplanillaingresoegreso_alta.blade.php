@@ -3,13 +3,12 @@
 @section('section_admin')
 
 <!-- ruta  -->
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a href="index.html">Panel</a>
-    </li>
-    <li class="breadcrumb-item active"><a href="">Planilla Ingreso/Egreso</a></li>
-    <li class="breadcrumb-item active">Alta</li>
-</ol>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-bullet">
+        <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+        <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+    </ol>
+</nav>
 
 <h1>Planilla Ingreso/Egreso| <small> alta </small></h1>
 

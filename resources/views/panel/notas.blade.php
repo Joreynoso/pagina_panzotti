@@ -3,12 +3,12 @@
 @section('section_admin')
 
 <!-- ruta  -->
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a href="index.html">Panel</a>
-    </li>
-    <li class="breadcrumb-item active">Mis Notas</li>
-</ol>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-bullet">
+        <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+        <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+    </ol>
+</nav>
 
 <!-- nuevo -->
 <a href="" class="btn btn-info mb-4" href="#" role="button">
@@ -25,7 +25,7 @@
             <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
                 <cite title="Source Title">Source Title</cite>
                 <br>
-                <a href="">eliminar esta nota</a>
+                <a class="red" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
@@ -36,6 +36,8 @@
             <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
             <footer class="blockquote-footer text-black-50 pt-4 mt-4 border-top">Someone famous in
                 <cite title="Source Title">Source Title</cite>
+                <br>
+                <a class="red" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
@@ -46,6 +48,8 @@
             <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
                 <cite title="Source Title">Source Title</cite>
+                <br>
+                <a class="red" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>
@@ -56,6 +60,8 @@
             <p class="mb-0 mt-2 font-italic">"comprar 2 bolsas de harina de 50kg para el martes."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top">Someone famous in
                 <cite title="Source Title">Source Title</cite>
+                <br>
+                <a class="red" href="">eliminar esta nota</a>
             </footer>
         </blockquote>
     </div>

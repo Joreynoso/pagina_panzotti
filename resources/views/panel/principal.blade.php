@@ -3,11 +3,12 @@
 @section('section_admin')
 
 <!-- ruta -->
-<ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="index.html">Inicio</a>
-  </li>
-</ol>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-bullet">
+    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+  </ol>
+</nav>
 
 <!-- mensaje de bienvenida -->
 <div class="jumbotron jumbotron-fluid panzotti-card overflow">

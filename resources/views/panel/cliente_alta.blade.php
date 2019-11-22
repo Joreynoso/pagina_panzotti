@@ -3,18 +3,15 @@
 @section('section_admin')
 
 <!-- ruta  -->
-<ol class="breadcrumb">
-  <li class="breadcrumb-item">
-    <a href="index.html">Panel</a>
-  </li>
-  <li class="breadcrumb-item active"><a href="">Clientes</a></li>
-  <li class="breadcrumb-item active">Alta</li>
-</ol>
-
-<h3 class="breadcrumb">Clientes | Alta</h3>
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb breadcrumb-bullet">
+    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+  </ol>
+</nav>
 
 <!-- formulario -->
-<div class="card shadow-lg">
+<div class="card shadow rounded">
   <div class="card-header clearfix">
     <div class="card-title">Formulario Clientes</div>
   </div>

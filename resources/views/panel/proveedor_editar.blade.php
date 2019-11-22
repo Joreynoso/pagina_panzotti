@@ -3,13 +3,12 @@
 @section('section_admin')
 
 <!-- ruta  -->
-<ol class="breadcrumb">
-    <li class="breadcrumb-item">
-        <a href="index.html">Panel</a>
-    </li>
-    <li class="breadcrumb-item active"><a href="">Proveedor</a></li>
-    <li class="breadcrumb-item active">editar</li>
-</ol>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb breadcrumb-bullet">
+        <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
+        <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+    </ol>
+</nav>
 
 <h1>Proveedor| <small> editar </small></h1>
 
@@ -49,11 +48,12 @@
     @enderror
 
     <input value="{{ $proveedor->nombre }}" type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
-    <input value="{{ $proveedor->direccion }}" type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
+    <input value="{{ $proveedor->direccion }}" type="text" name="direccion" placeholder="direccion"
+        class="form-control mb-2">
     <input value="{{ $proveedor->tel }}" type="text" name="tel" placeholder="tel" class="form-control mb-2">
     <input value="{{ $proveedor->cuit }}" type="text" name="cuit" placeholder="cuit" class="form-control mb-2">
     <input value="{{ $proveedor->mail }}" type="text" name="mail" placeholder="mail" class="form-control mb-2">
-    
+
     <button type="submit" class="btn btn-warning text-white">guardar cambios</button>
 </form>
 
