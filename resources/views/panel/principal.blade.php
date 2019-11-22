@@ -11,7 +11,7 @@
 </nav>
 
 <!-- mensaje de bienvenida -->
-<div class="jumbotron jumbotron-fluid panzotti-card overflow">
+<div class="jumbotron jumbotron-fluid bg-white overflow card">
   <div class="container">
     <h1 class="display-3 text-responsive">Administracion Panzotti!</h1>
     <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>

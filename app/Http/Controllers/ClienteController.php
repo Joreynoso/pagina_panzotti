@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use App\Cliente;
+use PDF;
 
 class ClienteController extends Controller
 {
@@ -86,6 +87,12 @@ class ClienteController extends Controller
         $clienteEliminar->delete();
 
         return redirect('cliente')->with('mensaje', 'Cliente eliminado con exito!');
+    }
+
+    //descargar pdf
+    public function descargarPDF(){
+
+    
     }
     
 }
