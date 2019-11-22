@@ -125,6 +125,11 @@
                     <i class="fas fa-receipt"></i>
                     <span>Recetas</span></a>
             </li>
+            <li class="nav-item">
+                    <a href="{{route('producto')}}" class="nav-link">
+                        <i class="fas fa-seedling"></i>
+                        <span>Producto</span></a>
+            </li>
 
         </ul>
 

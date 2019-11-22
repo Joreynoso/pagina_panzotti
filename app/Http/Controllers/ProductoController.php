@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Producto;
+use App\Receta;
 use Illuminate\Http\Request;
 
 class ProductoController extends Controller
@@ -18,9 +19,9 @@ class ProductoController extends Controller
     //acceder alta
     public function acceder()
     {
-        $recetas = Receta::all();
+      $recetas = Receta::all();
 
-        return view('panel.materiaprima_alta', compact('tipomateriaprimas', 'proveedores'));
+        return view('panel.producto_alta', compact('recetas'));
     }
 
     //alta
@@ -30,30 +31,30 @@ class ProductoController extends Controller
 
         //validacion
         $request->validate([
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'descripcion' => 'required'
         ]);
 
-        $nuevaMateriaPrima = new MateriaPrima;
+        $nuevoProducto = new Producto;
 
-        $nuevaMateriaPrima->nombre = $request->nombre;
-        $nuevaMateriaPrima->tipomateriaprima_id = $request->input('tipomateriaprima_id');
-        $nuevaMateriaPrima->proveedor_id = $request->input('proveedor_id');
+        $nuevoProducto->nombre = $request->nombre;
+        $nuevoProducto->descripcion = $request->descripcion;
+        $nuevoProducto->receta_id = $request->input('receta_id');
 
-        $nuevaMateriaPrima->save();
 
-        return redirect('materiaprima')->with('mensaje', 'Materia Prima agregado con exito!');
+        $nuevoProducto->save();
+
+        return redirect('producto')->with('mensaje', 'Producto agregado con exito!');
     }
 
      //acceder editar
      public function editar($id){
 
-        $materiaprima = MateriaPrima::findOrFail($id);
+        $producto = Producto::findOrFail($id);
 
-        $tipomateriaprimas = TipoMateriaPrima::all();
+        $recetas = Receta::all();
 
-        $proveedores = Proveedor::all();
-
-        return view('panel.materiaprima_editar',compact('materiaprima','tipomateriaprimas', 'proveedores'));
+        return view('panel.producto_editar',compact('producto','recetas'));
     }
 
        //update
@@ -61,27 +62,28 @@ class ProductoController extends Controller
 
         //validacion
         $request->validate([
-            'nombre' => 'required'
+            'nombre' => 'required',
+            'descripcion' => 'required'
         ]);
 
-        $materiaprimaUpdate = new MateriaPrima;
+        $ProductoUpdate = new Producto;
 
-        $materiaprimaUpdate->nombre = $request->nombre;
-        $materiaprimaUpdate->tipomateriaprima_id = $request->input('tipomateriaprima_id');
-        $materiaprimaUpdate->proveedor_id = $request->input('proveedor_id');
+        $ProductoUpdate->nombre = $request->nombre;
+        $ProductoUpdate->descripcion = $request->descripcion;
+        $ProductoUpdate->receta_id = $request->input('receta_id');
 
-        $materiaprimaUpdate->update();
+        $ProductoUpdate->save();
 
-        return redirect('materiaprima')->with('mensaje', 'Materia Prima editada con exito!');
+        return redirect('producto')->with('mensaje', 'Producto editado con exito!');
 
     }
 
       //baja
       public function baja($id){
 
-        $materiaprimaEliminar = MateriaPrima::findOrFail($id);
-        $materiaprimaEliminar->delete();
+        $productoEliminar = Producto::findOrFail($id);
+        $productoEliminar->delete();
 
-        return redirect('materiaprima')->with('mensaje', 'Materia Prima eliminada con exito!');
+        return redirect('producto')->with('mensaje', 'Producto eliminado con exito!');
     }
 }

@@ -74,7 +74,7 @@ class MateriaPrimaController extends Controller
         $materiaprimaUpdate->tipomateriaprima_id = $request->input('tipomateriaprima_id');
         $materiaprimaUpdate->proveedor_id = $request->input('proveedor_id');
 
-        $materiaprimaUpdate->update();
+        $materiaprimaUpdate->save();
 
         return redirect('materiaprima')->with('mensaje', 'Materia Prima editada con exito!');
 

@@ -79,7 +79,7 @@ class MPPlanillaIngresoEgresoController extends Controller
         $MPPlanillaIngresoEgresoUpdate->tipomovimiento_id = $request->input('tipomovimiento_id');
         $MPPlanillaIngresoEgresoUpdate->empleado_id = $request->input('empleado_id');
 
-        $MPPlanillaIngresoEgresoUpdate->update();
+        $MPPlanillaIngresoEgresoUpdate->save();
 
         return redirect('mpplanillaingresoegreso')->with('mensaje', 'Planilla Ingreso/Egreso editada con exito!');
 
