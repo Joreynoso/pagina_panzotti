@@ -10,15 +10,22 @@
   </ol>
 </nav>
 
-<h1>comentarios| <small> administar </small></h1>
+<!-- nuevo -->
+<div class="container-btn">
+  <a href="" class="btn btn-info mb-2" href="#" role="button">
+    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
+  </a>
+</div>
 
 <!-- buscador -->
-<form class="search-form mb-2">
-    <div class="input-group">
-        <div class="input-group-prepend"><span class="input-group-text"><i class="fa fa-search"></i></span></div><input type="text" placeholder="buscar.." class="form-control" />
-        <div class="input-group-append"><button class="btn-buscar btn btn-outline-secondary" type="button">Buscar</button></div>
+<div class="row">
+  <div class="col-xl-12 col-sm-12 mb-3">
+    <div class="search-box">
+      <i class="fa fa-search"></i>
+      <input type="text" class="form-control" placeholder="Buscar..">
     </div>
-</form>
+  </div>
+</div>
 
 <!-- existen comentarios? -->
 @if ($comentarios->count() == 0)

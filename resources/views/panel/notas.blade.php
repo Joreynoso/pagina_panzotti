@@ -12,7 +12,7 @@
 
 <!-- nuevo -->
 <a href="" class="btn btn-info mb-4" href="#" role="button">
-    <i class="fa fa-plus mr-2 fa-xs"></i>nueva nota
+    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
 </a>
 
 

@@ -22,20 +22,21 @@
 @endif
 
 <!-- nuevo -->
-<a href="{{route('receta_alta')}}" class="btn btn-info mb-2" href="#" role="button">
-  <i class="fa fa-plus mr-2 fa-xs"></i>nueva receta
-</a>
+<div class="container-btn">
+  <a href="{{route('receta_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
+  </a>
+</div>
 
 <!-- buscador -->
-<div class="input-group mb-2 border rounded-pill p-1">
-  <div class="input-group-prepend border-0">
-    <button id="button-addon4" type="button" class="btn btn-link text-info"><i class="fa fa-search"></i></button>
+<div class="row">
+  <div class="col-xl-12 col-sm-12 mb-3">
+    <div class="search-box">
+      <i class="fa fa-search"></i>
+      <input type="text" class="form-control" placeholder="Buscar..">
+    </div>
   </div>
-  <input type="search" placeholder="Que estas buscando?" aria-describedby="button-addon4"
-    class="form-control bg-none border-0">
 </div>
-</form>
-
 
 <!-- existen receta? -->
 @if ($recetas->count() == 0)
