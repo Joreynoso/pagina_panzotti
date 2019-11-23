@@ -47,43 +47,51 @@
 
 @else
 <!-- tabla -->
-<p class="cantidad">Cantidad de PLanilla Ingres/Egreso: {{$mpplanillaingresoegresos->total()}}</p>
-<div class="table-responsive">
-  <table class="table table-bordered table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#id</th>
-        <th scope="col">fecha</th>
-        <th scope="col">observacion</th>
-        <th scope="col">tipo movimiento</th>
-        <th scope="col">empleado</th>
-        <th scope="col">acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($mpplanillaingresoegresos as $item)
-      <tr>
-        <td>{{$item->id}}</td>
-        <td>{{$item->fecha}}</td>
-        <td>{{$item->observacion}}</td>
-        <td>{{$item->tipomovimiento->nombre}}</td>
-        <td>{{$item->empleado->nombre}}</td>
-        <td class="td-btn">
-          <a href="{{route('editarmpplanillaingresoegresos', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+<div class="card mb-3 shadow">
+  <div class="card-header fondo-tabla text-white">
+    <h6 class="text-uppercase mb-0">planilla ingreso, egreso | administrar</h6>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Cantidad de ingreso, egreso: {{$mpplanillaingresoegresos->total()}}</p>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <th scope="col">#</th>
+          <th scope="col">Fecha</th>
+          <th scope="col">Observacion</th>
+          <th scope="col">Tipo movimiento</th>
+          <th scope="col">Empleado</th>
+          <th scope="col">Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($mpplanillaingresoegresos as $item)
+          <tr>
+            <td>{{$item->id}}</td>
+            <td>{{$item->fecha}}</td>
+            <td>{{$item->observacion}}</td>
+            <td>{{$item->tipomovimiento->nombre}}</td>
+            <td>{{$item->empleado->nombre}}</td>
+            <td class="td-btn">
+              <a href="{{route('editarmpplanillaingresoegresos', $item)}}" title="editar"><i
+                  class="fa fa-pen yellow"></i></a>
 
-          <form action="{{route('bajampplanillaingresoegresos',$item)}}" class="d-inline"method="POST">
-            @method('DELETE')
-            @csrf
-            <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
-          </form>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+              <form action="{{route('bajampplanillaingresoegresos',$item)}}" class="d-inline" method="POST">
+                @method('DELETE')
+                @csrf
+                <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
+              </form>
+            </td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
 
-  {{ $mpplanillaingresoegresos->links() }}
+      {{ $mpplanillaingresoegresos->links() }}
+    </div>
+  </div>
 </div>
+
 <!-- exportar a pdf -->
 <div class="container-btn">
   <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">

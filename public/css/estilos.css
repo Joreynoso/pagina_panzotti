@@ -126,16 +126,8 @@ span:hover {
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 25px 0 rgba(51, 50, 50, 0.19);
 }
 
-.card {
-    border-radius: 5px;
-}
-
 th {
     color: rgb(80, 97, 126);
-}
-
-.table thead th {
-    padding: 10px 2px;
 }
 
 .gris {
@@ -334,3 +326,35 @@ th {
 .table{
     font-size: 14px;
 }
+
+table td:last-child {
+	width: 150px;
+}
+
+.card-header {
+    padding: 0.75rem 2rem;
+    background-color: white;
+    border-bottom: none;
+    -webkit-box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0.12rem 0.8rem rgba(0,0,0,0.1);
+}
+
+:first-child.card-header {
+    border-radius: calc(1rem - 1px) calc(1rem - 1px) 0 0;
+}
+
+.card {
+    background-color: #fff;
+    border: none;
+    -webkit-box-shadow: 0 0.125rem 0.8rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0.12rem 0.8rem rgba(0,0,0,0.1);
+    border-radius: 0.75rem;
+}
+
+.card-body{
+    padding: 20px;
+}
+
+
+
+

@@ -46,44 +46,51 @@
 
 @else
 <!-- tabla -->
-<p class="cantidad">Cantidad de Proveedores: {{$proveedores->total()}}</p>
-<div class="table-responsive">
-  <table class="table table-bordered table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#id</th>
-        <th scope="col">nombre</th>
-        <th scope="col">direccion</th>
-        <th scope="col">tel</th>
-        <th scope="col">cuit</th>
-        <th scope="col">mail</th>
-        <th scope="col">acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($proveedores as $item)
-      <tr>
-        <td>{{$item->id}}</td>
-        <td>{{$item->nombre}}</td>
-        <td>{{$item->direccion}}</td>
-        <td>{{$item->tel}}</td>
-        <td>{{$item->cuit}}</td>
-        <td>{{$item->mail}}</td>
-        <td class="td-btn">
-          <a href="{{route('editarProveedor', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+<div class="card mb-3 shadow">
+  <div class="card-header fondo-tabla text-white">
+    <h6 class="text-uppercase mb-0">proveedores | administrar</h6>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Cantidad de Proveedores: {{$proveedores->total()}}</p>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">nombre</th>
+            <th scope="col">direccion</th>
+            <th scope="col">tel</th>
+            <th scope="col">cuit</th>
+            <th scope="col">mail</th>
+            <th scope="col">acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($proveedores as $item)
+          <tr>
+            <td>{{$item->id}}</td>
+            <td>{{$item->nombre}}</td>
+            <td>{{$item->direccion}}</td>
+            <td>{{$item->tel}}</td>
+            <td>{{$item->cuit}}</td>
+            <td>{{$item->mail}}</td>
+            <td class="td-btn">
+              <a href="{{route('editarProveedor', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-          <form action="{{route('bajaProveedor',$item)}}" class="d-inline" method="POST">
-            @method('DELETE')
-            @csrf
-            <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
-          </form>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+              <form action="{{route('bajaProveedor',$item)}}" class="d-inline" method="POST">
+                @method('DELETE')
+                @csrf
+                <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
+              </form>
+            </td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
 
-  {{ $proveedores->links() }}
+      {{ $proveedores->links() }}
+    </div>
+  </div>
 </div>
 
 <!-- exportar a pdf -->

@@ -47,15 +47,17 @@
 
 @else
 <!-- tabla -->
-<div class="card bg-white rounded shadow">
+<div class="card mb-3 shadow">
+  <div class="card-header fondo-tabla text-white">
+    <h6 class="text-uppercase mb-0">recetas | administrar</h6>
+  </div>
   <div class="card-body">
-    <h5 class="card-title gris">Recetas | administrar</h5>
-    <p class="cantidad">Cantidad de Recetas: {{$recetas->total()}}</p>
-    <div class="table-responsive table-striped">
+    <p class="card-text">Cantidad de Recetas: {{$recetas->total()}}</p>
+    <div class="table-responsive">
       <table class="table table-hover">
         <thead>
           <tr>
-            <th scope="col">#id</th>
+            <th scope="col">#</th>
             <th scope="col">Nombre</th>
             <th scope="col">Descripcion</th>
             <th scope="col">Acciones</th>

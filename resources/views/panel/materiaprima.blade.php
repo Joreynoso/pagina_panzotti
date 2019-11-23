@@ -45,47 +45,47 @@
 </div>
 
 @else
-<!-- tabla -->
 <div class="card mb-3 shadow">
-        <div class="card-header fondo-tabla text-white">
-          <strong>Materia Prima | administrar</strong>
-        </div>
-<div class="card-body">
+  <div class="card-header fondo-tabla text-white">
+    <h6 class="text-uppercase mb-0">materia prima | administrar</h6>
+  </div>
+  <div class="card-body">
     <p class="card-text">Cantidad de Materia Prima: {{$materiaprimas->total()}}</p>
     <div class="table-responsive">
-    <table class="table table-hover">
+      <table class="table table-hover">
         <thead>
-        <tr>
-            <th scope="col">#id</th>
+          <tr>
+            <th scope="col">#</th>
             <th scope="col">nombre</th>
             <th scope="col">proveedor</th>
             <th scope="col">tipo materia prima</th>
             <th scope="col">acciones</th>
-        </tr>
+          </tr>
         </thead>
         <tbody>
-        @foreach ($materiaprimas as $item)
-        <tr>
+          @foreach ($materiaprimas as $item)
+          <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->nombre}}</td>
             <td>{{$item->proveedor->nombre}}</td>
             <td>{{$item->tipomp->nombre}}</td>
             <td class="td-btn">
-            <a href="{{route('editarMateriaPrima', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+              <a href="{{route('editarMateriaPrima', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-            <form action="{{route('bajaMateriaPrima',$item)}}" class="d-inline"method="POST">
+              <form action="{{route('bajaMateriaPrima',$item)}}" class="d-inline" method="POST">
                 @method('DELETE')
                 @csrf
                 <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
-            </form>
+              </form>
             </td>
-        </tr>
-        @endforeach
+          </tr>
+          @endforeach
         </tbody>
-    </table>
+      </table>
 
-    {{ $materiaprimas->links() }}
+      {{ $materiaprimas->links() }}
     </div>
+  </div>
 </div>
 
 <!-- exportar a pdf -->

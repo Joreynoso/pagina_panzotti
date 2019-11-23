@@ -24,7 +24,7 @@
 <!-- nuevo -->
 <div class="container-btn">
   <a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">
-    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo cliente
+    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
 </div>
 
@@ -49,7 +49,7 @@
 <!-- tabla -->
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
-    <strong>Clientes | administrar</strong>
+    <h6 class="text-uppercase mb-0">clientes | administrar</h6>
   </div>
   <div class="card-body">
     <p class="card-text">Cantidad de Clientes: {{$clientes->total()}}</p>

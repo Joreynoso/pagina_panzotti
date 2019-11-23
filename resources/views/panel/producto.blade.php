@@ -47,46 +47,47 @@
 @else
 <!-- tabla -->
 <div class="card mb-3 shadow">
-        <div class="card-header fondo-tabla text-white">
-          <strong>Producto | administrar</strong>
-        </div>
-<div class="card-body">
+  <div class="card-header fondo-tabla text-white">
+    <h6 class="text-uppercase mb-0">productos | administrar</h6>
+  </div>
+  <div class="card-body">
     <p class="card-text">Cantidad de Productos: {{$productos->total()}}</p>
     <div class="table-responsive">
-    <table class="table table-hover">
+      <table class="table table-hover">
         <thead>
-        <tr>
-            <th scope="col">#id</th>
+          <tr>
+            <th scope="col">#</th>
             <th scope="col">nombre</th>
             <th scope="col">descripcion</th>
             <th scope="col">receta</th>
             <th scope="col">acciones</th>
-        </tr>
+          </tr>
         </thead>
         <tbody>
-        @foreach ($productos as $item)
-        <tr>
+          @foreach ($productos as $item)
+          <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->nombre}}</td>
             <td>{{$item->descripcion}}</td>
             <td>{{$item->receta->nombre}}</td>
 
             <td class="td-btn">
-            <a href="{{route('editarProducto', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+              <a href="{{route('editarProducto', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
-            <form action="{{route('bajaProducto',$item)}}" class="d-inline"method="POST">
+              <form action="{{route('bajaProducto',$item)}}" class="d-inline" method="POST">
                 @method('DELETE')
                 @csrf
                 <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
-            </form>
+              </form>
             </td>
-        </tr>
-        @endforeach
+          </tr>
+          @endforeach
         </tbody>
-    </table>
+      </table>
 
-    {{ $productos->links() }}
+      {{ $productos->links() }}
     </div>
+  </div>
 </div>
 
 <!-- descargar pdf -->

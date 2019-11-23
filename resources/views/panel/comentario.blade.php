@@ -35,33 +35,42 @@
 
 @else
 <!-- tabla -->
-<div class="table-responsive">
-<table class="table table-bordered table-hover">
-    <thead class="thead-dark">
-      <tr>
-        <th scope="col">#id</th>
-        <th scope="col">descripcion</th>
-        <th scope="col">fecha</th>
-        <th scope="col">cliente</th>
-        <th scope="col">acciones</th>
-      </tr>
-    </thead>
-    <tbody>
-      @foreach ($comentarios as $item)
-      <tr>
-        <td>{{$item->id}}</td>
-        <td>{{$item->descripcion}}</td>
-        <td>{{$item->fecha}}</td>
-        <td>{{$item->cliente->nombre ?? 'error'}}</td>
-        <td class="td-btn">
-            <button title="detalle" class="btn btn-info" type="button"><i class="fa fa-eye"></i></button>
-            <button title="editar"class="btn btn-warning" type="button"><i class="fa fa-edit icon-white "></i></button>
-            <button title="eliminar"class="btn btn-danger" type="button"><i class="fa fa-trash"></i></button>
-        </td>
-      </tr>
-      @endforeach
-    </tbody>
-  </table>
+<div class="card mb-3 shadow">
+  <div class="card-header fondo-tabla text-white">
+    <h6 class="text-uppercase mb-0">comentarios | administrar</h6>
+  </div>
+  <div class="card-body">
+    <p class="card-text">Cantidad de Comentarios: {{$comentarios->total()}}</p>
+    <div class="table-responsive">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">descripcion</th>
+            <th scope="col">fecha</th>
+            <th scope="col">cliente</th>
+            <th scope="col">acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          @foreach ($comentarios as $item)
+          <tr>
+            <td>{{$item->id}}</td>
+            <td>{{$item->descripcion}}</td>
+            <td>{{$item->fecha}}</td>
+            <td>{{$item->cliente->nombre ?? 'error'}}</td>
+            <td class="td-btn">
+              <button title="detalle" class="btn btn-info" type="button"><i class="fa fa-eye"></i></button>
+              <button title="editar" class="btn btn-warning" type="button"><i
+                  class="fa fa-edit icon-white "></i></button>
+              <button title="eliminar" class="btn btn-danger" type="button"><i class="fa fa-trash"></i></button>
+            </td>
+          </tr>
+          @endforeach
+        </tbody>
+      </table>
+    </div>
+  </div>
 </div>
 
 {{ $comentarios->links() }}
@@ -74,5 +83,5 @@
 </div>
 
 @endif
-    
+
 @endsection

@@ -10,22 +10,9 @@
   </ol>
 </nav>
 
-<!-- mensaje de bienvenida -->
-<div class="jumbotron jumbotron-fluid bg-white overflow card">
-  <div class="container">
-    <h1 class="display-3 text-responsive">Administracion Panzotti!</h1>
-    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
-    <hr class="my-4">
-    <p>si tenes alguna duda sobre el funcionamiento de este panel de administracion no dudes en escribirnos.</p>
-    <a href="">joreynoso@institutosanmartin.edu.ar</a>
-    <br>
-    <a href="">jalbornos@institutosanmartin.edu.ar</a>
-  </div>
-</div>
-
 <!-- tarjetas -->
 <div class="row">
-  <div class="col-xl-3 col-sm-6 mb-3">
+  <div class="col-xl-3 col-sm-6 mb-3 ">
     <div class="card text-white bg-primary o-hidden h-100">
       <div class="card-body">
         <div class="card-body-icon">
@@ -90,5 +77,21 @@
     </div>
   </div>
 </div>
+
+<!-- mensaje de bienvenida -->
+<div class="jumbotron jumbotron-fluid bg-white overflow card">
+  <div class="container">
+    <h1 class="display-3 text-responsive">Administracion Panzotti!</h1>
+    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
+    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
+    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
+    <hr class="my-4">
+    <p>si tenes alguna duda sobre el funcionamiento de este panel de administracion no dudes en escribirnos.</p>
+    <a href="">joreynoso@institutosanmartin.edu.ar</a>
+    <br>
+    <a href="">jalbornos@institutosanmartin.edu.ar</a>
+  </div>
+</div>
+
 
 @endsection

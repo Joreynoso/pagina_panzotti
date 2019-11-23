@@ -74,5 +74,7 @@
     @endforeach
 </div>
 
+{{ $notas->links() }}
+
 @endif
 @endsection
