@@ -33,7 +33,7 @@ class FotoController extends Controller
             'ruta' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
-        $imageName = time().$request->ruta->extension();
+        $imageName = time().'.'.$request->ruta->extension();
 
         $request->ruta->move(public_path('/img/'), $imageName);
 
