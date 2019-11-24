@@ -28,11 +28,19 @@
 <div style="margin: 5px" class="row">
     @foreach ($fotos as $item)
 
-        <div class="card text-center" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+        <div class="card text-center" style="width: 18rem; margin: 5px">
+            <img class="card-img-top" src="{{ asset('img/'.$item->ruta) }}">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <a href="#" class="btn btn-info mb-4">Go somewhere</a>
+                <h5 class="card-title">{{$item->producto->nombre}}</h5>
+
+                <a href="{{route('editarFoto', $item)}}" title="editar" class="btn btn-info mb-4">Editar</i></a>
+
+                <form action="{{route('bajaFoto',$item)}}" class="d-inline" method="POST">
+                        @method('DELETE')
+                        @csrf
+                        <button title="borarr" class="btn btn-info mb-4" type="submit">Eliminar</button>
+                </form>
+
             </div>
         </div>
 

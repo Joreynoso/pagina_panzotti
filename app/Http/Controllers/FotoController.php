@@ -28,29 +28,39 @@ class FotoController extends Controller
     //alta
     public function alta(Request $request) {
 
-        //return $request->all();
 
-        // ruta de las imagenes guardadas
-        $ruta = public_path().'/img/';
+        $request->validate([
+            'ruta' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
 
-        // recogida del form
-        $imagenOriginal = $request->file('ruta');
+        $imageName = time().$request->ruta->extension();
 
-        // crear instancia de imagen
-        $imagen = Image::make($imagenOriginal);
+        $request->ruta->move(public_path('/img/'), $imageName);
 
-        //generar un nombre para la imagen
-        $name = time().$imagenOriginal->getClientOriginalName();
 
-        $imagen->resize(300,300);
+        // //return $request->all();
 
-        // guardar imagen
-        // save( [ruta], [calidad])
-        $imagen->save($ruta . $name, 100);
+        // // ruta de las imagenes guardadas
+        // $ruta = public_path().'/img/';
+
+        // // recogida del form
+        // $imagenOriginal = $request->file('ruta');
+
+        // // crear instancia de imagen
+        // $imagen = Image::make($imagenOriginal);
+
+        // //generar un nombre para la imagen
+        // $name = time().$imagenOriginal->getClientOriginalName();
+
+        // $imagen->resize(300,300);
+
+        // // guardar imagen
+        // // save( [ruta], [calidad])
+        // $imagen->save($ruta . $name, 100);
 
         $nuevaFoto = new Foto;
 
-        $nuevaFoto->ruta =$name;
+        $nuevaFoto->ruta =$imageName;
         $nuevaFoto->producto_id = $request->input('producto_id');
 
         $nuevaFoto->save();

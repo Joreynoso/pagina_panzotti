@@ -70,7 +70,7 @@
             <td>{{$item->proveedor->nombre}}</td>
             <td>{{$item->tipomp->nombre}}</td>
             <td class="td-btn">
-              <a href="{{route('editarMateriaPrima', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+              <a href="{{route('editarFoto', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
               <form action="{{route('bajaMateriaPrima',$item)}}" class="d-inline" method="POST">
                 @method('DELETE')
