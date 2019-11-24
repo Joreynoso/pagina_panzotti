@@ -50,10 +50,19 @@
       </div>
       @enderror
 
+      <label for="nombre">nombre</label>
       <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+
+      <label for="apellido">apellido</label>
       <input type="text" name="apellido" placeholder="apellido" class="form-control mb-2">
+
+      <label for="mail">direccion</label>
       <input type="text" name="direccion" placeholder="direccion" class="form-control mb-2">
+
+      <label for="fecha ingreso">fecha ingreso</label>
       <input type="text" name="fingreso" placeholder="fecha ingreso" class="form-control mb-2">
+
+      <label for="observaciones">observaciones</label>
       <input type="text" name="observaciones" placeholder="observaciones" class="form-control mb-2">
 
       <button type="submit" class="btn btn-success mt-3">agregar empleado</button>

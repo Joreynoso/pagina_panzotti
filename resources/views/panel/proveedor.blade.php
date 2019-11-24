@@ -75,7 +75,7 @@
             <td>{{$item->cuit}}</td>
             <td>{{$item->mail}}</td>
             <td class="td-btn">
-              <a href="{{route('editarProveedor', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+              <a href="{{route('proveedor_editar', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
               <form action="{{route('bajaProveedor',$item)}}" class="d-inline" method="POST">
                 @method('DELETE')

@@ -81,9 +81,9 @@ Route::get('/proveedor_alta', 'ProveedorController@acceder')->name('proveedor_al
 
 Route::post('/altaProveedor', 'ProveedorController@alta')->name('altaProveedor');
 
-Route::get('/proveedor_editar/{id}', 'ProveedorController@editar')->name('editarProveedor');
+Route::get('/proveedor_editar/{id}', 'ProveedorController@editar')->name('proveedor_editar');
 
-Route::put('/proveedor_editar/{id}', 'ProveedorController@update')->name('updateProveedor');
+Route::put('/updateProveedor/{id}', 'ProveedorController@update')->name('updateProveedor');
 
 Route::delete('/bajaProveedor/{id}', 'ProveedorController@baja')->name('bajaProveedor');
 

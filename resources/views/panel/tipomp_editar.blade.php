@@ -29,6 +29,7 @@
             </div>
             @enderror
 
+            <label for="apellido">Nombre</label>
             <input value="{{ $tipomateriaprimas->nombre }}" type="text" name="nombre" placeholder="nombre"
                 class="form-control mb-2">
 

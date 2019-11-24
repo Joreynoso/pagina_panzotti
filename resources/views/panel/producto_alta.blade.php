@@ -36,7 +36,6 @@
             <label for="nombre">Nombre</label>
             <input type="text" name="nombre" placeholder="ingrese nombre.." class="form-control mb-2">
 
-
             <label for="descripcion">Descripcion</label>
             <input type="text" name="descripcion" placeholder="ingrese la descripcion.." class="form-control mb-2">
 

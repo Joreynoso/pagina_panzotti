@@ -27,6 +27,8 @@
             </div>
             @enderror
 
+
+            <label for="apellido">Nombre</label>
             <input value="{{ $tipomovimiento->nombre }}" type="text" name="nombre" placeholder="nombre"
                 class="form-control mb-2">
 

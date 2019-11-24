@@ -26,6 +26,7 @@
       </div>
       @enderror
 
+      <label for="apellido">Nombre</label>
       <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
 
       <button type="submit" class="btn btn-success mt-3">agregar tipo movimiento</button>

@@ -52,12 +52,21 @@
             </div>
             @enderror
 
+            <label for="apellido">Nombre</label>
             <input value="{{ $proveedor->nombre }}" type="text" name="nombre" placeholder="nombre"
                 class="form-control mb-2">
+
+            <label for="direccion">direccion</label>
             <input value="{{ $proveedor->direccion }}" type="text" name="direccion" placeholder="direccion"
                 class="form-control mb-2">
+
+            <label for="telefono">telefono</label>
             <input value="{{ $proveedor->tel }}" type="text" name="tel" placeholder="tel" class="form-control mb-2">
+
+            <label for="cuit">cuit</label>
             <input value="{{ $proveedor->cuit }}" type="text" name="cuit" placeholder="cuit" class="form-control mb-2">
+
+            <label for="mail">mail</label>
             <input value="{{ $proveedor->mail }}" type="text" name="mail" placeholder="mail" class="form-control mb-2">
 
             <button type="submit" class="btn btn-warning text-white mt-3">guardar cambios</button>
