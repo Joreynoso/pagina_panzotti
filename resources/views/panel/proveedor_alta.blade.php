@@ -28,7 +28,7 @@
 
       @error('direccion')
       <div class="alert alert-danger" role="alert">
-        el nombre es obligatorio.
+        la direccion es obligatoria.
       </div>
       @enderror
 

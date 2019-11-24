@@ -27,7 +27,7 @@
             @enderror
 
             <label for="descripcion">descripcion</label>
-            <input type="text" name="descripcion" placeholder="describa su tarea.." class="form-control mb-3">
+            <input  maxlength="150" type="text" name="descripcion" placeholder="describa su tarea.." class="form-control mb-3">
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Que tan urgente es su tarea ?</label>
