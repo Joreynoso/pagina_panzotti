@@ -31,9 +31,12 @@
 <!-- buscador -->
 <div class="row">
   <div class="col-xl-12 col-sm-12 mb-3">
-    <div class="search-box">
-      <i class="fa fa-search"></i>
-      <input type="text" class="form-control" placeholder="Buscar..">
+    <div class="search-box inline">
+     <form class="">
+        <i class="fa fa-search"></i>
+        <input name="buscarpor" type="text" class="form-control" placeholder="Buscar..">
+        <button class="btn btn-light">buscar</button>
+     </form>
     </div>
   </div>
 </div>

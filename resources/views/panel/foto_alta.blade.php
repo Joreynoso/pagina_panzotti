@@ -17,7 +17,7 @@
         <div class="card-title">Formulario Fotos</div>
     </div>
     <div class="card-body">
-        <form class="form-group" action="{{route('altaFoto')}}" method="POST" enctype="multipart/form-data" >
+        <form class="form-group" action="{{route('altaFoto')}}" method="POST" enctype="multipart/form-data">
             @csrf
 
             @error('ruta')
@@ -26,16 +26,18 @@
             </div>
             @enderror
 
-            <label for="descripcion">foto</label>
-            <input type="file" class="form-control-file" name="ruta" >
+            <div class="custom-file">
+                <label class="custom-file-label" for="descripcion">seleccione una imagen...</label>
+                <input type="file" class="custom-file-input" name="ruta">
+            </div>
 
             <div style="padding-top: 5px" class="form-group">
-                    <label for="foto">seleccionar un producto</label>
-                    <select class="form-control" id="producto_id" name="producto_id">
-                        @foreach ($productos as $item)
-                        <option value="{{$item->id}}"> {{$item->nombre}} </option>
-                        @endforeach
-                    </select>
+                <label for="foto">seleccionar un producto</label>
+                <select class="form-control" id="producto_id" name="producto_id">
+                    @foreach ($productos as $item)
+                    <option value="{{$item->id}}"> {{$item->nombre}} </option>
+                    @endforeach
+                </select>
             </div>
 
             <button type="submit" class="btn btn-success mt-2">agregar foto</button>

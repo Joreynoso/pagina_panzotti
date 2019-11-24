@@ -24,25 +24,28 @@
 
 @else
 
-<!-- notas -->
-<div style="margin: 5px" class="row">
+<!-- foto producto -->
+<div class="row">
     @foreach ($fotos as $item)
 
-        <div class="card text-center" style="width: 18rem; margin: 5px">
-            <img class="card-img-top" src="{{ asset('img/'.$item->ruta) }}">
-            <div class="card-body">
-                <h5 class="card-title">{{$item->producto->nombre}}</h5>
-
-                <a href="{{route('editarFoto', $item)}}" title="editar" class="btn btn-info mb-4">Editar</i></a>
-
-                <form action="{{route('bajaFoto',$item)}}" class="d-inline" method="POST">
-                        @method('DELETE')
-                        @csrf
-                        <button title="borarr" class="btn btn-info mb-4" type="submit">Eliminar</button>
-                </form>
-
-            </div>
+    <div class="col-xl-3 col-lg-4 col-md-6 mb-4" style="">
+        <div class="bg-white shadow rounded overflow p-3 tarjeta">
+            <img src="{{asset('img/'.$item->ruta)}}" alt="ft_producto" class="img-fluid card-img-top">
+            <p class="text-muted mb-2 mt-2">nombre: {{$item->producto->nombre}}</p>
+            <a href="{{route('editarFoto', $item)}}" title="editar" class="btn btn-sm btn-warning text-white mb-3">
+                <i class="fa fa-pen"></i>
+                Editar
+            </a>
+            <form action="{{route('bajaFoto',$item)}}" class="d-inline" method="POST">
+                @method('DELETE')
+                @csrf
+                <button title="borarr" class="btn btn-danger btn-sm" type="submit">
+                    <i class="fa fa-trash"></i>
+                    Eliminar
+                </button>
+            </form>
         </div>
+    </div>
 
     @endforeach
 </div>
