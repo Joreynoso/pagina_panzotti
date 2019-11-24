@@ -12,12 +12,7 @@ class ClienteController extends Controller
     //leer
     public function leer(Request $request){
 
-
         $clientes = Cliente::paginate(5);
-
-        $nombres = $request->get('buscarpor');
-
-        $clientes = Cliente::where('nombre','like',"%nombre%")->paginate(5);
 
         return view('panel.cliente', compact('clientes'));
     }

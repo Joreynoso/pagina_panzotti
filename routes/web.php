@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/principal', 'AdminController@mostrar')->name('principal');
 
+
 // notas
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/notas', 'NotaController@leer')->name('notas');
@@ -29,6 +30,9 @@ Route::get('/notas', 'NotaController@leer')->name('notas');
 Route::get('/nota_alta', 'NotaController@acceder')->name('nota_alta');
 
 Route::post('/altaNota', 'NotaController@alta')->name('altaNota');
+
+Route::delete('/bajaNota/{id}', 'NotaController@baja')->name('bajaNota');
+
 
 // cliente
 // ────────────────────────────────────────────────────────────────────────────────

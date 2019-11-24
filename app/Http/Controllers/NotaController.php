@@ -39,6 +39,15 @@ class NotaController extends Controller
 
         return redirect('notas')->with('mensaje', 'Nueva Tarea agregada!');
     }
+    
+    //baja
+    public function baja($id){
+
+        $notaEliminar = Nota::findOrFail($id);
+        $notaEliminar->delete();
+
+        return redirect('notas')->with('mensaje', 'Cliente eliminado con exito!');
+    }
 
 
 }

@@ -32,7 +32,6 @@
                 <input type="file" class="custom-file-input" name="ruta">
             </div>
 
-
             <div style="padding-top: 5px" class="form-group">
                 <label for="foto">seleccionar un producto</label>
                 <select class="form-control" id="producto_id" name="producto_id">

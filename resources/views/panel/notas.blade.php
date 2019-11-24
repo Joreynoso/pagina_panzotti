@@ -17,11 +17,11 @@
 
 <div id="outerContainer">
     <div id="container">
-      <div id="item">
+        <div id="item">
 
-      </div>
+        </div>
     </div>
-  </div>
+</div>
 
 <!-- existen clientes? -->
 @if ($notas->count() == 0)
@@ -44,7 +44,11 @@
             <p class="mb-0 mt-2 font-italic non-selectable">"{{$item->descripcion}}."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top non-selectable">urgencia: {{$item->urgencia}}
                 <br>
-                <a class="red mt-2" href="">eliminar esta nota</a>
+                <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</button>
+                </form>
             </footer>
         </blockquote>
     </div>
@@ -60,7 +64,11 @@
             <footer class="blockquote-footer text-black-50 pt-4 mt-4 border-top non-selectable">urgencia:
                 {{$item->urgencia}}
                 <br>
-                <a class="red mt-2" href="">eliminar esta nota</a>
+                <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</i></button>
+                </form>
             </footer>
         </blockquote>
     </div>
@@ -73,7 +81,11 @@
             <p class="mb-0 mt-2 font-italic non-selectable">"{{$item->descripcion}}."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top non-selectable">urgencia: {{$item->urgencia}}
                 <br>
-                <a class="red mt-2" href="">eliminar esta nota</a>
+                <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
+                    @method('DELETE')
+                    @csrf
+                    <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</button>
+                </form>
             </footer>
         </blockquote>
     </div>
@@ -87,4 +99,3 @@
 
 @endif
 @endsection
-
