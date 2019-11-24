@@ -50,7 +50,7 @@
             </div>
 
 
-            <button type="submit" class="btn btn-success mt-3">agregar receta</button>
+            <button type="submit" class="btn btn-success mt-3">agregar producto</button>
         </form>
     </div>
 </div>

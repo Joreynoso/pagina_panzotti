@@ -10,4 +10,9 @@ class Producto extends Model
     {
         return $this->hasOne('App\Receta', 'id', 'receta_id');
     }
+
+    public function foto()
+    {
+        return $this->belongsTo('App\Foto', 'id', 'foto_id');
+    }
 }

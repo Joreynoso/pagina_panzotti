@@ -17,6 +17,7 @@
     <!-- Custom styles for this template-->
     <link rel="stylesheet" href="{!! asset('css/sb-admin.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/estilos.css') !!}">
+
 </head>
 
 <body id="page-top">
@@ -129,6 +130,11 @@
                     <a href="{{route('producto')}}" class="nav-link">
                         <i class="fas fa-seedling"></i>
                         <span>Producto</span></a>
+            </li>
+            <li class="nav-item">
+                    <a href="{{route('foto')}}" class="nav-link">
+                        <i class="fas fa-images"></i>
+                        <span>Foto</span></a>
             </li>
 
         </ul>

@@ -173,6 +173,22 @@ Route::put('/producto_editar/{id}', 'ProductoController@update')->name('updatePr
 
 Route::delete('/bajaProducto/{id}', 'ProductoController@baja')->name('bajaProducto');
 
+
+// materiaprima
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/foto', 'FotoController@leer')->name('foto');
+
+Route::get('/foto_alta', 'FotoController@acceder')->name('foto_alta');
+
+Route::post('/altaFoto', 'FotoController@alta')->name('altaFoto');
+
+Route::get('/foto_editar/{id}', 'FotoController@editar')->name('editarFoto');
+
+Route::put('/foto_editar/{id}', 'FotoController@update')->name('updateFoto');
+
+Route::delete('/bajaFoto/{id}', 'FotoController@baja')->name('bajaFoto');
+
+
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------
