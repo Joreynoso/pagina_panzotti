@@ -20,8 +20,17 @@ class CreateMateriaPrimasTable extends Migration
             $table->bigInteger('proveedor_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('tipomateriaprima_id')->references('id')->on('tipo_materia_primas');
-            $table->foreign('proveedor_id')->references('id')->on('proveedors');
+            $table->foreign('tipomateriaprima_id')
+            ->references('id')
+            ->on('tipo_materia_primas')
+            ->onUdpate('cascade')
+            ->onDelete('cascade');
+
+            $table->foreign('proveedor_id')
+            ->references('id')
+            ->on('proveedors')
+            ->onUdpate('cascade')
+            ->onDelete('cascade');
         });
     }
 
