@@ -192,6 +192,20 @@ Route::put('/foto_editar/{id}', 'FotoController@update')->name('updateFoto');
 
 Route::delete('/bajaFoto/{id}', 'FotoController@baja')->name('bajaFoto');
 
+// Producto Precio
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/productoprecio', 'ProductoPrecioController@leer')->name('productoprecio');
+
+Route::get('/productoprecio_alta', 'ProductoPrecioController@acceder')->name('productoprecio_alta');
+
+Route::post('/altaProductoPrecio', 'ProductoPrecioController@alta')->name('altaProductoPrecio');
+
+Route::get('/productoprecio_editar/{id}', 'ProductoPrecioController@editar')->name('editarProductoPrecio');
+
+Route::put('/productoprecio_editar/{id}', 'ProductoPrecioController@update')->name('updateProductoPrecio');
+
+Route::delete('/bajaProductoPrecio/{id}', 'ProductoPrecioController@baja')->name('bajaProductoPrecio');
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal

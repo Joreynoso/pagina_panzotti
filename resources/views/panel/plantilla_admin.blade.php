@@ -136,6 +136,11 @@
                         <i class="fas fa-images"></i>
                         <span>Foto</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('productoprecio')}}" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Producto Precio</span></a>
+            </li>
 
         </ul>
 
