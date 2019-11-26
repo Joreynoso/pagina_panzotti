@@ -10,4 +10,9 @@ class Cliente extends Model
 
         return $this->hasMany(Comentario::class);
     }
+
+    public function venta()
+    {
+        return $this->belongsTo('App\Venta', 'id', 'cliente_id');
+    }
 }

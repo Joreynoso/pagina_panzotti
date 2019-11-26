@@ -141,6 +141,11 @@
                     <i class="fas fa-images"></i>
                     <span>Producto Precio</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('venta')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Ventas</span></a>
+            </li>
 
         </ul>
 

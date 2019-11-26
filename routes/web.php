@@ -206,6 +206,20 @@ Route::put('/productoprecio_editar/{id}', 'ProductoPrecioController@update')->na
 
 Route::delete('/bajaProductoPrecio/{id}', 'ProductoPrecioController@baja')->name('bajaProductoPrecio');
 
+// Venta
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/venta', 'VentaController@leer')->name('venta');
+
+Route::get('/venta_alta', 'VentaController@acceder')->name('venta_alta');
+
+Route::post('/altaVenta', 'VentaController@alta')->name('altaVenta');
+
+Route::get('/venta_editar/{id}', 'VentaController@editar')->name('editarVenta');
+
+Route::put('/venta_editar/{id}', 'VentaController@update')->name('updateVenta');
+
+Route::delete('/bajaVenta/{id}', 'VentaController@baja')->name('bajaVenta');
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal
