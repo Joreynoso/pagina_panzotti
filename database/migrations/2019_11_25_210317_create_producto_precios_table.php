@@ -15,7 +15,12 @@ class CreateProductoPreciosTable extends Migration
     {
         Schema::create('producto_precios', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->String('fecha');
+            $table->String('precio');
+            $table->bigInteger('producto_id')->unsigned();
             $table->timestamps();
+
+            $table->foreign('producto_id')->references('id')->on('productos')->onDelete('cascade')->onUdpate('cascade');
         });
     }
 
