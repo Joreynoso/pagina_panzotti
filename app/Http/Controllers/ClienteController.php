@@ -7,15 +7,21 @@ use Illuminate\Support\Facades\Redirect;
 use App\Cliente;
 use PDF;
 
-class ClienteController extends Controller
-{
-    //leer
+class ClienteController extends Controller{
+  
     public function leer(Request $request){
 
-        $clientes = Cliente::paginate(5);
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $variablesurl = $request->all();
+
+        $clientes = Cliente::buscarpor($tipo, $buscar)->paginate(5)->appends($variablesurl);
 
         return view('panel.cliente', compact('clientes'));
     }
+
 
     //acceder alta
     public function acceder(){

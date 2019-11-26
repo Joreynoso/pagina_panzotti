@@ -29,17 +29,20 @@
 </div>
 
 <!-- buscador -->
-<div class="row">
-  <div class="col-xl-12 col-sm-12 mb-3">
-    <div class="search-box inline">
-     <form class="">
-        <i class="fa fa-search"></i>
-        <input name="buscarpor" type="text" class="form-control" placeholder="Buscar..">
-        <button class="btn btn-light">buscar</button>
-     </form>
-    </div>
-  </div>
-</div>
+<form class="form-inline mb-3">
+
+    <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
+      <option>Buscar por tipo</option>
+      <option>nombre</option>
+      <option>apellido</option>
+      <option>tel</option>
+      <option>domicilio</option>
+    </select>
+
+    <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
+
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
 
 <!-- existen clientes? -->
 @if ($clientes->count() == 0)

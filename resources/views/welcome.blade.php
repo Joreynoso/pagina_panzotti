@@ -117,7 +117,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
                     <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
                     </div>
-                    <div class="text-white bg-dark shadow rounded overflow p-3 tarjeta">
+                    <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
                         <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                         <p class="text-muted mb-2 mt-2">Fetuccine</p>
                         <p>descripcion del producto</p>
@@ -131,7 +131,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
                     <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
                     </div>
-                    <div class="text-white bg-dark shadow rounded overflow p-3 tarjeta">
+                    <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
                         <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                         <p class="text-muted mb-2 mt-2">Fetuccine</p>
                         <p>descripcion del producto</p>
@@ -145,7 +145,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
                     <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
                     </div>
-                    <div class="text-white bg-dark  shadow rounded overflow p-3 tarjeta">
+                    <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
                         <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                         <p class="text-muted mb-2 mt-2">Fetuccine</p>
                         <p>descripcion del producto</p>
@@ -159,7 +159,7 @@
                 <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
                     <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
                     </div>
-                    <div class="text-white bg-dark  shadow rounded overflow p-3 tarjeta">
+                    <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
                         <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                         <p class="text-muted mb-2 mt-2">Fetuccine</p>
                         <p>descripcion del producto</p>
@@ -169,8 +169,12 @@
                         </a>
                     </div>
                 </div>
-
             </div>
+
+            <div class="text-center">
+                <button class="btn btn-danger mt-4" style="width: 200px;">ver mas</button>
+            </div>
+
         </div>
     </section>
 
