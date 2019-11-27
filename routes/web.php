@@ -224,6 +224,6 @@ Route::delete('/bajaVenta/{id}', 'VentaController@baja')->name('bajaVenta');
 //--------------------------------------------------------------------------
 // Pagina Principal
 //--------------------------------------------------------------------------
-
+Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
 
 

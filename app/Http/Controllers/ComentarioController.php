@@ -5,8 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Comentario;
 
-class ComentarioController extends Controller
-{
+class ComentarioController extends Controller{
+
+    //auth
+    public function __construct(){
+
+        $this->middleware('auth');
+    }
+    
     public function mostrar(){
 
         return view('/panel/comentario');

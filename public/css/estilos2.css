@@ -361,3 +361,12 @@ h1, h2, h3, .font-beyond {
 .bg-negro2 {
     background: rgb(56, 56, 56);
 }
+
+.letra{
+    font-size: 15px;
+    color: grey;
+}
+
+.corazon{
+    color: red;
+}

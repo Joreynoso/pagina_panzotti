@@ -21,7 +21,7 @@
 
     <div class="row">
         <div class="col-12 text-center mt-3">
-            <img src="{{ asset('img/1574726509.jpg') }}" alt="" style="width: 200px;">
+
         </div>
     </div>
 
