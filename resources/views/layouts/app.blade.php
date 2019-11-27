@@ -30,6 +30,9 @@
     <link rel="stylesheet" href="{!! asset('css/scrolling-nav.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/estilos2.css') !!}">
 
+    <link rel="stylesheet" href="{!! asset('css/Simple-Slider.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/Swipe-Slider-9.css') !!}">
+
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{!! asset('fonts/beyond_the_mountains-webfont.css') !!}">
@@ -157,6 +160,8 @@
 
     <!-- js -->
     <script type="text/javascript" src="{!! asset('js/scrolling-nav.js') !!}" async></script>
+    <script type="text/javascript" src="{!! asset('js/Simple-Slider.js') !!}" async></script>
+    <script type="text/javascript" src="{!! asset('js/Swipe-Slider-9.js') !!}" async></script>
 
 </body>
 

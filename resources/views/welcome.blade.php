@@ -47,82 +47,81 @@
 </section>
 
 <!-- tarjetas productos -->
-<section id="services" class="bg-negro">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="heading">
-                    <img class="heading-img" src="img/heading_logo.png" alt="">
-                    <h2 class="text-white">Nuestros Productos</h2>
-                    <p class="lead text-center text-white">te mostramos algunos de nuestros productos! </p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
+<section>
+    <div class="simple-slider"></div><!-- Paradise Slider -->
+	<div id="fw_al_007" class="carousel ps_rotate_scale_c ps_indicators_l ps_control_rotate_f swipe_x ps_easeOutQuint" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        ver detalle
-                    </a>
-                </div>
-            </div>
+		<!-- Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#fw_al_007" data-slide-to="0" class="active"></li>
+			<li data-target="#fw_al_007" data-slide-to="1"></li>
+			<li data-target="#fw_al_007" data-slide-to="2"></li>
+		</ol>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        ver detalle
-                    </a>
-                </div>
-            </div>
+		<!-- Wrapper For Slides -->
+		<div class="carousel-inner" role="listbox">
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        ver detalle
-                    </a>
-                </div>
-            </div>
+			<!-- First Slide -->
+			<div class="carousel-item active">
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="text-white bg-negro2 shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        ver detalle
-                    </a>
-                </div>
-            </div>
-        </div>
+				<!-- Slide Background -->
+				<img src="img/fondo.png" alt="fw_al_007_01">
 
-        <div class="text-center">
-            <button class="btn btn-danger mt-4" style="width: 200px;">ver mas</button>
-        </div>
+				<!-- Slide Text Layer -->
+				<div class="fw_al_007_slide">
+					<h3 data-animation="animated flipInX">Panzotti</h3>
+					<h1 data-animation="animated flipInX"><span>FETUCCINI</span> caseros</h1>
+					<p data-animation="animated flipInX">Los mejores fetuccini los podes encontrar en Pastas Panzotti</p>
+					<a href="#" data-animation="animated flipInX">hace tu pedido</a>
+				</div>
+			</div>
+			<!-- End of Slide -->
 
-    </div>
-</section>
+			<!-- Second Slide -->
+			<div class="carousel-item">
+
+				<!-- Slide Background -->
+				<img src="img/fondo2.png" alt="fw_al_007_02">
+
+				<!-- Slide Text Layer -->
+				<div class="fw_al_007_slide">
+					<h3 data-animation="animated flipInX">hello world</h3>
+					<h1 data-animation="animated flipInX"><span>awesome</span> hover affect</h1>
+					<p data-animation="animated flipInX">Vestibulum et urna aliquam pretium urna nec dapibus vehicula tellus</p>
+					<a href="#" data-animation="animated flipInX">read more</a>
+				</div>
+			</div>
+			<!-- End of Slide -->
+
+			<!-- Third Slide -->
+			<div class="carousel-item">
+
+				<!-- Slide Background -->
+				<img src="img/heading_logo.png" alt="fw_al_007_03">
+
+				<!-- Slide Text Layer -->
+				<div class="fw_al_007_slide">
+					<h3 data-animation="animated flipInX">hello world</h3>
+					<h1 data-animation="animated flipInX"><span>AWESOME</span> hover affetc</h1>
+					<p data-animation="animated flipInX">Vestibulum et urna aliquam pretium urna nec dapibus vehicula tellus</p>
+					<a href="#" data-animation="animated flipInX">read more</a>
+				</div>
+			</div>
+			<!-- End of Slide -->
+
+		</div><!-- End of Wrapper For Slides -->
+
+		<!-- Left Control -->
+		<a class="carousel-control-prev" href="#fw_al_007" data-slide="prev">
+			<span class="fa fa-angle-left" aria-hidden="true"></span>
+		</a>
+		<!-- Right Control -->
+		<a class="carousel-control-next" href="#fw_al_007" data-slide="next">
+			<span class="fa fa-angle-right" aria-hidden="true"></span>
+		</a>
+
+    </section>
+
 
 <!-- instagram -->
 <section id="instagram">
