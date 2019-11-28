@@ -224,8 +224,10 @@ Route::delete('/bajaVenta/{id}', 'VentaController@baja')->name('bajaVenta');
 //--------------------------------------------------------------------------
 // Pagina Principal Panzotti
 //--------------------------------------------------------------------------
-Route::get('/producto', 'ProductoController@leerWeb')->name('productoWeb');
+Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
 
-Route::get('/producto/venta', 'VentaController@leerprincipal')->name('venta-principal');
+Route::get('/venta-principal', 'VentaController@leerprincipal')->name('venta-principal');
+
+Route::get('/receta-principal', 'RecetaController@leerprincipal')->name('receta-principal');
 
 

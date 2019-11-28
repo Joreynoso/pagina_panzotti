@@ -6,7 +6,8 @@
 <header class="bg-primary text-white">
     <div class="container text-center">
         <h1 class="mt-5 texto">Panzotti</h1>
-        <p class="lead">Proba nuestras riquisimas pastas caseras, elaboradas con productos naturales!</p>
+        <p class="lead">Proba nuestras riquisimas pastas caseras, elaboradas con productos naturales!
+        </p>
         <button class="btn btn-danger">VER CATALOGO PRODUCTOS</button>
     </div>
 </header>
@@ -47,38 +48,45 @@
 </section>
 
 <!-- tarjetas productos -->
-<section id="carousel">
+<section id="carousel" class="bg-light">
+    <div class="heading">
+        <img class="heading-img" src="img/heading_logo.png" alt="">
+        <h2 class="text-center">Lo mas Vendido</h2>
+        <p class="text-center">te mostramos algunos de nuestros productos mas vendidos! </p>
+    </div>
     <div class="carousel slide" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-nature carousel-hero">
-                    <h1 class="hero-title">Panzotti</h1>
-                    <p class="hero-subtitle">Spaguetti Panzotti.</p>
-                    <p><a class="btn btn-primary hero-button plat mt-5" role="button" href="{{route('venta-principal')}}">Hacer Pedido</a></p>
+                    <h1 class="hero-title">Spaguetti</h1>
+                    <p class="hero-subtitle lead">pastas caseras!</p>
+                    <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-photography carousel-hero">
-                    <h1 class="hero-title">Panzotti</h1>
-                    <p class="hero-subtitle lead">Fetuccini Panzotti</p>
-                    <p><a class="btn btn-primary hero-button plat mt-5" role="button" href="{{route('venta-principal')}}">Hacer Pedido</a></p>
+                    <h1 class="hero-title">Fetuccini</h1>
+                    <p class="hero-subtitle lead">pastas caseras!</p>
+                    <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
             <div class="carousel-item active">
                 <div class="jumbotron pulse animated hero-technology carousel-hero">
-                    <h1 class="hero-title">Panzotti</h1>
-                    <p  class="hero-subtitle">Ravioles</p>
-                    <p><a class="btn btn-primary hero-button plat mt-5" role="button" href="{{route('venta-principal')}}">Hacer Pedido</a></p>
+                    <h1 class="hero-title">Ravioles</h1>
+                    <p class="hero-subtitle">pastas caseras!</p>
+                    <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
         </div>
-        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
-        <ol
-            class="carousel-indicators">
+        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i
+                    class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a
+                class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i
+                    class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
+        <ol class="carousel-indicators">
             <li data-target="#carousel-1" data-slide-to="0"></li>
             <li data-target="#carousel-1" data-slide-to="1"></li>
             <li data-target="#carousel-1" data-slide-to="2" class="active"></li>
-            </ol>
+        </ol>
     </div>
 </section>
 
@@ -90,48 +98,47 @@
             <div class="col-lg-12 mx-auto">
                 <div class="heading">
                     <img class="heading-img" src="img/heading_logo.png" alt="">
-                    <h2>Seguinos en Instagram!</h2>
-                    <p class="lead text-center">Enterate de todas nuestras noticias, promociones y ofertas,
+                    <h2 class="text-center">Seguinos en Instagram!</h2>
+                    <p class="text-center">Enterate de todas nuestras noticias, promociones y ofertas,
                         seguinos!.</p>
                 </div>
 
                 <div class="gallery">
                     <span class="gallery-item shadow">
-                        <a href="">
+                        <a href="https://www.instagram.com/panzotti_pastas/?hl=es-la">
                             <img class="gallery-image" src="img/insta1.jpg" alt="imagen">
                         </a>
                     </span>
 
                     <span class="gallery-item shadow">
-                        <a href="">
+                        <a href="https://www.instagram.com/panzotti_pastas/?hl=es-la">
                             <img class="gallery-image" src="img/insta2.jpg" alt="imagen">
                         </a>
                     </span>
 
                     <span class="gallery-item shadow">
-                        <a href="">
+                        <a href="https://www.instagram.com/panzotti_pastas/?hl=es-la">
                             <img class="gallery-image" src="img/insta3.jpg" alt="imagen">
                         </a>
                     </span>
 
                     <span class="gallery-item shadow">
-                        <a href="">
+                        <a href="https://www.instagram.com/panzotti_pastas/?hl=es-la">
                             <img class="gallery-image" src="img/insta4.png" alt="imagen">
                         </a>
                     </span>
 
                     <span class="gallery-item shadow">
-                        <a href="">
+                        <a href="https://www.instagram.com/panzotti_pastas/?hl=es-la">
                             <img class="gallery-image" src="img/insta5.jpg" alt="imagen">
                         </a>
                     </span>
 
                     <span class="gallery-item shadow">
-                        <a href="">
+                        <a href="https://www.instagram.com/panzotti_pastas/?hl=es-la">
                             <img class="gallery-image" src="img/insta6.png" alt="imagen">
                         </a>
                     </span>
-
                 </div>
             </div>
         </div>
@@ -143,6 +150,7 @@
     <div class="map-clean text-center">
         <div class="container">
             <div class="intro">
+                <img class="heading-img" src="img/heading_logo.png" alt="">
                 <h2 class="text-center">Donde Encontarnos?</h2>
                 <p class="text-center">Acercate y conoce nuestros productos, te van a encantar!!, te esperamos
                     en nuñez del prado al 135!. </p>

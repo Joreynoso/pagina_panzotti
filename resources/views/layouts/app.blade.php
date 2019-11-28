@@ -67,7 +67,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">Recetas</a>
+                            <a class="nav-link" href="{{route('receta-principal')}}">Recetas</a>
                         </li>
 
                         @if(auth()->check() && auth()->user()->is_admin)

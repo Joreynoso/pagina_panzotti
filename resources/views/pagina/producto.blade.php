@@ -3,7 +3,7 @@
 @section('content')
 
 <!-- Mensaje Bienvenida Productos -->
-<header class="bg-primary text-white">
+<header class="bg-primary2 text-white">
     <div class="container text-center">
         <h1 class="mt-5 texto">Productos Panzotti</h1>
         <p class="lead">Te invitamos a conocer todos nuestros productos!</p>
@@ -20,6 +20,11 @@
                     <h2>Nuestros Productos</h2>
                     <p class="lead text-center">elegi el producto que mas te guste y hace un pedido! </p>
                 </div>
+
+                <div class="mb-5">
+                    <!-- Dotted divider -->
+                    <hr class="dotted">
+                </div>
             </div>
         </div>
         <div class="row">
@@ -30,7 +35,7 @@
                 <div class="shadow rounded overflow p-3 tarjeta">
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
+                    <p class="font-weight-bold">Precio/kg: 75$</p>
                     <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
@@ -44,7 +49,7 @@
                 <div class="shadow rounded overflow p-3 tarjeta">
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
+                    <p class="font-weight-bold">Precio/kg: 75$</p>
                     <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
@@ -58,7 +63,7 @@
                 <div class="shadow rounded overflow p-3 tarjeta">
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
+                    <p class="font-weight-bold">Precio/kg: 75$</p>
                     <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
@@ -72,7 +77,7 @@
                 <div class="shadow rounded overflow p-3 tarjeta">
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p>descripcion del producto</p>
+                    <p class="font-weight-bold">Precio/kg: 75$</p>
                     <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido

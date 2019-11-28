@@ -11,7 +11,7 @@ div.jumbotron.carousel-hero {
 
 div.jumbotron.hero-nature {
     background-color: rgb(50, 50, 50);
-    background-image: url('../img/spaguetti.jpeg');
+    background-image: url('../img/spaguetti.png');
     background-blend-mode: soft-light;
 }
 
@@ -32,12 +32,12 @@ h2.hero-title,
 h3.hero-title {
     text-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
     color: #fff;
+    font-size: 70px;
 }
 
 p.hero-subtitle {
     max-width: 600px;
     margin: 25px auto;
-    padding: 10px 15px;
     color: #fff;
 }
 
