@@ -2,82 +2,67 @@
 
 @section('content')
 
-<nav class="flex-nav">
-    <div class="container">
-      <div class="grid menu">
-        <div class="column-xs-8 column-md-6">
-          <p id="highlight">ShopShop</p>
-        </div>
-        {{-- <div class="column-xs-4 column-md-6">
-          <a href="#" class="toggle-nav">Menu <i class="ion-navicon-round"></i></a>
-          <ul>
-            <li class="nav-item"><a href="#">Products</a></li>
-            <li class="nav-item"><a href="#">About</a></li>
-            <li class="nav-item"><a href="#">My Account</a></li>
-            <li class="nav-item"><a href="#">Cart (0)</a></li>
-          </ul>
-        </div> --}}
-      </div>
-    </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="grid second-nav">
-        <div class="column-xs-12">
-          <nav>
-            <ol class="breadcrumb-list">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item"><a href="#">Household Plants</a></li>
-              <li class="breadcrumb-item active">Bonsai</li>
-            </ol>
-          </nav>
-        </div>
-      </div>
-      <div class="grid product">
-        <div class="column-xs-12 column-md-7">
-          <div class="product-gallery">
-            <div class="product-image">
-              <img class="active" src="https://source.unsplash.com/W1yjvf5idqA">
-            </div>
-            <ul class="image-list">
-              <li class="image-item"><img src="https://source.unsplash.com/W1yjvf5idqA"></li>
-              <li class="image-item"><img src="https://source.unsplash.com/VgbUxvW3gS4"></li>
-              <li class="image-item"><img src="https://source.unsplash.com/5WbYFH0kf_8"></li>
-            </ul>
-          </div>
-        </div>
-        <div class="column-xs-12 column-md-5">
-          <h1>Bonsai</h1>
-          <h2>$19.99</h2>
-          <div class="description">
-            <p>The purposes of bonsai are primarily contemplation for the viewer, and the pleasant exercise of effort and ingenuity for the grower.</p>
-            <p>By contrast with other plant cultivation practices, bonsai is not intended for production of food or for medicine. Instead, bonsai practice focuses on long-term cultivation and shaping of one or more small trees growing in a container.</p>
-          </div>
-          <button class="add-to-cart">Add To Cart</button>
-        </div>
-      </div>
-      <div class="grid related-products">
-        <div class="column-xs-12">
-          <h3>You may also like</h3>
-        </div>
-        <div class="column-xs-12 column-md-4">
-          <img src="https://source.unsplash.com/miziNqvJx5M">
-          <h4>Succulent</h4>
-          <p class="price">$19.99</p>
-        </div>
-        <div class="column-xs-12 column-md-4">
-          <img src="https://source.unsplash.com/2y6s0qKdGZg">
-          <h4>Terranium</h4>
-          <p class="price">$19.99</p>
-        </div>
-        <div class="column-xs-12 column-md-4">
-          <img src="https://source.unsplash.com/6Rs76hNbIWE">
-          <h4>Cactus</h4>
-          <p class="price">$19.99</p>
-        </div>
-      </div>
-    </div>
-  </main>
+<div class="container">
 
+<div class="card">
+	<div class="row">
+		<aside class="col-sm-5 border-right">
+<article class="gallery-wrap">
+<div class="img-big-wrap ">
+  <div> <a href="#"><img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"></a></div>
+</div> <!-- slider-product.// -->
+<div class="img-small-wrap">
+  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
+  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
+  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
+  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
+</div> <!-- slider-nav.// -->
+</article> <!-- gallery-wrap .end// -->
+		</aside>
+		<aside class="col-sm-7">
+<article class="card-body p-5">
+	<h3 class="title mb-3">Spaguetti Panzotti</h3>
+
+<p class="price-detail-wrap">
+	<span class="price h3 text-warning">
+		<span class="currency">$</span><span class="num">150</span>
+	</span>
+	<span>/per kg</span>
+</p> <!-- price-detail-wrap .// -->
+<dl class="item-property">
+  <dt>Description</dt>
+  <dd><p>Los espagueti Panzotti son un producto de elaboración propia. Están hechos con materia prima cien porcientos naturales. Contiene huevos caseros y harían 0000.</p></dd>
+</dl>
+  <!-- item-property-hor .// -->
+
+<hr>
+	<div class="row">
+		<div class="col-sm-5">
+			<dl class="param param-inline">
+			  <dt>Kilos: </dt>
+			  <dd>
+			  	<select class="form-control form-control-sm" style="width:70px;">
+			  		<option> 1 </option>
+			  		<option> 2 </option>
+			  		<option> 3 </option>
+			  	</select>
+			  </dd>
+			</dl>  <!-- item-property .// -->
+		</div> <!-- col.// -->
+
+	</div> <!-- row.// -->
+	<hr>
+	<a href="#" class="btn btn-lg btn-primary text-uppercase"> Hacer Pedido </a>
+	<a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Agregar mas </a>
+</article> <!-- card-body.// -->
+		</aside> <!-- col.// -->
+	</div> <!-- row.// -->
+</div> <!-- card.// -->
+
+
+</div>
+<!--container.//-->
 
 @endsection
+
+
