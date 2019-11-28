@@ -47,80 +47,40 @@
 </section>
 
 <!-- tarjetas productos -->
-<section>
-    <div class="simple-slider"></div><!-- Paradise Slider -->
-	<div id="fw_al_007" class="carousel ps_rotate_scale_c ps_indicators_l ps_control_rotate_f swipe_x ps_easeOutQuint" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="2000">
-
-		<!-- Indicators -->
-		<ol class="carousel-indicators">
-			<li data-target="#fw_al_007" data-slide-to="0" class="active"></li>
-			<li data-target="#fw_al_007" data-slide-to="1"></li>
-			<li data-target="#fw_al_007" data-slide-to="2"></li>
-		</ol>
-
-		<!-- Wrapper For Slides -->
-		<div class="carousel-inner" role="listbox">
-
-			<!-- First Slide -->
-			<div class="carousel-item active">
-
-				<!-- Slide Background -->
-				<img src="img/fondo.png" alt="fw_al_007_01">
-
-				<!-- Slide Text Layer -->
-				<div class="fw_al_007_slide">
-					<h3 data-animation="animated flipInX">Panzotti</h3>
-					<h1 data-animation="animated flipInX"><span>FETUCCINI</span> caseros</h1>
-					<p data-animation="animated flipInX">Los mejores fetuccini los podes encontrar en Pastas Panzotti</p>
-					<a href="#" data-animation="animated flipInX">hace tu pedido</a>
-				</div>
-			</div>
-			<!-- End of Slide -->
-
-			<!-- Second Slide -->
-			<div class="carousel-item">
-
-				<!-- Slide Background -->
-				<img src="img/fondo2.png" alt="fw_al_007_02">
-
-				<!-- Slide Text Layer -->
-				<div class="fw_al_007_slide">
-					<h3 data-animation="animated flipInX">hello world</h3>
-					<h1 data-animation="animated flipInX"><span>awesome</span> hover affect</h1>
-					<p data-animation="animated flipInX">Vestibulum et urna aliquam pretium urna nec dapibus vehicula tellus</p>
-					<a href="#" data-animation="animated flipInX">read more</a>
-				</div>
-			</div>
-			<!-- End of Slide -->
-
-			<!-- Third Slide -->
-			<div class="carousel-item">
-
-				<!-- Slide Background -->
-				<img src="img/heading_logo.png" alt="fw_al_007_03">
-
-				<!-- Slide Text Layer -->
-				<div class="fw_al_007_slide">
-					<h3 data-animation="animated flipInX">hello world</h3>
-					<h1 data-animation="animated flipInX"><span>AWESOME</span> hover affetc</h1>
-					<p data-animation="animated flipInX">Vestibulum et urna aliquam pretium urna nec dapibus vehicula tellus</p>
-					<a href="#" data-animation="animated flipInX">read more</a>
-				</div>
-			</div>
-			<!-- End of Slide -->
-
-		</div><!-- End of Wrapper For Slides -->
-
-		<!-- Left Control -->
-		<a class="carousel-control-prev" href="#fw_al_007" data-slide="prev">
-			<span class="fa fa-angle-left" aria-hidden="true"></span>
-		</a>
-		<!-- Right Control -->
-		<a class="carousel-control-next" href="#fw_al_007" data-slide="next">
-			<span class="fa fa-angle-right" aria-hidden="true"></span>
-		</a>
-
-    </section>
+<section id="carousel">
+    <div class="carousel slide" data-ride="carousel" id="carousel-1">
+        <div class="carousel-inner" role="listbox">
+            <div class="carousel-item">
+                <div class="jumbotron pulse animated hero-nature carousel-hero">
+                    <h1 style="color:black" class="hero-title">Panzotti</h1>
+                    <p style="color:black" class="hero-subtitle">Spaguetti Panzotti.</p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Hacer Pedido</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="jumbotron pulse animated hero-photography carousel-hero">
+                    <h1 style="color:black" class="hero-title">Panzotti</h1>
+                    <p style="color:black" class="hero-subtitle">Fetuccini Panzotti</p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Hacer Pedido</a></p>
+                </div>
+            </div>
+            <div class="carousel-item active">
+                <div class="jumbotron pulse animated hero-technology carousel-hero">
+                    <h1 style="color:black" class="hero-title">Panzotti</h1>
+                    <p style="color:black"  class="hero-subtitle">Ravioles</p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Hacer Pedido</a></p>
+                </div>
+            </div>
+        </div>
+        <div><a class="carousel-control-prev" href="#carousel-1" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i><span class="sr-only">Previous</span></a><a class="carousel-control-next" href="#carousel-1" role="button" data-slide="next"><i class="fa fa-chevron-right"></i><span class="sr-only">Next</span></a></div>
+        <ol
+            class="carousel-indicators">
+            <li data-target="#carousel-1" data-slide-to="0"></li>
+            <li data-target="#carousel-1" data-slide-to="1"></li>
+            <li data-target="#carousel-1" data-slide-to="2" class="active"></li>
+            </ol>
+    </div>
+</section>
 
 
 <!-- instagram -->

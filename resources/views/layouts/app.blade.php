@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Panzotti') }}</title>
     <title>Pagina Web Panzotti Pastas!</title>
 
     <!-- Scripts -->
@@ -30,8 +30,10 @@
     <link rel="stylesheet" href="{!! asset('css/scrolling-nav.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/estilos2.css') !!}">
 
+
+
     <link rel="stylesheet" href="{!! asset('css/Simple-Slider.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/Swipe-Slider-9.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/best-carousel-slide.css') !!}">
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
@@ -44,7 +46,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Panzotti') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
