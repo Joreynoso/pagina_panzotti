@@ -210,8 +210,6 @@ Route::delete('/bajaProductoPrecio/{id}', 'ProductoPrecioController@baja')->name
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/venta', 'VentaController@leer')->name('venta');
 
-Route::get('/venta-principal', 'VentaController@leerprincipal')->name('venta-principal');
-
 Route::get('/venta_alta', 'VentaController@acceder')->name('venta_alta');
 
 Route::post('/altaVenta', 'VentaController@alta')->name('altaVenta');
@@ -224,8 +222,10 @@ Route::delete('/bajaVenta/{id}', 'VentaController@baja')->name('bajaVenta');
 
 
 //--------------------------------------------------------------------------
-// Pagina Principal
+// Pagina Principal Panzotti
 //--------------------------------------------------------------------------
-Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
+Route::get('/producto', 'ProductoController@leerWeb')->name('productoWeb');
+
+Route::get('/producto/venta', 'VentaController@leerprincipal')->name('venta-principal');
 
 

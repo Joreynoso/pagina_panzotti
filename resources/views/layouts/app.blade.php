@@ -107,7 +107,7 @@
                         </li>
                         @endguest
                         <li class="nav-item">
-                            <button class="btn btn-danger ml-2">pedidos: 3834-7799661</button>
+                            <button class="btn btn-danger">pedidos: 3834-7799661</button>
                         </li>
                     </ul>
                 </div>
