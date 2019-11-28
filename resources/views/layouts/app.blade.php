@@ -28,6 +28,7 @@
     <script src="https://kit.fontawesome.com/a6f4c22e9b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{!! asset('css/scrolling-nav.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/estilos2.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/producto.css') !!}">
 
 
 
@@ -169,6 +170,7 @@
     <script type="text/javascript" src="{!! asset('js/scrolling-nav.js') !!}" async></script>
     <script type="text/javascript" src="{!! asset('js/Simple-Slider.js') !!}" async></script>
     <script type="text/javascript" src="{!! asset('js/Swipe-Slider-9.js') !!}" async></script>
+    <script type="text/javascript" src="{!! asset('js/producto.js') !!}" async></script>
 
 </body>
 

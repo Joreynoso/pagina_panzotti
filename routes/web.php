@@ -210,6 +210,8 @@ Route::delete('/bajaProductoPrecio/{id}', 'ProductoPrecioController@baja')->name
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/venta', 'VentaController@leer')->name('venta');
 
+Route::get('/venta-principal', 'VentaController@leerprincipal')->name('venta-principal');
+
 Route::get('/venta_alta', 'VentaController@acceder')->name('venta_alta');
 
 Route::post('/altaVenta', 'VentaController@alta')->name('altaVenta');

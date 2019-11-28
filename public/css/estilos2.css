@@ -11,7 +11,10 @@ body {
     background: none;
 }
 
-h1, h2, h3, .font-beyond {
+h1,
+h2,
+h3,
+.font-beyond {
     font-family: "beyond_the_mountainsregular", sans-serif;
 }
 
@@ -37,6 +40,7 @@ h1, h2, h3, .font-beyond {
 .texto {
     font-size: 50px;
 }
+
 
 /* footer */
 
@@ -130,6 +134,7 @@ h1, h2, h3, .font-beyond {
     margin-bottom: 0;
 }
 
+
 /* tarjetas producto*/
 
 .heading {
@@ -188,6 +193,7 @@ h1, h2, h3, .font-beyond {
     background-color: #ac2533;
 }
 
+
 /*mapa de google*/
 
 .map-clean {
@@ -219,6 +225,7 @@ h1, h2, h3, .font-beyond {
     margin: 0 auto 40px;
 }
 
+
 /*galeria de instagram*/
 
 .gallery {
@@ -245,6 +252,7 @@ h1, h2, h3, .font-beyond {
     transform: scale(1.08);
     opacity: 0.8;
 }
+
 
 /* presentacion */
 
@@ -322,6 +330,7 @@ h1, h2, h3, .font-beyond {
     right: 0;
 }
 
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 992px) {
@@ -362,11 +371,11 @@ h1, h2, h3, .font-beyond {
     background: rgb(56, 56, 56);
 }
 
-.letra{
+.letra {
     font-size: 15px;
     color: grey;
 }
 
-.corazon{
+.corazon {
     color: red;
 }
