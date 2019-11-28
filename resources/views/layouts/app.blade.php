@@ -71,7 +71,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="">Recetas</a>
+                            <a class="nav-link" href="{{route('receta-principal')}}">Recetas</a>
                         </li>
 
                         @if(auth()->check() && auth()->user()->is_admin)
@@ -111,7 +111,7 @@
                         </li>
                         @endguest
                         <li class="nav-item">
-                            <button class="btn btn-danger ml-2">pedidos: 3834-7799661</button>
+                            <button class="btn btn-danger">pedidos: 3834-7799661</button>
                         </li>
                     </ul>
                 </div>

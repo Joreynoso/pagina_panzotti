@@ -22,6 +22,12 @@ class RecetaController extends Controller
         return view('panel.receta_alta');
     }
 
+    //acceder receta pagina
+    public function leerprincipal(){
+
+        return view('pagina.receta-principal');
+    }
+
     //alta
     public function alta(Request $request){
 
