@@ -54,21 +54,21 @@
                 <div class="jumbotron pulse animated hero-nature carousel-hero">
                     <h1 style="color:black" class="hero-title">Panzotti</h1>
                     <p style="color:black" class="hero-subtitle">Spaguetti Panzotti.</p>
-                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Hacer Pedido</a></p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="{{route('venta-principal')}}">Hacer Pedido</a></p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-photography carousel-hero">
                     <h1 style="color:black" class="hero-title">Panzotti</h1>
                     <p style="color:black" class="hero-subtitle">Fetuccini Panzotti</p>
-                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Hacer Pedido</a></p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="{{route('venta-principal')}}">Hacer Pedido</a></p>
                 </div>
             </div>
             <div class="carousel-item active">
                 <div class="jumbotron pulse animated hero-technology carousel-hero">
                     <h1 style="color:black" class="hero-title">Panzotti</h1>
                     <p style="color:black"  class="hero-subtitle">Ravioles</p>
-                    <p><a class="btn btn-primary hero-button plat" role="button" href="#">Hacer Pedido</a></p>
+                    <p><a class="btn btn-primary hero-button plat" role="button" href="{{route('venta-principal')}}">Hacer Pedido</a></p>
                 </div>
             </div>
         </div>
