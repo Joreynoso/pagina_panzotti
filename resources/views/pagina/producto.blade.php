@@ -36,7 +36,7 @@
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
                     <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
+                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
                     </a>
@@ -50,7 +50,7 @@
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
                     <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
+                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
                     </a>
@@ -64,7 +64,7 @@
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
                     <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
+                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
                     </a>
@@ -78,7 +78,7 @@
                     <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
                     <p class="text-muted mb-2 mt-2">Fetuccine</p>
                     <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
+                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
                     </a>

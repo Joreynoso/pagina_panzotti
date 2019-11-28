@@ -8,7 +8,7 @@
         <h1 class="mt-5 texto">Panzotti</h1>
         <p class="lead">Proba nuestras riquisimas pastas caseras, elaboradas con productos naturales!
         </p>
-        <button class="btn btn-danger">VER CATALOGO PRODUCTOS</button>
+        <a class="btn btn-danger" role="button" href="{{route('productoWeb')}}">VER CATALOGO PRODUCTOS</a>
     </div>
 </header>
 
