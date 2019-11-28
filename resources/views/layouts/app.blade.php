@@ -29,8 +29,10 @@
     <link rel="stylesheet" href="{!! asset('css/scrolling-nav.css') !!}">
     <link rel="stylesheet" href="{!! asset('css/estilos2.css') !!}">
 
+
+
     <link rel="stylesheet" href="{!! asset('css/Simple-Slider.css') !!}">
-    <link rel="stylesheet" href="{!! asset('css/Swipe-Slider-9.css') !!}">
+    <link rel="stylesheet" href="{!! asset('css/best-carousel-slide.css') !!}">
 
     <script src="https://code.jquery.com/jquery-3.3.1.js"
         integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
