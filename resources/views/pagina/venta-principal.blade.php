@@ -52,8 +52,8 @@
 
 	</div> <!-- row.// -->
 	<hr>
-	<a href="#" class="btn btn-lg btn-primary text-uppercase"> Hacer Pedido </a>
-	<a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Agregar mas </a>
+	<a href="#" style="margin: 5px" class="btn btn-lg btn-primary text-uppercase"> Hacer Pedido </a>
+	<a href="#" style="margin: 5px" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Agregar mas </a>
 </article> <!-- card-body.// -->
 		</aside> <!-- col.// -->
 	</div> <!-- row.// -->
