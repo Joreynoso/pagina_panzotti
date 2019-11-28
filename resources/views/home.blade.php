@@ -9,12 +9,16 @@
 
                 <div class="card-body">
                     @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
+                    <div class="alert alert-success" role="alert">
+                        {{ session('status') }}
+                    </div>
                     @endif
 
-                    Bienvenido a Panzotti!
+                    @if(auth()->check() && auth()->user()->is_admin)
+                    iniciaste como administrador
+                    @else
+                    Bienvenido a panzotti!
+                    @endif
                 </div>
             </div>
         </div>

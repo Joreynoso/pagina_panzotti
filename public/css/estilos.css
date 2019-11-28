@@ -122,12 +122,8 @@ span:hover {
 }
 
 .btn-light {
-    color: #212529;
-    background-color: #f8f9fa;
+    background-color: transparent;
     border-radius: 35px;
-    border: 1px solid rgba(248, 249, 250, 0.75);
-    min-width: 200px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 25px 0 rgba(51, 50, 50, 0.19);
 }
 
 th {
@@ -380,4 +376,11 @@ table td:last-child {
 .tarjeta a{
     width: 100%;
 }
+
+@media screen and (max-width: 600px) {
+    .salir {
+        font-size: 0;
+    }
+}
+
 

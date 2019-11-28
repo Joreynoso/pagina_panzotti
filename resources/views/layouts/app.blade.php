@@ -8,7 +8,6 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
     <title>Pagina Web Panzotti Pastas!</title>
 
     <!-- Scripts -->
@@ -44,7 +43,7 @@
         <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    <h1 class="mt-2" style="font-size: 20px">Panzotti</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -65,8 +64,14 @@
                         </li>
 
                         <li class="nav-item">
-                                <a class="nav-link" href="">Recetas</a>
+                            <a class="nav-link" href="">Recetas</a>
                         </li>
+
+                        @if(auth()->check() && auth()->user()->is_admin)
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('principal')}}">Administrar</a>
+                             </li>
+                        @endif
 
                         <!-- Authentication Links -->
                         @guest
@@ -88,7 +93,7 @@
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Salir') }}
                                 </a>
 
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST"

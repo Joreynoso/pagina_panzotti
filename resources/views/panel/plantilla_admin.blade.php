@@ -23,7 +23,7 @@
 <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark panzotti-nav static-top">
-        <a class="navbar-brand mr-1" href="index.html">Start Bootstrap</a>
+        <a class="navbar-brand mr-1" href="index.html">Panzotti Admin</a>
         <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
         </button>
@@ -35,17 +35,18 @@
 
         <!-- Navbar -->
         <ul class="navbar-nav ml-auto ml-md-0">
-            <li class="mt-2 text-white">
-                Administrador
+            <li class="mt-3 text-white salir">
+                Volver a la pagina
             </li>
-            <li class="nav-item dropdown no-arrow">
-                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                    <i class="fas fa-user-circle fa-fw fa-lg"></i>
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
-                    <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Cerrar Sesion</a>
-                </div>
+            <li class="nav-item">
+                <form method="POST" action="{{ route('logout') }}">
+                    @csrf
+                    <a class="nav-link" title="salir">
+                        <button class="btn">
+                            <i class="fas fa-door-open fa-fw fa-lg corazon"></i>
+                        </button>
+                    </a>
+                </form>
             </li>
         </ul>
     </nav>
@@ -127,14 +128,14 @@
                     <span>Recetas</span></a>
             </li>
             <li class="nav-item">
-                    <a href="{{route('producto')}}" class="nav-link">
-                        <i class="fas fa-seedling"></i>
-                        <span>Producto</span></a>
+                <a href="{{route('producto')}}" class="nav-link">
+                    <i class="fas fa-seedling"></i>
+                    <span>Producto</span></a>
             </li>
             <li class="nav-item">
-                    <a href="{{route('foto')}}" class="nav-link">
-                        <i class="fas fa-images"></i>
-                        <span>Foto</span></a>
+                <a href="{{route('foto')}}" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Foto</span></a>
             </li>
             <li class="nav-item">
                 <a href="{{route('productoprecio')}}" class="nav-link">
@@ -163,7 +164,7 @@
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
                         <span>hecho con <i class="fas fa-heart corazon"></i>
-                        y mucho <i class="fas fa-coffee"></i> para Pastas Panzotti. (2019)</span>
+                            y mucho <i class="fas fa-coffee"></i> para Pastas Panzotti. (2019)</span>
                     </div>
                 </div>
             </footer>
@@ -177,26 +178,6 @@
     <a class="scroll-to-top rounded" href="#page-top">
         <i class="fas fa-angle-up"></i>
     </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Seguro que deseas salir?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">×</span>
-                    </button>
-                </div>
-                <div class="modal-body">Selecciona "salir" para abandonar el panel de administracion.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="login.html">Salir</a>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- Bootstrap core JavaScript-->
     <script type="text/javascript" src="{!! asset('js/jquery.min.js') !!}" async></script>
