@@ -5,8 +5,8 @@
 <!-- Mensaje Bienvenida Productos -->
 <header class="bg-primary2 text-white">
     <div class="container text-center">
-        <h1 class="mt-5 texto">Productos Panzotti</h1>
-        <p class="lead">Te invitamos a conocer todos nuestros productos!</p>
+        <h1 class="mt-5 texto font-beyond">Productos Panzotti</h1>
+        <p>Te invitamos a conocer todos nuestros productos!</p>
     </div>
 </header>
 
@@ -17,8 +17,8 @@
             <div class="col-lg-8 mx-auto">
                 <div class="heading">
                     <img class="heading-img" src="img/heading_logo.png" alt="">
-                    <h2>Nuestros Productos</h2>
-                    <p class="lead text-center">elegi el producto que mas te guste y hace un pedido! </p>
+                    <h2 class="font-beyond">Nuestros Productos</h2>
+                    <p class="text-center">elegi el producto que mas te guste y hace un pedido! </p>
                 </div>
 
                 <div class="mb-5">
@@ -86,7 +86,7 @@
             </div>
         </div>
 
-        <p class="lead text-center mt-5 letra">En Panzotti Pastas Trabajamos día a día para brindar servicio,
+        <p class="text-center mt-5">En Panzotti Pastas Trabajamos día a día para brindar servicio,
             atención y valor a nuestros clientes que confían en nosotros y nos eligen.
 
             Buscamos satisfacer todas las necesidades que el cliente solicita y seguir creciendo en líneas de productos,
