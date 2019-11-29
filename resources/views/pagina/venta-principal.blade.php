@@ -9,13 +9,102 @@
 		<aside class="col-sm-5 border-right">
 <article class="gallery-wrap">
 <div class="img-big-wrap ">
-  <div> <a href="#"><img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"></a></div>
+
+
+    <!-- Button trigger modal -->
+    <div>
+            <button type="button"  data-toggle="modal" data-target="#exampleModal">
+                    <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg">
+                </button>
+    </div>
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-body">
+                    <img class="img-fluid" alt="Responsive image"  src="img/fetuccini.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
 </div> <!-- slider-product.// -->
 <div class="img-small-wrap">
-  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
-  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
-  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
-  <div class="item-gallery"> <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg"> </div>
+    <div class="item-gallery">
+      <!-- Button trigger modal -->
+        <button type="button"  data-toggle="modal" data-target="#exampleModal">
+            <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg">
+        </button>
+
+         <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+                        <img class="img-fluid" alt="Responsive image"  src="img/fetuccini.jpeg" alt="">
+                </div>
+              </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="item-gallery">
+        <!-- Button trigger modal -->
+        <button type="button"  data-toggle="modal" data-target="#exampleModal">
+            <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg">
+        </button>
+
+         <!-- Modal -->
+         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                            <img class="img-fluid" alt="Responsive image"  src="img/fetuccini.jpeg" alt="">
+                    </div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="item-gallery">
+        <!-- Button trigger modal -->
+            <button type="button"  data-toggle="modal" data-target="#exampleModal">
+                <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg">
+            </button>
+
+             <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                            <img class="img-fluid" alt="Responsive image"  src="img/fetuccini.jpeg" alt="">
+                    </div>
+                  </div>
+                </div>
+        </div>
+    </div>
+
+    <div class="item-gallery">
+        <!-- Button trigger modal -->
+            <button type="button"  data-toggle="modal" data-target="#exampleModal">
+                <img class="img-fluid" alt="Responsive image" src="img/fetuccini.jpeg">
+            </button>
+
+             <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                            <img class="img-fluid" alt="Responsive image"  src="img/fetuccini.jpeg" alt="">
+                    </div>
+                  </div>
+                </div>
+            </div>
+    </div>
+
 </div> <!-- slider-nav.// -->
 </article> <!-- gallery-wrap .end// -->
 		</aside>
