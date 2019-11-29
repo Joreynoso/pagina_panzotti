@@ -24,24 +24,17 @@
 
         <div class="row">
             <div class="col-md-6">
-                <p class="mb-30">Maecenas fermentum tortor id fringilla molestie. In hac habitasse
-                    platea dictumst. Morbi maximus
-                    lobortis ipsum, ut blandit augue ullamcorper vitae.
-                    Nulla dignissim leo felis, eget cursus elit aliquet ut. Curabitur vel convallis
-                    massa. Morbi tellus
-                    tortor, luctus et lacinia non, tincidunt in lacus.
-                    Vivamus sed ligula imperdiet, feugiat magna vitae, blandit ex. Vestibulum id
-                    dapibus dolor, ac
-                    cursus nulla. </p>
+                <p style="text-align: justify" class="mb-30">Pastas Panzotti es una empresa familiar, que se dedica a la elaboración de Pastas
+                     100% CASERAS. Nuestros productos son de la mejor calidad y todo 100% naturales. Nuestro amplio
+                     abanico de variedad te ofrece fetuccini de varios sabores, espaguetis, ravioles y cappellettis.
+                       </p>
             </div><!-- col-md-6 -->
 
             <div class="col-md-6">
-                <p class="mb-30">Maecenas fermentum tortor id fringilla molestie. In hac habitasse platea
-                    dictumst.Morbi maximus lobortis ipsum, ut blandit augue ullamcorper vitae.
-                    Nulla dignissim leo felis, eget cursus elit aliquet ut. Curabitur vel
-                    convallismassa. Morbi tellus tortor, luctus et lacinia non, tincidunt in lacus.
-                    Vivamus sed ligula imperdiet, feugiat magna vitae, blandit ex. Vestibulumidda
-                    pibus dolor, accursus nulla. </p>
+                <p style="text-align: justify" class="mb-30">Panzotti es una empresa familiar la cual tiene como principal actividad es la producción de
+                    pastas frescas, dicha producción está compuesta por tres productos (ravioles, fetuccini y espaguetis).
+                    Todos nuestros productos están elaborados con las mejores materias primas y el mayor de los cuidados
+                    en seguridad e higiene. Te invitamos a conocer nuestras instalaciones.   </p>
             </div>
         </div>
     </div>

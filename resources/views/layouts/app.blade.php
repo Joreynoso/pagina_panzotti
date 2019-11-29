@@ -148,10 +148,9 @@
                     </div>
                     <div class="col-md-6 item text">
                         <h3>Pastas Panzotti</h3>
-                        <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac sem lacus. Ut vehicula
-                            rhoncus
-                            elementum. Etiam quis tristique lectus. Aliquam in arcu eget velit pulvinar dictum vel in
-                            justo.</p>
+                        <p style="text-align: justify">La empresa Panzotti está ubicada en la calle prado 135, es una empresa familiar la
+                            cual produce pastas caseras, dentro de su producción elaboran ravioles, fetuccini y
+                            espaguetis los cuales tienen una gran aceptación en el público.</p>
                     </div>
                     <div class="col item social">
                         <a href="#"><i class="icon ion-social-facebook"></i></a>

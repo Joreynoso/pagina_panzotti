@@ -11,7 +11,10 @@ body {
     background: none;
 }
 
-h1, h2, h3, .font-beyond {
+h1,
+h2,
+h3,
+.font-beyond {
     font-family: "beyond_the_mountainsregular", sans-serif;
 }
 
@@ -38,6 +41,15 @@ h1, h2, h3, .font-beyond {
     object-fit: cover;
 }
 
+.bg-primary3 {
+    height: 500px;
+    background-image: url("../img/spaguetti.png");
+    background-size: cover;
+    background-color: #000000!important;
+    background-color: rgba(0, 0, 0, .7)!important;
+    object-fit: cover;
+}
+
 .bg-dark {
     background-color: #000000!important;
     background-color: rgba(0, 0, 0, .8)!important;
@@ -46,6 +58,7 @@ h1, h2, h3, .font-beyond {
 .texto {
     font-size: 50px;
 }
+
 
 /* footer */
 
@@ -139,6 +152,7 @@ h1, h2, h3, .font-beyond {
     margin-bottom: 0;
 }
 
+
 /* tarjetas producto*/
 
 .heading {
@@ -202,6 +216,7 @@ h1, h2, h3, .font-beyond {
     background-color: #ac2533;
 }
 
+
 /*mapa de google*/
 
 .map-clean {
@@ -233,6 +248,7 @@ h1, h2, h3, .font-beyond {
     margin: 0 auto 40px;
 }
 
+
 /*galeria de instagram*/
 
 .gallery {
@@ -260,6 +276,7 @@ h1, h2, h3, .font-beyond {
     transform: scale(1.08);
     opacity: 0.8;
 }
+
 
 /* presentacion */
 
@@ -337,6 +354,7 @@ h1, h2, h3, .font-beyond {
     right: 0;
 }
 
+
 /* RESPONSIVE */
 
 @media only screen and (max-width: 992px) {
@@ -386,6 +404,7 @@ h1, h2, h3, .font-beyond {
     color: red;
 }
 
+
 /*separadores*/
 
 hr.dashed {
@@ -422,87 +441,89 @@ hr.hr-text::before {
     transform: translate(-50%, -50%);
 }
 
+
 /*recetas*/
+
 .article-clean {
     color: #56585b;
     background-color: #fff;
     font-family: 'Lora', serif;
     font-size: 14px;
-  }
-  
-  .article-clean .intro {
+}
+
+.article-clean .intro {
     font-size: 16px;
     margin: 0 auto 30px;
-  }
-  
-  .article-clean .intro h1 {
+}
+
+.article-clean .intro h1 {
     font-size: 32px;
     margin-bottom: 15px;
     padding-top: 20px;
     line-height: 1.5;
     color: inherit;
     margin-top: 20px;
-  }
-  
-  .article-clean .intro p {
+}
+
+.article-clean .intro p {
     color: #929292;
     font-size: 12px;
-  }
-  
-  .article-clean .intro p .by {
+}
+
+.article-clean .intro p .by {
     font-style: italic;
-  }
-  
-  .article-clean .intro p .date {
+}
+
+.article-clean .intro p .date {
     text-transform: uppercase;
     padding: 4px 0 4px 10px;
     margin-left: 10px;
     border-left: 1px solid #ddd;
-  }
-  
-  .article-clean .intro p a {
+}
+
+.article-clean .intro p a {
     color: #333;
     text-transform: uppercase;
     padding-left: 3px;
-  }
-  
-  .article-clean .intro img {
+}
+
+.article-clean .intro img {
     margin-top: 20px;
-  }
-  
-  .article-clean .text p {
+}
+
+.article-clean .text p {
     margin-bottom: 20px;
     line-height: 1.45;
-  }
-  
-  @media (min-width:768px) {
+}
+
+@media (min-width:768px) {
     .article-clean .text p {
-      font-size: 16px;
+        font-size: 16px;
     }
-  }
-  
-  .article-clean .text h2 {
+}
+
+.article-clean .text h2 {
     margin-top: 28px;
     margin-bottom: 20px;
     line-height: 1.45;
     font-size: 16px;
     font-weight: bold;
     color: #333;
-  }
-  
-  @media (min-width:768px) {
+}
+
+@media (min-width:768px) {
     .article-clean .text h2 {
-      font-size: 20px;
+        font-size: 20px;
     }
-  }
-  
-  .article-clean .text figure {
+}
+
+.article-clean .text figure {
     text-align: center;
     margin-top: 30px;
     margin-bottom: 20px;
-  }
-  
-  .article-clean .text figure img {
+}
+
+.article-clean .text figure img {
     margin-bottom: 12px;
     max-width: 100%;
-  }
+}
