@@ -23,9 +23,9 @@ h3,
     margin-bottom: 30px;
 }
 
-.bg-primary {
+.bg-primary1 {
     height: 500px;
-    background-image: url("../img/fondo.png");
+    background-image: url("../img/fondo2.png");
     background-size: cover;
     background-color: #000000!important;
     background-color: rgba(0, 0, 0, .7)!important;
@@ -46,13 +46,13 @@ h3,
     background-image: url("../img/spaguetti.png");
     background-size: cover;
     background-color: #000000!important;
-    background-color: rgba(0, 0, 0, .7)!important;
+    background-color: rgb(90, 90, 90)!important;
+    background-blend-mode: soft-light;
     object-fit: cover;
 }
 
-.bg-dark {
-    background-color: #000000!important;
-    background-color: rgba(0, 0, 0, .8)!important;
+.bg-dark1 {
+    background: rgb(43, 43, 43)!important;
 }
 
 .texto {
@@ -441,89 +441,53 @@ hr.hr-text::before {
     transform: translate(-50%, -50%);
 }
 
-
-/*recetas*/
-
-.article-clean {
-    color: #56585b;
-    background-color: #fff;
-    font-family: 'Lora', serif;
-    font-size: 14px;
-}
-
-.article-clean .intro {
-    font-size: 16px;
-    margin: 0 auto 30px;
-}
-
-.article-clean .intro h1 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    padding-top: 20px;
-    line-height: 1.5;
-    color: inherit;
-    margin-top: 20px;
-}
-
-.article-clean .intro p {
-    color: #929292;
-    font-size: 12px;
-}
-
-.article-clean .intro p .by {
-    font-style: italic;
-}
-
-.article-clean .intro p .date {
-    text-transform: uppercase;
-    padding: 4px 0 4px 10px;
-    margin-left: 10px;
-    border-left: 1px solid #ddd;
-}
-
-.article-clean .intro p a {
-    color: #333;
-    text-transform: uppercase;
-    padding-left: 3px;
-}
-
-.article-clean .intro img {
-    margin-top: 20px;
-}
-
-.article-clean .text p {
-    margin-bottom: 20px;
-    line-height: 1.45;
-}
-
-@media (min-width:768px) {
-    .article-clean .text p {
-        font-size: 16px;
+/* RECETAS
+------------------------- */
+.blog-title {
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .blog-description {
+    font-size: 1.1rem;
+    color: #999;
+  }
+  
+  @media (min-width: 40em) {
+    .blog-title {
+      font-size: 3.5rem;
     }
-}
+  }
+  
+  /* Pagination */
+  .blog-pagination {
+    margin-bottom: 4rem;
+  }
+  .blog-pagination > .btn {
+    border-radius: 2rem;
+  }
+  
+  /*
+   * Blog posts
+   */
+  .blog-post {
+    margin-bottom: 4rem;
+    text-align: justify;
+  }
+  .blog-post-title {
+    margin-bottom: .25rem;
+    font-size: 2.5rem;
+  }
+  .blog-post-meta {
+    margin-bottom: 1.25rem;
+    color: #999;
+  }
 
-.article-clean .text h2 {
-    margin-top: 28px;
-    margin-bottom: 20px;
-    line-height: 1.45;
-    font-size: 16px;
-    font-weight: bold;
-    color: #333;
-}
+  .blog-post img{
+    width: 100%;
+  }
 
-@media (min-width:768px) {
-    .article-clean .text h2 {
-        font-size: 20px;
-    }
-}
-
-.article-clean .text figure {
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 20px;
-}
-
-.article-clean .text figure img {
-    margin-bottom: 12px;
-    max-width: 100%;
-}
+  .texto2{
+      color: #dc3545;
+      font-style: italic;
+  }

@@ -3,9 +3,9 @@
 @section('content')
 
 <!-- Mensaje Bienvenida -->
-<header class="bg-primary text-white">
+<header class="bg-primary1 text-white">
     <div class="container text-center">
-        <h1 class="mt-5 texto">Panzotti</h1>
+        <h1 class="mt-5 texto font-beyond">Panzotti</h1>
         <p class="lead">Proba nuestras riquisimas pastas caseras, elaboradas con productos naturales!
         </p>
         <a class="btn btn-danger" role="button" href="{{route('productoWeb')}}">VER CATALOGO PRODUCTOS</a>
@@ -19,7 +19,7 @@
     <div class="container">
         <div class="heading">
             <img class="heading-img" src="img/heading_logo.png" alt="">
-            <h2>Quienes somos?</h2>
+            <h2 class="font-beyond">Quienes somos?</h2>
         </div>
 
         <div class="row">
@@ -31,7 +31,7 @@
             </div><!-- col-md-6 -->
 
             <div class="col-md-6">
-                <p style="text-align: justify" class="mb-30">Panzotti es una empresa familiar la cual tiene como principal actividad es la producción de
+                <p style="text-align: justify" class="mb-30">Panzotti es una empresa familiar la cual tiene como principal actividad la producción de
                     pastas frescas, dicha producción está compuesta por tres productos (ravioles, fetuccini y espaguetis).
                     Todos nuestros productos están elaborados con las mejores materias primas y el mayor de los cuidados
                     en seguridad e higiene. Te invitamos a conocer nuestras instalaciones.   </p>
@@ -44,28 +44,28 @@
 <section id="carousel" class="bg-light">
     <div class="heading">
         <img class="heading-img" src="img/heading_logo.png" alt="">
-        <h2 class="text-center">Lo mas Vendido</h2>
+        <h2 class="text-center font-beyond">Lo mas Vendido</h2>
         <p class="text-center">te mostramos algunos de nuestros productos mas vendidos! </p>
     </div>
     <div class="carousel slide" data-ride="carousel" id="carousel-1">
         <div class="carousel-inner" role="listbox">
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-nature carousel-hero">
-                    <h1 class="hero-title">Spaguetti</h1>
+                    <h1 class="hero-title font-beyond">Spaguetti</h1>
                     <p class="hero-subtitle lead">pastas caseras!</p>
                     <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-photography carousel-hero">
-                    <h1 class="hero-title">Fetuccini</h1>
+                    <h1 class="hero-title font-beyond">Fetuccini</h1>
                     <p class="hero-subtitle lead">pastas caseras!</p>
                     <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
             <div class="carousel-item active">
                 <div class="jumbotron pulse animated hero-technology carousel-hero">
-                    <h1 class="hero-title">Ravioles</h1>
+                    <h1 class="hero-title font-beyond">Ravioles</h1>
                     <p class="hero-subtitle">pastas caseras!</p>
                     <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
@@ -91,7 +91,7 @@
             <div class="col-lg-12 mx-auto">
                 <div class="heading">
                     <img class="heading-img" src="img/heading_logo.png" alt="">
-                    <h2 class="text-center">Seguinos en Instagram!</h2>
+                    <h2 class="text-center font-beyond">Seguinos en Instagram!</h2>
                     <p class="text-center">Enterate de todas nuestras noticias, promociones y ofertas,
                         seguinos!.</p>
                 </div>
@@ -144,7 +144,7 @@
         <div class="container">
             <div class="intro">
                 <img class="heading-img" src="img/heading_logo.png" alt="">
-                <h2 class="text-center">Donde Encontarnos?</h2>
+                <h2 class="text-center font-beyond">Donde Encontarnos?</h2>
                 <p class="text-center">Acercate y conoce nuestros productos, te van a encantar!!, te esperamos
                     en nuñez del prado al 135!. </p>
             </div>

@@ -47,10 +47,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark1 shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <h1 class="mt-2" style="font-size: 20px">Panzotti</h1>
+                    <h1 class="mt-2 font-beyond" style="font-size: 20px">Panzotti</h1>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -131,7 +131,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Servicios</h3>
+                        <h3 class="font-beyond">Servicios</h3>
                         <ul>
                             <li><a href="#">Web design</a></li>
                             <li><a href="#">Development</a></li>
@@ -139,7 +139,7 @@
                         </ul>
                     </div>
                     <div class="col-sm-6 col-md-3 item">
-                        <h3>Quienes Somos?</h3>
+                        <h3 class="font-beyond">Quienes Somos?</h3>
                         <ul>
                             <li><a href="#">Company</a></li>
                             <li><a href="#">Team</a></li>
@@ -147,7 +147,7 @@
                         </ul>
                     </div>
                     <div class="col-md-6 item text">
-                        <h3>Pastas Panzotti</h3>
+                        <h3 class="font-beyond">Pastas Panzotti</h3>
                         <p style="text-align: justify">La empresa Panzotti está ubicada en la calle prado 135, es una empresa familiar la
                             cual produce pastas caseras, dentro de su producción elaboran ravioles, fetuccini y
                             espaguetis los cuales tienen una gran aceptación en el público.</p>
