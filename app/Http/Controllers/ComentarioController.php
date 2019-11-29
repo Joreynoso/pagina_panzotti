@@ -7,11 +7,11 @@ use App\Comentario;
 
 class ComentarioController extends Controller{
 
-    //auth
-    public function __construct(){
+    // //auth
+    // public function __construct(){
 
-        $this->middleware('auth');
-    }
+    //     $this->middleware('auth');
+    // }
     
     public function mostrar(){
 

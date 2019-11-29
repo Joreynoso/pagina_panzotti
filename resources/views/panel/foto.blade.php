@@ -30,7 +30,7 @@
 
     <div class="col-xl-3 col-lg-4 col-md-6 mb-4" style="">
         <div class="bg-white shadow rounded overflow p-3 tarjeta">
-            <img src="{{asset('img/logo_pdf.png')}}" alt="ft_producto" class="img-fluid card-img-top">
+            <img src="{{ asset('img/'.$item->ruta)}}" alt="ft_producto" class="img-fluid card-img-top">
             <p class="text-muted mb-2 mt-2">nombre: {{$item->producto->nombre}}</p>
             <a href="{{route('editarFoto', $item)}}" title="editar" class="btn btn-sm btn-warning text-white mb-3">
                 <i class="fa fa-pen"></i>
