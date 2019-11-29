@@ -8,7 +8,7 @@
         <h1 class="mt-5 texto font-beyond">Panzotti</h1>
         <p class="lead">Proba nuestras riquisimas pastas caseras, elaboradas con productos naturales!
         </p>
-        <a class="btn btn-danger" role="button" href="{{route('productoWeb')}}">VER CATALOGO PRODUCTOS</a>
+        <a class="btn btn-rojo text-white" role="button" href="{{route('productoWeb')}}">VER CATALOGO PRODUCTOS</a>
     </div>
 </header>
 
@@ -53,21 +53,21 @@
                 <div class="jumbotron pulse animated hero-nature carousel-hero">
                     <h1 class="hero-title font-beyond">Spaguetti</h1>
                     <p class="hero-subtitle lead">pastas caseras!</p>
-                    <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
+                    <p><a class="btn btn-rojo text-white mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
             <div class="carousel-item">
                 <div class="jumbotron pulse animated hero-photography carousel-hero">
                     <h1 class="hero-title font-beyond">Fetuccini</h1>
                     <p class="hero-subtitle lead">pastas caseras!</p>
-                    <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
+                    <p><a class="btn btn-rojo text-white mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
             <div class="carousel-item active">
                 <div class="jumbotron pulse animated hero-technology carousel-hero">
                     <h1 class="hero-title font-beyond">Ravioles</h1>
                     <p class="hero-subtitle">pastas caseras!</p>
-                    <p><a class="btn btn-danger mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
+                    <p><a class="btn btn-rojo text-white  mt-5" role="button" href="{{route('venta-principal')}}">VER TODOS LOS PRODUCTOS</a></p>
                 </div>
             </div>
         </div>
