@@ -23,26 +23,25 @@
 
 <!-- nuevo -->
 <div class="container-btn">
-  <a href="{{route('cliente_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+  <a href="{{route('cliente_alta')}}" class="btn btn-info mb-4" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
 </div>
 
 <!-- buscador -->
 <form class="form-inline mb-3">
+  <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
+    <option>Buscar por tipo</option>
+    <option>nombre</option>
+    <option>apellido</option>
+    <option>tel</option>
+    <option>domicilio</option>
+  </select>
 
-    <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
-      <option>Buscar por tipo</option>
-      <option>nombre</option>
-      <option>apellido</option>
-      <option>tel</option>
-      <option>domicilio</option>
-    </select>
+  <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
 
-    <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
-
-    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
-  </form>
+  <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+</form>
 
 <!-- existen clientes? -->
 @if ($clientes->count() == 0)

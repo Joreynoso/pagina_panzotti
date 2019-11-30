@@ -8,7 +8,40 @@ use App\Nota;
 class NotaController extends Controller
 {
     //leer
-    public function leer(){
+    public function leer(Request $request){
+
+        $tipo = $request->get('tipo');
+
+        $variablesurl = $request->all();
+
+        if ($tipo == "mas reciente") {
+
+            $notas = Nota::orderBy('created_at', 'DESC')->paginate(8)->appends($variablesurl);
+
+            return view('panel.notas',compact('notas'));
+        }
+
+        if ($tipo == "menos reciente") {
+
+            $notas = Nota::orderBy('created_at', 'ASC')->paginate(8)->appends($variablesurl);
+
+            return view('panel.notas',compact('notas'));
+        }
+
+        if ($tipo == "mas urgente") {
+
+            $notas = Nota::orderBy('urgencia','ASC')->paginate(8)->appends($variablesurl);
+
+            return view('panel.notas',compact('notas'));
+        }
+
+        if ($tipo == "menos urgente") {
+
+            $notas = Nota::orderBy('urgencia','DESC')->paginate(8)->appends($variablesurl);
+
+            return view('panel.notas',compact('notas'));
+        }
+
         $notas = Nota::paginate(8);
 
         return view('panel.notas',compact('notas'));

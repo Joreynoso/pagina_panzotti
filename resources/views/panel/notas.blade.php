@@ -6,7 +6,7 @@
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb breadcrumb-bullet">
         <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
-        <li aria-current="page" class="breadcrumb-item active text-uppercase">Clientes</li>
+        <li aria-current="page" class="breadcrumb-item active text-uppercase">MisNotas</li>
     </ol>
 </nav>
 
@@ -15,13 +15,18 @@
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
 </a>
 
-<div id="outerContainer">
-    <div id="container">
-        <div id="item">
+<!-- filtros -->
+<form class="form-inline mb-4">
+    <select name="tipo" class="form-control mr-sm-2" style="width: 200px;" id="exampleFormControlSelect1">
+        <option>todas las notas</option>
+        <option>mas reciente</option>
+        <option>menos reciente</option>
+        <option>mas urgente</option>
+        <option>menos urgente</option>
+    </select>
 
-        </div>
-    </div>
-</div>
+    <button class="btn btn-outline-info my-2 my-sm-0" type="submit">mostrar</button>
+</form>
 
 <!-- existen clientes? -->
 @if ($notas->count() == 0)
@@ -43,31 +48,13 @@
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
             <p class="mb-0 mt-2 font-italic non-selectable">"{{$item->descripcion}}."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top non-selectable">urgencia: {{$item->urgencia}}
+                <p class="mb-0 mt-2 font-italic non-selectable texto-nota">
+                    {{$item->created_at->format('d M Y - H:i:s')}}</p>
                 <br>
                 <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
                     @method('DELETE')
                     @csrf
                     <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</button>
-                </form>
-            </footer>
-        </blockquote>
-    </div>
-
-    @else
-
-    <!-- urgencia = media , nota color rosa -->
-    @if ($item->urgencia == 'media')
-    <div class="col-xl-3 col-sm-6 mb-3">
-        <blockquote class="blockquote blockquote-custom nota-color2 p-5 shadow rounded">
-            <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
-            <p class="mb-0 mt-2 font-italic non-selectable">"{{$item->descripcion}}."</p>
-            <footer class="blockquote-footer text-black-50 pt-4 mt-4 border-top non-selectable">urgencia:
-                {{$item->urgencia}}
-                <br>
-                <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
-                    @method('DELETE')
-                    @csrf
-                    <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</i></button>
                 </form>
             </footer>
         </blockquote>
@@ -80,6 +67,8 @@
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
             <p class="mb-0 mt-2 font-italic non-selectable">"{{$item->descripcion}}."</p>
             <footer class="blockquote-footer pt-4 mt-4 border-top non-selectable">urgencia: {{$item->urgencia}}
+                <p class="mb-0 mt-2 font-italic non-selectable texto-nota">
+                    {{$item->created_at->format('d M Y - H:i:s')}}</p>
                 <br>
                 <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
                     @method('DELETE')
@@ -90,7 +79,6 @@
         </blockquote>
     </div>
 
-    @endif
     @endif
     @endforeach
 </div>

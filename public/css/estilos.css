@@ -383,4 +383,9 @@ table td:last-child {
     }
 }
 
+.texto-nota{
+    font-size: 13px;
+    color: grey;
+    font-weight: bold;
+}
 

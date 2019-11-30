@@ -34,7 +34,6 @@
                 <select class="form-control" id="urgencia" name="urgencia">
                     <option>alta</option>
                     <option>baja</option>
-                    <option>media</option>
                 </select>
             </div>
 
