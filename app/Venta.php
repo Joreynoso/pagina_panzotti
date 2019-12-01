@@ -10,4 +10,9 @@ class Venta extends Model
     {
         return $this->hasOne('App\Cliente', 'id', 'cliente_id');
     }
+
+    public function productos()
+    {
+        return $this->belongsToMany('App\Producto', 'id', 'producto_id')->withTimestamps();
+    }
 }

@@ -20,4 +20,9 @@ class Producto extends Model
     {
         return $this->belongsTo('App\ProductoPrecio', 'id', 'productoprecio_id');
     }
+
+    public function ventas()
+    {
+        return $this->belongsToMany('App\Venta', 'id', 'venta_id')->withTimestamps();
+    }
 }

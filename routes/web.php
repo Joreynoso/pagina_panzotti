@@ -220,6 +220,20 @@ Route::put('/venta_editar/{id}', 'VentaController@update')->name('updateVenta');
 
 Route::delete('/bajaVenta/{id}', 'VentaController@baja')->name('bajaVenta');
 
+// Producto-Venta
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/productoventa', 'ProductoVentaController@leer')->name('productoventa');
+
+Route::get('/productoventa_alta', 'ProductoVentaController@acceder')->name('productoventa_alta');
+
+Route::post('/altaProductoVenta', 'ProductoVentaController@alta')->name('altaProductoVenta');
+
+Route::get('/productoventa_editar/{id}', 'ProductoVentaController@editar')->name('editarProductoVenta');
+
+Route::put('/productoventa_editar/{id}', 'ProductoVentaController@update')->name('updateProductoVenta');
+
+Route::delete('/bajaProductoVenta/{id}', 'ProductoVentaController@baja')->name('bajaProductoVenta');
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal Panzotti

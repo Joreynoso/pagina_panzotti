@@ -147,6 +147,11 @@
                     <i class="fas fa-donate"></i>
                     <span>Ventas</span></a>
             </li>
+            <li class="nav-item">
+                <a href="{{route('productoventa')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Producto-Ventas</span></a>
+            </li>
 
         </ul>
 
