@@ -12,13 +12,13 @@ class ProveedorController extends Controller
 
         $proveedores = Proveedor::paginate(5);
 
-        return view('panel.proveedor', compact('proveedores'));
+        return view('panel.proveedor.proveedor', compact('proveedores'));
     }
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.proveedor_alta');
+        return view('panel.proveedor.proveedor_alta');
     }
 
     //alta
@@ -53,7 +53,7 @@ class ProveedorController extends Controller
 
         $proveedor = Proveedor::findOrFail($id);
 
-        return view('panel.proveedor_editar',compact('proveedor'));
+        return view('panel.proveedor.proveedor_editar',compact('proveedor'));
     }
 
     //update

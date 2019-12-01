@@ -8,7 +8,7 @@ use App\Cliente;
 use PDF;
 
 class ClienteController extends Controller{
-  
+
     public function leer(Request $request){
 
         $buscar = $request->get('buscarpor');
@@ -19,16 +19,16 @@ class ClienteController extends Controller{
 
         $clientes = Cliente::buscarpor($tipo, $buscar)->paginate(5)->appends($variablesurl);
 
-        return view('panel.cliente', compact('clientes'));
+        return view('panel.cliente.cliente', compact('clientes'));
     }
 
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.cliente_alta');
+        return view('panel.cliente.cliente_alta');
     }
-    
+
     //alta
     public function alta(Request $request){
 
@@ -59,7 +59,7 @@ class ClienteController extends Controller{
 
         $cliente = Cliente::findOrFail($id);
 
-        return view('panel.cliente_editar',compact('cliente'));
+        return view('panel.cliente.cliente_editar',compact('cliente'));
     }
 
     //update
@@ -103,7 +103,7 @@ class ClienteController extends Controller{
         $pdf = PDF::loadView('pdf.clientespdf', compact('clientes'));
 
         return $pdf->download('clientes-panzotti-lista.pdf');
-    
+
     }
 
 }

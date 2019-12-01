@@ -13,7 +13,7 @@ class ProductoController extends Controller
     {
         $productos = Producto::paginate(5);
 
-        return view('panel.producto', compact('productos'));
+        return view('panel.producto.producto', compact('productos'));
     }
 
     //acceder alta
@@ -21,7 +21,7 @@ class ProductoController extends Controller
     {
       $recetas = Receta::all();
 
-        return view('panel.producto_alta', compact('recetas'));
+        return view('panel.producto.producto_alta', compact('recetas'));
     }
 
     //alta
@@ -54,7 +54,7 @@ class ProductoController extends Controller
 
         $recetas = Receta::all();
 
-        return view('panel.producto_editar',compact('producto','recetas'));
+        return view('panel.producto.producto_editar',compact('producto','recetas'));
     }
 
        //update
@@ -91,7 +91,7 @@ class ProductoController extends Controller
     //leer producto web
     public function leerWeb()
     {
-      
+
         return view('pagina.producto');
     }
 }

@@ -11,13 +11,13 @@ class TipoMateriaPrimaController extends Controller
     public function leer(){
         $tipomateriaprimas = TipoMateriaPrima::paginate(5);
 
-        return view('panel.tipomp', compact('tipomateriaprimas'));
+        return view('panel.tipomp.tipomp', compact('tipomateriaprimas'));
     }
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.tipomp_alta');
+        return view('panel.tipomp.tipomp_alta');
     }
 
     //alta
@@ -44,7 +44,7 @@ class TipoMateriaPrimaController extends Controller
 
         $tipomateriaprimas = TipoMateriaPrima::findOrFail($id);
 
-        return view('panel.tipomp_editar',compact('tipomateriaprimas'));
+        return view('panel.tipomp.tipomp_editar',compact('tipomateriaprimas'));
     }
 
     //update

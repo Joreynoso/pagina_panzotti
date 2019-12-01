@@ -12,10 +12,10 @@ class ComentarioController extends Controller{
 
     //     $this->middleware('auth');
     // }
-    
+
     public function mostrar(){
 
-        return view('/panel/comentario');
+        return view('/panel/comentario/comentario');
     }
 
     //leer
@@ -23,6 +23,6 @@ class ComentarioController extends Controller{
 
         $comentarios = Comentario::paginate(10);;
 
-        return view('/panel/comentario',compact('comentarios'));
+        return view('/panel/comentario/comentario',compact('comentarios'));
     }
 }

@@ -13,7 +13,7 @@ class VentaController extends Controller
     {
         $ventas = Venta::paginate(5);
 
-        return view('panel.venta', compact('ventas'));
+        return view('panel.venta.venta', compact('ventas'));
     }
 
     //leer principal
@@ -29,7 +29,7 @@ class VentaController extends Controller
     {
         $clientes = Cliente::all();
 
-        return view('panel.venta_alta', compact('clientes'));
+        return view('panel.venta.venta_alta', compact('clientes'));
     }
 
     //alta
@@ -62,7 +62,7 @@ class VentaController extends Controller
 
         $clientes = Cliente::all();
 
-        return view('panel.venta_editar',compact('venta','clientes'));
+        return view('panel.venta.venta_editar',compact('venta','clientes'));
     }
 
        //update

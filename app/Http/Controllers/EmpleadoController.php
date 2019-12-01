@@ -11,14 +11,14 @@ class EmpleadoController extends Controller
     public function leer(){
         $empleados = Empleado::paginate(5);
 
-        return view('panel.empleado', compact('empleados'));
+        return view('panel.empleado.empleado', compact('empleados'));
     }
 
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.empleado_alta');
+        return view('panel.empleado.empleado_alta');
     }
 
     //alta
@@ -53,7 +53,7 @@ class EmpleadoController extends Controller
 
         $empleado = Empleado::findOrFail($id);
 
-        return view('panel.empleado_editar',compact('empleado'));
+        return view('panel.empleado.empleado_editar',compact('empleado'));
     }
 
     //update

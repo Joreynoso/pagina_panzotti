@@ -13,7 +13,7 @@ class ProductoPrecioController extends Controller
      {
          $productoprecios = ProductoPrecio::paginate(5);
 
-         return view('panel.productoprecio', compact('productoprecios'));
+         return view('panel.productoprecio.productoprecio', compact('productoprecios'));
      }
 
      //acceder alta
@@ -21,7 +21,7 @@ class ProductoPrecioController extends Controller
      {
          $productos = Producto::all();
 
-         return view('panel.productoprecio_alta', compact('productos'));
+         return view('panel.productoprecio.productoprecio_alta', compact('productos'));
      }
 
      //alta
@@ -54,7 +54,7 @@ class ProductoPrecioController extends Controller
 
          $productos = Producto::all();
 
-         return view('panel.productoprecio_editar',compact('productoprecio','productos'));
+         return view('panel.productoprecio.productoprecio_editar',compact('productoprecio','productos'));
      }
 
         //update

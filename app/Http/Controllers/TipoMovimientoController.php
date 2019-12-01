@@ -11,13 +11,13 @@ class TipoMovimientoController extends Controller
     public function leer(){
         $tipomovimientos = TipoMovimiento::paginate(5);
 
-        return view('panel.tipomov', compact('tipomovimientos'));
+        return view('panel.tipomov.tipomov', compact('tipomovimientos'));
     }
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.tipomov_alta');
+        return view('panel.tipomov.tipomov_alta');
     }
 
     //alta
@@ -44,7 +44,7 @@ class TipoMovimientoController extends Controller
 
         $tipomovimiento = TipoMovimiento::findOrFail($id);
 
-        return view('panel.tipomov_editar',compact('tipomovimiento'));
+        return view('panel.tipomov.tipomov_editar',compact('tipomovimiento'));
     }
 
     //update

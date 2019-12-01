@@ -14,7 +14,7 @@ class FotoController extends Controller
     {
         $fotos = Foto::paginate(5);
 
-        return view('panel.foto', compact('fotos'));
+        return view('panel.foto.foto', compact('fotos'));
     }
 
     //acceder alta
@@ -22,7 +22,7 @@ class FotoController extends Controller
     {
         $productos = Producto::all();
 
-        return view('panel.foto_alta', compact('productos'));
+        return view('panel.foto.foto_alta', compact('productos'));
     }
 
     //alta
@@ -75,7 +75,7 @@ class FotoController extends Controller
 
         $productos = Producto::all();
 
-        return view('panel.foto_editar',compact('foto','productos'));
+        return view('panel.foto.foto_editar',compact('foto','productos'));
     }
 
        //update

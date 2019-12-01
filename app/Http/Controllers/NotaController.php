@@ -18,41 +18,41 @@ class NotaController extends Controller
 
             $notas = Nota::orderBy('created_at', 'DESC')->paginate(8)->appends($variablesurl);
 
-            return view('panel.notas',compact('notas'));
+            return view('panel.nota.notas',compact('notas'));
         }
 
         if ($tipo == "menos reciente") {
 
             $notas = Nota::orderBy('created_at', 'ASC')->paginate(8)->appends($variablesurl);
 
-            return view('panel.notas',compact('notas'));
+            return view('panel.nota.notas',compact('notas'));
         }
 
         if ($tipo == "mas urgente") {
 
             $notas = Nota::orderBy('urgencia','ASC')->paginate(8)->appends($variablesurl);
 
-            return view('panel.notas',compact('notas'));
+            return view('panel.nota.notas',compact('notas'));
         }
 
         if ($tipo == "menos urgente") {
 
             $notas = Nota::orderBy('urgencia','DESC')->paginate(8)->appends($variablesurl);
 
-            return view('panel.notas',compact('notas'));
+            return view('panel.nota.notas',compact('notas'));
         }
 
         $notas = Nota::paginate(8);
 
-        return view('panel.notas',compact('notas'));
+        return view('panel.nota.notas',compact('notas'));
     }
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.nota_alta');
+        return view('panel.nota.nota_alta');
     }
-    
+
     //alta
     public function alta(Request $request){
 
@@ -72,7 +72,7 @@ class NotaController extends Controller
 
         return redirect('notas')->with('mensaje', 'Nueva Tarea agregada!');
     }
-    
+
     //baja
     public function baja($id){
 

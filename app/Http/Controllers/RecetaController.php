@@ -13,13 +13,13 @@ class RecetaController extends Controller
     {
         $recetas = Receta::paginate(5);
 
-        return view('panel.receta', compact('recetas'));
+        return view('panel.receta.receta', compact('recetas'));
     }
 
     //acceder alta
     public function acceder(){
 
-        return view('panel.receta_alta');
+        return view('panel.receta.receta_alta');
     }
 
     //acceder receta pagina
@@ -55,7 +55,7 @@ class RecetaController extends Controller
 
         $receta = Receta::findOrFail($id);
 
-        return view('panel.receta_editar',compact('receta'));
+        return view('panel.receta.receta_editar',compact('receta'));
     }
 
     //update

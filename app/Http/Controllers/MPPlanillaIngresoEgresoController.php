@@ -14,7 +14,7 @@ class MPPlanillaIngresoEgresoController extends Controller
     {
         $mpplanillaingresoegresos = MPPlanillaIngresoEgreso::paginate(5);
 
-        return view('panel.mpplanillaingresoegreso', compact('mpplanillaingresoegresos'));
+        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso', compact('mpplanillaingresoegresos'));
     }
 
     //acceder alta
@@ -24,7 +24,7 @@ class MPPlanillaIngresoEgresoController extends Controller
 
         $empleados = Empleado::all();
 
-        return view('panel.mpplanillaingresoegreso_alta', compact('tipomovimientos', 'empleados'));
+        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_alta', compact('tipomovimientos', 'empleados'));
     }
 
     //alta
@@ -59,7 +59,7 @@ class MPPlanillaIngresoEgresoController extends Controller
 
         $empleados = Empleado::all();
 
-        return view('panel.mpplanillaingresoegreso_editar',compact('mpplanillaingresoegresos','tipomovimientos', 'empleados'));
+        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_editar',compact('mpplanillaingresoegresos','tipomovimientos', 'empleados'));
         }
 
        //update

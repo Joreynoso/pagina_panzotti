@@ -14,7 +14,7 @@ class MateriaPrimaController extends Controller
     {
         $materiaprimas = MateriaPrima::paginate(5);
 
-        return view('panel.materiaprima', compact('materiaprimas'));
+        return view('panel.materiaprima.materiaprima', compact('materiaprimas'));
     }
 
     //acceder alta
@@ -24,7 +24,7 @@ class MateriaPrimaController extends Controller
 
         $proveedores = Proveedor::all();
 
-        return view('panel.materiaprima_alta', compact('tipomateriaprimas', 'proveedores'));
+        return view('panel.materiaprima.materiaprima_alta', compact('tipomateriaprimas', 'proveedores'));
     }
 
     //alta
@@ -57,7 +57,7 @@ class MateriaPrimaController extends Controller
 
         $proveedores = Proveedor::all();
 
-        return view('panel.materiaprima_editar',compact('materiaprima','tipomateriaprimas', 'proveedores'));
+        return view('panel.materiaprima.materiaprima_editar',compact('materiaprima','tipomateriaprimas', 'proveedores'));
     }
 
        //update
