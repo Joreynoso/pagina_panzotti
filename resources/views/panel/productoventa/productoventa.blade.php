@@ -59,7 +59,9 @@
             <th scope="col">peso</th>
             <th scope="col">monto</th>
             <th scope="col">producto</th>
-            <th scope="col">venta</th>
+            <th scope="col">cliente</th>
+            <th scope="col">fehca del pedido</th>
+            <th scope="col">fehca de entrega</th>
             <th scope="col">acciones</th>
           </tr>
         </thead>
@@ -75,8 +77,16 @@
                @endforeach
 
                @foreach ($item->ventas as $venta)
-                   <td>{{$venta->montototal}}</td>
+                   <td>{{$venta->cliente->nombre}}</td>
                @endforeach
+
+                @foreach ($item->ventas as $venta)
+                    <td>{{$venta->created_at->format('d M Y - H:i:s')}}</td>
+                @endforeach
+
+                @foreach ($item->ventas as $venta)
+                <td>{{$venta->fecha}}</td>
+            @endforeach
 
             <td class="td-btn">
               <a href="{{route('editarProductoVenta', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>

@@ -39,6 +39,7 @@
             <label for="monto">Monto</label>
             <input type="text" name="monto" placeholder="ingrese monto.." class="form-control mb-2">
 
+
             <div class="form-group">
                 <label for="productoventa">seleccionar un producto</label>
                 <select class="form-control" id="producto_id" name="producto_id">
@@ -48,11 +49,12 @@
                 </select>
             </div>
 
+
             <div class="form-group">
-                <label for="productoventa">seleccionar una venta</label>
+                <label for="productoventa">seleccionar un cliente</label>
                 <select class="form-control" id="venta_id" name="venta_id">
-                    @foreach ($ventas as $item)
-                    <option value="{{$item->id}}"> {{$item->fecha}} </option>
+                    @foreach ($ventas as $venta)
+                    <option value="{{$venta->id}}">{{$venta->cliente->nombre}}</option>
                     @endforeach
                 </select>
             </div>
