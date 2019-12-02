@@ -34,7 +34,7 @@
             @enderror
 
             <label for="fecha">Fecha</label>
-            <input type="text" name="fecha" placeholder="ingrese fecha.." class="form-control mb-2">
+            <input type="date" name="fecha" requiered placeholder="ingrese fecha.." class="form-control mb-2">
 
             <label for="montototal">Monto Total</label>
             <input type="text" name="montototal" placeholder="ingrese monto total.." class="form-control mb-2">
