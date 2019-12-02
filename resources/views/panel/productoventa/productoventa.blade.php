@@ -69,8 +69,15 @@
             <td>{{$item->id}}</td>
             <td>{{$item->peso}}</td>
             <td>${{$item->monto}}</td>
-            <td>{{$item->producto_id}}</td>
-            <td>{{$item->venta_id}}</td>
+
+               @foreach ($item->productos as $producto)
+                   <td>{{$producto->nombre}}</td>
+               @endforeach
+
+               @foreach ($item->ventas as $venta)
+                   <td>{{$venta->montototal}}</td>
+               @endforeach
+
             <td class="td-btn">
               <a href="{{route('editarProductoVenta', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
 
