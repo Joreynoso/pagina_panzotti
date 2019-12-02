@@ -16,5 +16,10 @@ class MateriaPrima extends Model
         return $this->hasOne('App\TipoMateriaPrima', 'id', 'tipomateriaprima_id');
     }
 
+    public function recetas()
+    {
+        return $this->belongsToMany('App\Receta', 'id', 'receta_id')->withTimestamps();
+    }
+
 
 }

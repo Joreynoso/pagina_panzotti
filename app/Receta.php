@@ -10,4 +10,9 @@ class Receta extends Model
     {
         return $this->belongsTo('App\Producto', 'id', 'producto_id');
     }
+
+    public function materiaprimas()
+    {
+        return $this->belongsToMany('App\MateriaPrima', 'id', 'materiaprima_id')->withTimestamps();
+    }
 }

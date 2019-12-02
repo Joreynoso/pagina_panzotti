@@ -234,6 +234,21 @@ Route::put('/productoventa_editar/{id}', 'ProductoVentaController@update')->name
 
 Route::delete('/bajaProductoVenta/{id}', 'ProductoVentaController@baja')->name('bajaProductoVenta');
 
+// Materia Prima-Receta
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/materiaprimareceta', 'MateriaprimaRecetaController@leer')->name('materiaprimareceta');
+
+Route::get('/materiaprimareceta_alta', 'MateriaprimaRecetaController@acceder')->name('materiaprimareceta_alta');
+
+Route::post('/altaMateriaprimaReceta', 'MateriaprimaRecetaController@alta')->name('altaMateriaprimaReceta');
+
+Route::get('/materiaprimareceta_editar/{id}', 'MateriaprimaRecetaController@editar')->name('editarMateriaprimaReceta');
+
+Route::put('/materiaprimareceta_editar/{id}', 'MateriaprimaRecetaController@update')->name('updateMateriaprimaReceta');
+
+Route::delete('/bajaMateriaprimaReceta/{id}', 'MateriaprimaRecetaController@baja')->name('bajaMateriaprimaReceta');
+
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal Panzotti

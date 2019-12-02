@@ -153,6 +153,12 @@
                     <span>Producto-Ventas</span></a>
             </li>
 
+            <li class="nav-item">
+                <a href="{{route('materiaprimareceta')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Materia Prima-Receta</span></a>
+            </li>
+
         </ul>
 
         <div id="content-wrapper">
