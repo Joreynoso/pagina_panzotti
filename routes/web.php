@@ -248,6 +248,21 @@ Route::put('/materiaprimareceta_editar/{id}', 'MateriaprimaRecetaController@upda
 
 Route::delete('/bajaMateriaprimaReceta/{id}', 'MateriaprimaRecetaController@baja')->name('bajaMateriaprimaReceta');
 
+// Materia Prima-Ingreso Egreso
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/mpplanillaingresoegresodetalle', 'MateriaprimaMpplanillaingresoegresoController@leer')->name('mpplanillaingresoegresodetalle');
+
+Route::get('/mpplanillaingresoegresodetalle_alta', 'MateriaprimaMpplanillaingresoegresoController@acceder')->name('mpplanillaingresoegresodetalle_alta');
+
+Route::post('/altaMpplanillaingresoegresodetalle', 'MateriaprimaMpplanillaingresoegresoController@alta')->name('altaMpplanillaingresoegresodetalle');
+
+Route::get('/mpplanillaingresoegresodetalle_editar/{id}', 'MateriaprimaMpplanillaingresoegresoController@editar')->name('editarMpplanillaingresoegresodetalle');
+
+Route::put('/mpplanillaingresoegresodetalle_editar/{id}', 'MateriaprimaMpplanillaingresoegresoController@update')->name('updateMpplanillaingresoegresodetalle');
+
+Route::delete('/bajaMpplanillaingresoegresodetalle/{id}', 'MateriaprimaMpplanillaingresoegresoController@baja')->name('bajaMpplanillaingresoegresodetalle');
+
+
 
 
 //--------------------------------------------------------------------------
