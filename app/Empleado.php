@@ -8,6 +8,6 @@ class Empleado extends Model
 {
     public function empleado()
     {
-        return $this->belongsTo('App\MPPlanillaIngresoEgreso', 'id', 'empleados_id');
+        return $this->belongsTo('App\Planilla', 'id', 'empleados_id');
     }
 }

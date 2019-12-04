@@ -17,7 +17,7 @@
         <div class="card-title">Formulario Planilla de Ingresos/Egresos</div>
     </div>
     <div class="card-body">
-        <form action="{{ route('updatempplanillaingresoegresos', $mpplanillaingresoegresos->id) }}" method="POST">
+        <form action="{{ route('updatempplanillaingresoegresos', $planillas->id) }}" method="POST">
             @method('PUT')
             @csrf
 
@@ -34,10 +34,10 @@
             @enderror
 
             <label for="fecha">Fecha</label>
-            <input value="{{ $mpplanillaingresoegresos->fecha }}" type="text" name="fecha"
+            <input value="{{ $planillas->fecha }}" type="text" name="fecha"
                 placeholder="ingrese la fecha.." class="form-control mb-2">
 
-            <label value="{{ $mpplanillaingresoegresos->observacion }}" for="observacion">Observacion</label>
+            <label value="{{ $planillas->observacion }}" for="observacion">Observacion</label>
             <input type="text" name="observacion" placeholder="ingrese la observacion.." class="form-control mb-2">
 
             <div class="form-group">

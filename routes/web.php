@@ -135,17 +135,17 @@ Route::delete('/bajaMateriaPrima/{id}', 'MateriaPrimaController@baja')->name('ba
 
 // planilla ingreso/egreso
 // ────────────────────────────────────────────────────────────────────────────────
-Route::get('/mpplanillaingresoegreso', 'MPPlanillaIngresoEgresoController@leer')->name('mpplanillaingresoegresos');
+Route::get('/mpplanillaingresoegreso', 'PlantillaController@leer')->name('mpplanillaingresoegresos');
 
-Route::get('/mpplanillaingresoegreso_alta', 'MPPlanillaIngresoEgresoController@acceder')->name('mpplanillaingresoegresos_alta');
+Route::get('/mpplanillaingresoegreso_alta', 'PlantillaController@acceder')->name('mpplanillaingresoegresos_alta');
 
-Route::post('/altampplanillaingresoegreso', 'MPPlanillaIngresoEgresoController@alta')->name('altampplanillaingresoegresos');
+Route::post('/altampplanillaingresoegreso', 'PlantillaController@alta')->name('altampplanillaingresoegresos');
 
-Route::get('/mpplanillaingresoegreso_editar/{id}', 'MPPlanillaIngresoEgresoController@editar')->name('editarmpplanillaingresoegresos');
+Route::get('/mpplanillaingresoegreso_editar/{id}', 'PlantillaController@editar')->name('editarmpplanillaingresoegresos');
 
-Route::put('/mpplanillaingresoegreso_editar/{id}', 'MPPlanillaIngresoEgresoController@update')->name('updatempplanillaingresoegresos');
+Route::put('/mpplanillaingresoegreso_editar/{id}', 'PlantillaController@update')->name('updatempplanillaingresoegresos');
 
-Route::delete('/bajampplanillaingresoegreso/{id}', 'MPPlanillaIngresoEgresoController@baja')->name('bajampplanillaingresoegresos');
+Route::delete('/bajampplanillaingresoegreso/{id}', 'PlantillaController@baja')->name('bajampplanillaingresoegresos');
 
 
 // receta

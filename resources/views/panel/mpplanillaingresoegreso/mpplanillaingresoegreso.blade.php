@@ -40,7 +40,7 @@
 </div>
 
 <!-- existen elementos? -->
-@if ($mpplanillaingresoegresos->count() == 0)
+@if ($planillas->count() == 0)
 <div class="alert alert-info">
   no existe ninguna planilla ingreso/egreso, agrega uno.
 </div>
@@ -52,7 +52,7 @@
     <h6 class="text-uppercase mb-0">planilla ingreso, egreso | administrar</h6>
   </div>
   <div class="card-body">
-    <p class="card-text">Cantidad de ingreso, egreso: {{$mpplanillaingresoegresos->total()}}</p>
+    <p class="card-text">Cantidad de ingreso, egreso: {{$planillas->total()}}</p>
     <div class="table-responsive">
       <table class="table table-hover">
         <thead>
@@ -65,7 +65,7 @@
           </tr>
         </thead>
         <tbody>
-          @foreach ($mpplanillaingresoegresos as $item)
+          @foreach ($planillas as $item)
           <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->fecha}}</td>
@@ -87,7 +87,7 @@
         </tbody>
       </table>
 
-      {{ $mpplanillaingresoegresos->links() }}
+      {{ $planillas->links() }}
     </div>
   </div>
 </div>
