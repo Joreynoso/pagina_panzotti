@@ -270,7 +270,7 @@ Route::delete('/bajaMpplanillaingresoegresodetalle/{id}', 'MateriaprimaPlantilla
 //--------------------------------------------------------------------------
 Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
 
-Route::get('/venta-principal', 'VentaController@leerprincipal')->name('venta-principal');
+Route::get('/venta-principal/{id}', 'ProductoVentaController@leerprincipal')->name('venta-principal');
 
 Route::get('/receta-principal', 'RecetaController@leerprincipal')->name('receta-principal');
 

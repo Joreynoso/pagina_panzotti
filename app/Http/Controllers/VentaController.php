@@ -16,14 +16,6 @@ class VentaController extends Controller
         return view('panel.venta.venta', compact('ventas'));
     }
 
-    //leer principal
-    public function leerprincipal()
-    {
-        //$ventas = Venta::paginate(5);
-
-        return view('pagina.venta-principal');
-    }
-
     //acceder alta
     public function acceder()
     {

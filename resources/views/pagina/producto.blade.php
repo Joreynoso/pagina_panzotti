@@ -29,73 +29,38 @@
         </div>
         <div class="row">
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        hacer pedido
-                    </a>
-                </div>
-            </div>
+            @foreach ($productos as $item)
 
             <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
                 <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
                 </div>
                 <div class="shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
+                    <img src="{{ asset('img/'.$item->foto->ruta)}}" alt="ft_producto" class="img-fluid card-img-top">
+                    <p class="text-muted mb-2 mt-2">{{$item->nombre}}</p>
+                    <p class="font-weight-bold">Precio/kg: ${{$item->productoprecio->precio}}</p>
+
+                    <a href="{{ route('venta-principal', $item) }}" title="hacer pedido"
+                        class="btn btn-sm btn-rojo text-white mb-3">
                         <i class="fa fa-shopping-cart"></i>
                         hacer pedido
                     </a>
+
                 </div>
             </div>
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        hacer pedido
-                    </a>
-                </div>
-            </div>
+            @endforeach
 
-            <div class="col-xl-3 col-lg-4 col-md-6 mb-4 mt-3">
-                <div class="blockquote-custom-icon bg-success shadow-sm"><i class="fas fa-seedling text-white"></i>
-                </div>
-                <div class="shadow rounded overflow p-3 tarjeta">
-                    <img src="img/1574600669.jpeg" alt="ft_producto" class="img-fluid card-img-top">
-                    <p class="text-muted mb-2 mt-2">Fetuccine</p>
-                    <p class="font-weight-bold">Precio/kg: 75$</p>
-                    <a href="{{route('venta-principal')}}" title="editar" class="btn btn-sm btn-rojo text-white mb-3">
-                        <i class="fa fa-shopping-cart"></i>
-                        hacer pedido
-                    </a>
-                </div>
-            </div>
+            <p class="text-center mt-5">En Panzotti Pastas Trabajamos día a día para brindar servicio,
+                atención y valor a nuestros clientes que confían en nosotros y nos eligen.
+
+                Buscamos satisfacer todas las necesidades que el cliente solicita y seguir creciendo en líneas de
+                productos,
+                y atención personalizada.
+
+                Muchas gracias por confiar en nosotros, nuestra meta es su satisfacción.
+
+                La Empresa. <i class="fa fa-heart corazon"></i> </p>
         </div>
-
-        <p class="text-center mt-5">En Panzotti Pastas Trabajamos día a día para brindar servicio,
-            atención y valor a nuestros clientes que confían en nosotros y nos eligen.
-
-            Buscamos satisfacer todas las necesidades que el cliente solicita y seguir creciendo en líneas de productos,
-            y atención personalizada.
-
-            Muchas gracias por confiar en nosotros, nuestra meta es su satisfacción.
-
-            La Empresa. <i class="fa fa-heart corazon"></i> </p>
-    </div>
 </section>
 
 @endsection

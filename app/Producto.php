@@ -13,12 +13,12 @@ class Producto extends Model
 
     public function foto()
     {
-        return $this->belongsTo('App\Foto', 'id', 'foto_id');
+        return $this->belongsTo('App\Foto', 'id', 'id');
     }
 
     public function productoprecio()
     {
-        return $this->belongsTo('App\ProductoPrecio', 'id', 'productoprecio_id');
+        return $this->belongsTo('App\ProductoPrecio', 'id', 'id');
     }
 
     public function ventas()

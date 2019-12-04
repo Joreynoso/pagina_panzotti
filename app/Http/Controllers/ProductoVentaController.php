@@ -91,4 +91,15 @@ class ProductoVentaController extends Controller
 
         return redirect('productoventa')->with('mensaje', 'Producto Venta eliminado con exito!');
     }
+
+     //PAGINA WEB
+     //acceder venta-principal
+      public function leerprincipal($id)
+      {
+
+        $producto = Producto::findOrFail($id);
+
+        return view('pagina.venta-principal', compact('producto'));
+
+      }
 }
