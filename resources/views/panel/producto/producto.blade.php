@@ -59,7 +59,6 @@
             <th scope="col">#</th>
             <th scope="col">nombre</th>
             <th scope="col">descripcion</th>
-            <th scope="col">precio</th>
             <th scope="col">receta</th>
             <th scope="col">acciones</th>
           </tr>
@@ -70,7 +69,6 @@
             <td>{{$item->id}}</td>
             <td>{{$item->nombre}}</td>
             <td>{{$item->descripcion}}</td>
-            <td>$: {{$item->precio}}</td>
             <td>{{$item->receta->nombre}}</td>
 
             <td class="td-btn">
