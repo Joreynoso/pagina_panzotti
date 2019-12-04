@@ -39,7 +39,7 @@
 </div>
 
 <!-- existen elementos? -->
-@if ($productoventas->count() == 0)
+@if  ($materiaprimaplanillas->count() == 0)
 <div class="alert alert-info">
   no existe ninguna materia prima ingreso egreso, agrega uno.
 </div>
@@ -50,7 +50,7 @@
     <h6 class="text-uppercase mb-0">materia prima ingreso egreso | administrar</h6>
   </div>
   <div class="card-body">
-    <p class="card-text">Cantidad de Materia Prima ingreso egreso: {{$mpplanillaingresoegresodetalles->total()}}</p>
+    <p class="card-text">Cantidad de Materia Prima ingreso egreso: {{$materiaprimaplanillas->total()}}</p>
     <div class="table-responsive">
       <table class="table table-hover">
         <thead>
@@ -58,12 +58,13 @@
             <th scope="col">#</th>
             <th scope="col">cantidad</th>
             <th scope="col">materia primo</th>
-            <th scope="col">Materia Prima Ingreso/Egreso Observacion</th>
+            <th scope="col">Observaciones</th>
+            <th scope="col">Tipo de Movimiento</th>
             <th scope="col">acciones</th>
           </tr>
         </thead>
         <tbody>
-          @foreach ($mpplanillaingresoegresodetalles as $item)
+          @foreach ($materiaprimaplanillas as $item)
           <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->cantidad}}</td>
@@ -72,8 +73,12 @@
                    <td>{{$materiaprima->nombre}}</td>
                @endforeach
 
-               @foreach ($item->mpplanillaingresoegresos as $mpplanillaingresoegreso)
-                   <td>{{$mpplanillaingresoegreso->observacion}}</td>
+               @foreach ($item->planillas as $planilla)
+                   <td>{{$planilla->observacion}}</td>
+               @endforeach
+
+               @foreach ($item->planillas as $planilla)
+                   <td>{{$planilla->tipomovimiento->nombre}}</td>
                @endforeach
 
 
@@ -91,7 +96,7 @@
         </tbody>
       </table>
 
-      {{ $mpplanillaingresoegresodetalles->links() }}
+      {{ $materiaprimaplanillas->links() }}
     </div>
   </div>
 </div>
