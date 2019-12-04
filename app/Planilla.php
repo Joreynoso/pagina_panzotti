@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class MPPlanillaIngresoEgreso extends Model
+class Planilla extends Model
 {
     public function tipomovimiento()
     {

@@ -6,10 +6,9 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-bullet">
     <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
-    <li aria-current="page" class="breadcrumb-item active text-uppercase">Planilla Ingreso, Egreso</li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Materia Prima Ingreso Egreso</li>
   </ol>
 </nav>
-
 
 <!-- mensaje -->
 @if (Session::has('mensaje'))
@@ -24,7 +23,7 @@
 
 <!-- nuevo -->
 <div class="container-btn">
-  <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+  <a href="{{route('mpplanillaingresoegresodetalle_alta')}}" class="btn btn-info mb-2" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
 </div>
@@ -40,43 +39,53 @@
 </div>
 
 <!-- existen elementos? -->
-@if ($planillas->count() == 0)
+@if  ($materiaprimaplanillas->count() == 0)
 <div class="alert alert-info">
-  no existe ninguna planilla ingreso/egreso, agrega uno.
+  no existe ninguna materia prima ingreso egreso, agrega uno.
 </div>
 
 @else
-<!-- tabla -->
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
-    <h6 class="text-uppercase mb-0">planilla ingreso, egreso | administrar</h6>
+    <h6 class="text-uppercase mb-0">materia prima ingreso egreso | administrar</h6>
   </div>
   <div class="card-body">
-    <p class="card-text">Cantidad de ingreso, egreso: {{$planillas->total()}}</p>
+    <p class="card-text">Cantidad de Materia Prima ingreso egreso: {{$materiaprimaplanillas->total()}}</p>
     <div class="table-responsive">
       <table class="table table-hover">
         <thead>
-          <th scope="col">#</th>
-          <th scope="col">Fecha</th>
-          <th scope="col">Observacion</th>
-          <th scope="col">Tipo movimiento</th>
-          <th scope="col">Empleado</th>
-          <th scope="col">Acciones</th>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">cantidad</th>
+            <th scope="col">materia primo</th>
+            <th scope="col">Observaciones</th>
+            <th scope="col">Tipo de Movimiento</th>
+            <th scope="col">acciones</th>
           </tr>
         </thead>
         <tbody>
-          @foreach ($planillas as $item)
+          @foreach ($materiaprimaplanillas as $item)
           <tr>
             <td>{{$item->id}}</td>
-            <td>{{$item->fecha}}</td>
-            <td>{{$item->observacion}}</td>
-            <td>{{$item->tipomovimiento->nombre}}</td>
-            <td>{{$item->empleado->nombre}}</td>
-            <td class="td-btn">
-              <a href="{{route('editarmpplanillaingresoegresos', $item)}}" title="editar"><i
-                  class="fa fa-pen yellow"></i></a>
+            <td>{{$item->cantidad}}</td>
 
-              <form action="{{route('bajampplanillaingresoegresos',$item)}}" class="d-inline" method="POST">
+               @foreach ($item->materiaprimas as $materiaprima)
+                   <td>{{$materiaprima->nombre}}</td>
+               @endforeach
+
+               @foreach ($item->planillas as $planilla)
+                   <td>{{$planilla->observacion}}</td>
+               @endforeach
+
+               @foreach ($item->planillas as $planilla)
+                   <td>{{$planilla->tipomovimiento->nombre}}</td>
+               @endforeach
+
+
+            <td class="td-btn">
+              <a href="{{route('editarMpplanillaingresoegresodetalle', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+
+              <form action="{{route('bajaMpplanillaingresoegresodetalle',$item)}}" class="d-inline" method="POST">
                 @method('DELETE')
                 @csrf
                 <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
@@ -87,7 +96,7 @@
         </tbody>
       </table>
 
-      {{ $planillas->links() }}
+      {{ $materiaprimaplanillas->links() }}
     </div>
   </div>
 </div>
