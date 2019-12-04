@@ -22,12 +22,12 @@ class CreateMateriaprimaRecetasTable extends Migration
 
             $table->foreign('materiaprima_id')
             ->references('id')
-            ->on('materiaprimas')
+            ->on('materia_primas')
             ->onUdpate('cascade')
             ->onDelete('cascade');
 
             $table->foreign('receta_id')
-            ->references('id')
+
             ->on('recetas')
             ->onUdpate('cascade')
             ->onDelete('cascade');

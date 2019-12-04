@@ -33,17 +33,19 @@
             </div>
             @enderror
 
-            <input value="{{ $producto->nombre }}" type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
+            <input value="{{ $producto->nombre }}" type="text" name="nombre" placeholder="nombre"
+                class="form-control mb-2">
 
-            <input value="{{ $producto->descripcion }}" type="text" name="descripcion" placeholder="descripcion" class="form-control mb-2">
+            <input value="{{ $producto->descripcion }}" type="text" name="descripcion" placeholder="descripcion"
+                class="form-control mb-2">
 
             <div class="form-group">
-                    <label for="producto">seleccionar la receta</label>
-                    <select class="form-control" id="receta_id" name="receta_id">
-                        @foreach ($recetas as $item)
-                        <option value="{{$item->id}}"> {{$item->nombre}} </option>
-                        @endforeach
-                    </select>
+                <label for="producto">seleccionar la receta</label>
+                <select class="form-control" id="receta_id" name="receta_id">
+                    @foreach ($recetas as $item)
+                    <option value="{{$item->id}}"> {{$item->nombre}} </option>
+                    @endforeach
+                </select>
             </div>
 
             <button type="submit" class="btn btn-warning text-white">guardar cambios</button>

@@ -87,11 +87,17 @@ class ProductoController extends Controller
         return redirect('producto')->with('mensaje', 'Producto eliminado con exito!');
     }
 
-    /*pagina web*/
+    /*PAGINA WEB*/
     //leer producto web
     public function leerWeb()
     {
 
-        return view('pagina.producto');
+        $productos = Producto::paginate(6);
+
+        return view('pagina.producto', compact('productos'));
     }
+
+    //cargar producto seleccionado
 }
+
+

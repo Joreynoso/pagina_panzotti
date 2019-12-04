@@ -2,7 +2,7 @@
 
 @section('content')
 
-<section class="bg-light">
+{{-- <section class="bg-light">
 	<div class="container">
 		<div class="card">
 			<div class="row">
@@ -206,7 +206,7 @@
 			</div>
 		</div>
 	</div>
-</section>
+</section> --}}
 
 <section class="bg-light">
 	<div class="container">
@@ -219,7 +219,8 @@
 						<div id="carouselExampleControls" class="carousel slide mb-4" data-ride="carousel">
 							<div class="carousel-inner">
 								<div class="carousel-item active">
-									<img class="d-block w-100" src="img/fetuccini.jpeg" alt="First slide">
+									<img class="d-block w-100" src="{{ asset('img/'.$producto->foto->ruta)}}"
+										alt="First slide">
 								</div>
 								<div class="carousel-item">
 									<img class="d-block w-100" src="img/fetuccini.jpeg" alt="Second slide">
@@ -246,12 +247,12 @@
 				<!-- descripcion del producto -->
 				<div class="col-7 p-4">
 					<div class="card-body p-5">
-						<h3 class="tittle mb-3">Spaguetti panzotti</h3>
+						<h3 class="tittle mb-3">{{$producto->nombre}}</h3>
 
 						<!-- detalle precio -->
 						<p>
 							<span class="price h3 text-warning">
-								<span>$</span><span>150</span>
+								<span>$</span><span id="precio">{{$producto->productoprecio->precio}}</span>
 							</span>
 
 							<span>p/kg</span>
@@ -259,25 +260,26 @@
 
 						<!-- descripcion del producto -->
 						<p>Descripcion:</p>
-						<p>Los espagueti Panzotti son un producto de elaboración propia. Están hechos con materia
+						<p>{{$producto->descripcion}}</p>
+						<p>Nuestras pastas son un producto de elaboración propia. Están hechos con materia
 							prima cien porcientos naturales. Contiene huevos caseros y harína 0000.</p>
 
 						<hr>
 						<!---->
 						<div class="form-group">
 							<label for="exampleFormControlSelect1"><strong>cantidad kilos</strong></label>
-							<select class="form-control" id="exampleFormControlSelect1">
-								<option>1 kg</option>
-								<option>2 kg</option>
-								<option>3 kg</option>
-								<option>4 kg</option>
-								<option>5 kg</option>
+							<select class="form-control" id="kilo">
+								<option value="1">1</option>
+								<option value="2">2</option>
+								<option value="3">3</option>
+								<option value="4">4</option>
+								<option value="5">5</option>
 							</select>
 						</div>
 
 						<strong>que fecha que desea retirar el producto ?</strong>
 						<div class="form-group">
-							<input class="form-control" type="date" value="2019-11-19" id="example-date-input">
+							<input class="form-control" type="date" value="" id="example-date-input">
 						</div>
 						<hr>
 						<!---->
@@ -285,7 +287,7 @@
 						<!-- precio total -->
 						<p>
 							<span class="price h3 text-warning">
-								<span>Total: </span><span>150</span>
+								<span>Total $ </span><span id="total"></span>
 							</span>
 						</p>
 
@@ -301,5 +303,21 @@
 		</div>
 	</div>
 </section>
+
+@endsection
+
+@section('scripts')
+
+<script>
+	$(document).ready(function() {
+		  $('#kilo').on('change', function() {
+			var precioPorKilo = $('#precio').text();
+			var cantidad = this.value;
+			var total = precioPorKilo * cantidad;
+			$('#total').text(total);
+			
+		  });
+		});
+</script>
 
 @endsection
