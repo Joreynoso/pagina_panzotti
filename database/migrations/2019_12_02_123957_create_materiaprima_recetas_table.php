@@ -27,7 +27,7 @@ class CreateMateriaprimaRecetasTable extends Migration
             ->onDelete('cascade');
 
             $table->foreign('receta_id')
-
+            ->references('id')
             ->on('recetas')
             ->onUdpate('cascade')
             ->onDelete('cascade');
