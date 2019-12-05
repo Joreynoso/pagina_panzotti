@@ -166,6 +166,12 @@
                     <span>Materia Prima-Ingreso Egreso</span></a>
             </li>
 
+            <li class="nav-item">
+                <a href="{{route('stock')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Stock</span></a>
+            </li>
+
         </ul>
 
         <div id="content-wrapper">

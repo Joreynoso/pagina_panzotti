@@ -262,6 +262,20 @@ Route::put('/mpplanillaingresoegresodetalle_editar/{id}', 'MateriaprimaPlantilla
 
 Route::delete('/bajaMpplanillaingresoegresodetalle/{id}', 'MateriaprimaPlantillaController@baja')->name('bajaMpplanillaingresoegresodetalle');
 
+// Stock
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/stock', 'StockController@leer')->name('stock');
+
+Route::get('/stock_alta', 'StockController@acceder')->name('stock_alta');
+
+Route::post('/altaStock', 'StockController@alta')->name('altaStock');
+
+Route::get('/stock_editar/{id}', 'StockController@editar')->name('editarStock');
+
+Route::put('/stock_editar/{id}', 'StockController@update')->name('updateStock');
+
+Route::delete('/bajaStock/{id}', 'StockController@baja')->name('bajaStock');
+
 
 
 

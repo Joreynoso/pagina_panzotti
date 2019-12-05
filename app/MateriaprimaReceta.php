@@ -15,4 +15,9 @@ class MateriaprimaReceta extends Model
     {
         return $this->hasMany('App\Receta', 'id', 'receta_id');
     }
+
+    public function stock()
+    {
+        return $this->belongsTo('App\Stock', 'id', 'id');
+    }
 }

@@ -15,4 +15,9 @@ class MateriaprimaPlanilla extends Model
     {
         return $this->hasMany('App\Planilla', 'id', 'planilla_id');
     }
+
+    public function stock()
+    {
+        return $this->belongsTo('App\Stock', 'id', 'id');
+    }
 }
