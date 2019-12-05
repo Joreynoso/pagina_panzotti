@@ -11,10 +11,7 @@ body {
     background: none;
 }
 
-h1,
-h2,
-h3,
-.font-beyond {
+h1, h2, h3, .font-beyond {
     font-family: "beyond_the_mountainsregular", sans-serif;
 }
 
@@ -58,7 +55,6 @@ h3,
 .texto {
     font-size: 50px;
 }
-
 
 /* footer */
 
@@ -152,7 +148,6 @@ h3,
     margin-bottom: 0;
 }
 
-
 /* tarjetas producto*/
 
 .heading {
@@ -216,7 +211,6 @@ h3,
     background-color: #ac2533;
 }
 
-
 /*mapa de google*/
 
 .map-clean {
@@ -248,7 +242,6 @@ h3,
     margin: 0 auto 40px;
 }
 
-
 /*galeria de instagram*/
 
 .gallery {
@@ -276,7 +269,6 @@ h3,
     transform: scale(1.08);
     opacity: 0.8;
 }
-
 
 /* presentacion */
 
@@ -354,7 +346,6 @@ h3,
     right: 0;
 }
 
-
 /* RESPONSIVE */
 
 @media only screen and (max-width: 992px) {
@@ -404,7 +395,6 @@ h3,
     color: red;
 }
 
-
 /*separadores*/
 
 hr.dashed {
@@ -443,51 +433,64 @@ hr.hr-text::before {
 
 /* RECETAS
 ------------------------- */
+
 .blog-title {
     margin-bottom: 0;
     font-size: 2rem;
     font-weight: 400;
-  }
-  .blog-description {
+}
+
+.blog-description {
     font-size: 1.1rem;
     color: #999;
-  }
-  
-  @media (min-width: 40em) {
+}
+
+@media (min-width: 40em) {
     .blog-title {
-      font-size: 3.5rem;
+        font-size: 3.5rem;
     }
-  }
-  
-  /* Pagination */
-  .blog-pagination {
+}
+
+/* Pagination */
+
+.blog-pagination {
     margin-bottom: 4rem;
-  }
-  .blog-pagination > .btn {
+}
+
+.blog-pagination>.btn {
     border-radius: 2rem;
-  }
-  
-  /*
+}
+
+/*
    * Blog posts
    */
-  .blog-post {
+
+.blog-post {
     margin-bottom: 4rem;
     text-align: justify;
-  }
-  .blog-post-title {
+}
+
+.blog-post-title {
     margin-bottom: .25rem;
     font-size: 2.5rem;
-  }
-  .blog-post-meta {
+}
+
+.blog-post-meta {
     margin-bottom: 1.25rem;
     color: #999;
-  }
+}
 
-  .blog-post img{
+.blog-post img {
     width: 100%;
-  }
+}
 
-  .texto2{
-      color: #dc3545;
-      font-style: italic;
-  }
+.texto2 {
+    color: #dc3545;
+    font-style: italic;
+}
+
+.input-precio {
+    border: 0;
+    width: 30px;
+    box-shadow: none;
+}

@@ -92,14 +92,52 @@ class ProductoVentaController extends Controller
         return redirect('productoventa')->with('mensaje', 'Producto Venta eliminado con exito!');
     }
 
+      
      //PAGINA WEB
      //acceder venta-principal
-      public function leerprincipal($id)
-      {
+     public function leerprincipal($id)
+     {
 
-        $producto = Producto::findOrFail($id);
+       $producto = Producto::findOrFail($id);
 
-        return view('pagina.venta-principal', compact('producto'));
+       return view('pagina.venta-principal', compact('producto'));
 
-      }
+     }
+
+     //alta pedido
+     public function pedido(Request $request) {
+
+        //alta venta
+        $request->validate([
+            'fecha' => 'required'
+        ]);
+
+        $nuevaVenta = new Venta;
+
+        $nuevaVenta->fecha = $request->input('fecha');
+        $nuevaVenta->cliente_id = $request->cliente_id = 1;
+
+        $nuevaVenta->save();
+
+        //alta pedido
+
+
+        $cantidad = $request->input('cantidad');
+        $precio = $request->input('precio');
+        $id_cliente = $request->input('id');
+
+        $total = $precio * $cantidad;
+
+        $nuevoPedido = new ProductoVenta;
+
+        $nuevoPedido->peso = $request->input('cantidad');
+        $nuevoPedido->monto = $request->monto = $total;
+        $nuevoPedido->producto_id = $request->producto_id = $id_cliente;
+        $nuevoPedido->venta_id = $request->venta_id = $nuevaVenta->id;
+
+        dd($nuevoPedido);
+
+        return redirect('venta')->with('mensaje', 'Venta agregada con exito!');
+    }
+
 }

@@ -247,56 +247,75 @@
 				<!-- descripcion del producto -->
 				<div class="col-7 p-4">
 					<div class="card-body p-5">
-						<h3 class="tittle mb-3">{{$producto->nombre}}</h3>
+						<form method="POST" action="{{route('pedido')}}">
+							@csrf
 
-						<!-- detalle precio -->
-						<p>
-							<span class="price h3 text-warning">
-								<span>$</span><span id="precio">{{$producto->productoprecio->precio}}</span>
-							</span>
+							@error('fecha')
+							<div class="alert alert-danger" role="alert">
+								por favor seleccione una fecha.
+							</div>
+							@enderror
 
-							<span>p/kg</span>
-						</p>
+							<input type="hidden" name="id" value="{{$producto->id}}" />
 
-						<!-- descripcion del producto -->
-						<p>Descripcion:</p>
-						<p>{{$producto->descripcion}}</p>
-						<p>Nuestras pastas son un producto de elaboración propia. Están hechos con materia
-							prima cien porcientos naturales. Contiene huevos caseros y harína 0000.</p>
+							<h3 class="tittle mb-3">{{$producto->nombre}}</h3>
 
-						<hr>
-						<!---->
-						<div class="form-group">
-							<label for="exampleFormControlSelect1"><strong>cantidad kilos</strong></label>
-							<select class="form-control" id="kilo">
-								<option value="1">1</option>
-								<option value="2">2</option>
-								<option value="3">3</option>
-								<option value="4">4</option>
-								<option value="5">5</option>
-							</select>
-						</div>
+							<!-- detalle precio -->
+							<p>
+								<span class="price h3 text-warning">
+									<span>$</span><input 
+										class="input-precio price h3 noselect text-warning"
+										name="precio" 
+										value="{{$producto->productoprecio->precio}}" 
+										readonly="true">
+								</span>
 
-						<strong>que fecha que desea retirar el producto ?</strong>
-						<div class="form-group">
-							<input class="form-control" type="date" value="" id="example-date-input">
-						</div>
-						<hr>
-						<!---->
+								<span id="precio" style="font-size: 0">{{$producto->productoprecio->precio}}</span>
 
-						<!-- precio total -->
-						<p>
-							<span class="price h3 text-warning">
-								<span>Total $ </span><span id="total"></span>
-							</span>
-						</p>
+								<span class="price h5">p/kg</span>
+							</p>
 
-						<a href="" title="agregar al carrito" class="btn btn-rojo text-white mb-3">hacer pedido</a>
-						<a href="" title="agregar al carrito" class="btn btn-outline-primary mb-3">
-							<i class="fa fa-shopping-cart"></i>
-							agregar al carrito
-						</a>
+							<!-- descripcion del producto -->
+							<p>Descripcion:</p>
+							<p>{{$producto->descripcion}}</p>
+							<p>Nuestras pastas son un producto de elaboración propia. Están hechos con materia
+								prima cien porcientos naturales. Contiene huevos caseros y harína 0000.</p>
 
+							<hr>
+							<!-- cantidad de kilos -->
+							<div class="form-group">
+								<label for="exampleFormControlSelect1"><strong>cantidad kilos</strong></label>
+								<select class="form-control" id="kilo" name="cantidad">
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+							</div>
+
+							<!-- fecha retiro producto -->
+							<strong>que fecha que desea retirar el producto ?</strong>
+							<div class="form-group">
+								<input class="form-control" type="date" value="" id="example-date-input" name="fecha">
+							</div>
+							<hr>
+
+							<!-- precio total -->
+							<p>
+								<span class="price h3 text-warning">
+									<span>Total $ </span><span id="total">{{$producto->productoprecio->precio}}</span>
+								</span>
+							</p>
+
+							<button title="hacer pedido" class="btn btn-rojo text-white mb-3" type="submit">hacer
+								pedido</button>
+							<a href="" title="agregar al carrito" class="btn btn-outline-primary mb-3">
+								<i class="fa fa-shopping-cart"></i>
+								agregar al carrito
+							</a>
+
+						</form>
 					</div>
 				</div>
 			</div>
@@ -317,7 +336,8 @@
 			$('#total').text(total);
 			
 		  });
-		});
+	});
+		
 </script>
 
 @endsection

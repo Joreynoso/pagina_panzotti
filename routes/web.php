@@ -263,15 +263,16 @@ Route::put('/mpplanillaingresoegresodetalle_editar/{id}', 'MateriaprimaPlantilla
 Route::delete('/bajaMpplanillaingresoegresodetalle/{id}', 'MateriaprimaPlantillaController@baja')->name('bajaMpplanillaingresoegresodetalle');
 
 
-
-
 //--------------------------------------------------------------------------
 // Pagina Principal Panzotti
 //--------------------------------------------------------------------------
+Route::get('/receta-principal', 'RecetaController@leerprincipal')->name('receta-principal');
+
 Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
 
 Route::get('/venta-principal/{id}', 'ProductoVentaController@leerprincipal')->name('venta-principal');
 
-Route::get('/receta-principal', 'RecetaController@leerprincipal')->name('receta-principal');
+Route::post('/venta-principal', 'ProductoVentaController@pedido')->name('pedido');
+
 
 
