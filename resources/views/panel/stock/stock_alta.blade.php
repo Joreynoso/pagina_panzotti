@@ -57,7 +57,9 @@
                 <label for="stock">seleccione el tipo de movimiento</label>
                 <select class="form-control" id="materiaprimaplanilla_id" name="materiaprimaplanilla_id">
                     @foreach ($materiaprimaplanillas as $item)
-                    <option value="{{$item->id}}">{{$item->cantidad}}</option>
+                      @foreach ($item->planillas as $planilla)
+                          <option value="{{$item->id}}">{{$planilla->observacion}}</option>
+                      @endforeach
                     @endforeach
                 </select>
             </div>

@@ -13,8 +13,10 @@ class StockController extends Controller
      public function leer()
      {
          $stocks = Stock::paginate(5);
+         $materiaprimaplanillas = MateriaprimaPlanilla::all();
+         $materiaprimarecetas = MateriaprimaReceta::all();
 
-         return view('panel.stock.stock', compact('stocks'));
+         return view('panel.stock.stock', compact('stocks','materiaprimarecetas','materiaprimaplanillas'));
      }
 
      //acceder alta

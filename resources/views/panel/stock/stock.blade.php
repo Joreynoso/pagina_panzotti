@@ -59,7 +59,8 @@
             <th scope="col">cantidad</th>
             <th scope="col">fecha</th>
             <th scope="col">materia prima</th>
-            <th scope="col">tipo de movimiento</th>
+            <th scope="col">observacion</th>
+            <th scope="col">tipo movimiento</th>
             <th scope="col">acciones</th>
           </tr>
         </thead>
@@ -68,15 +69,20 @@
           <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->cantidad}}</td>
-            <td>${{$item->fecha}}</td>
+            <td>{{$item->fecha}}</td>
 
-               @foreach ($item->materiaprimarecetas as $materiaprimareceta)
-                   <td>{{$materiaprimareceta->materiaprima->nombre}}</td>
+            @foreach ($materiaprimarecetas as $item)
+               @foreach ($item->materiaprimas as $materiaprima)
+                 <td> {{$materiaprima->nombre}} </td>
                @endforeach
+            @endforeach
 
-                @foreach ($item->materiaprimaplanillas as $materiaprimaplanilla)
-                    <td>{{$materiaprimaplanilla->planilla->tipomovimiento->nombre}}</td>
+            @foreach ($materiaprimaplanillas as $item)
+                @foreach ($item->planillas as $planilla)
+                    <td>{{$planilla->tipomovimiento->nombre}}</td>
                 @endforeach
+            @endforeach
+
 
             <td class="td-btn">
               <a href="{{route('editarStock', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
