@@ -21,5 +21,4 @@ class MateriaPrima extends Model
         return $this->belongsToMany('App\Receta', 'id', 'receta_id')->withTimestamps();
     }
 
-
 }

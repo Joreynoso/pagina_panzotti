@@ -44,7 +44,6 @@ class StockController extends Controller
          $nuevoStock->materiaprimaplanilla_id = $request->input('materiaprimaplanilla_id');
          $nuevoStock->materiaprimareceta_id = $request->input('materiaprimareceta_id');
 
-
          $nuevoStock->save();
 
          return redirect('stock')->with('mensaje', 'Nuevo Stock agregado con exito!');

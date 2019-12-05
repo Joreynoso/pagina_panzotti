@@ -40,21 +40,24 @@
             <input type="text" name="fecha" placeholder="ingrese fecha.." class="form-control mb-2">
 
 
+            <!--ACA ESTA PARA LLAMAR A NOMBRE DE LA MATERIA PRIMA-->
             <div class="form-group">
-                <label for="stock">seleccionar la metria prima</label>
+                <label for="stock">seleccione la materia prima</label>
                 <select class="form-control" id="materiaprimareceta_id" name="materiaprimareceta_id">
-                    @foreach ($materiaprimarecetas as $materiaprimareceta)
-                    <option value="{{$materiaprimareceta->id}}"> {{$materiaprimareceta->unidadmedida}} </option>
+                    @foreach ($materiaprimarecetas as $item)
+                         @foreach ($item->materiaprimas as $materiaprima)
+                            <option value="{{$item->id}}"> {{$materiaprima->nombre}} </option>
+                         @endforeach
                     @endforeach
                 </select>
             </div>
 
 
             <div class="form-group">
-                <label for="stock">seleccionar un cliente</label>
+                <label for="stock">seleccione el tipo de movimiento</label>
                 <select class="form-control" id="materiaprimaplanilla_id" name="materiaprimaplanilla_id">
-                    @foreach ($materiaprimaplanillas as $materiaprimaplanilla)
-                    <option value="{{$materiaprimaplanilla->id}}">{{$materiaprimaplanilla->cantidad}}</option>
+                    @foreach ($materiaprimaplanillas as $item)
+                    <option value="{{$item->id}}">{{$item->cantidad}}</option>
                     @endforeach
                 </select>
             </div>

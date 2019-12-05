@@ -120,8 +120,6 @@ class ProductoVentaController extends Controller
         $nuevaVenta->save();
 
         //alta pedido
-
-
         $cantidad = $request->input('cantidad');
         $precio = $request->input('precio');
         $id_cliente = $request->input('id');
