@@ -133,9 +133,16 @@ class ProductoVentaController extends Controller
         $nuevoPedido->producto_id = $request->producto_id = $id_cliente;
         $nuevoPedido->venta_id = $request->venta_id = $nuevaVenta->id;
 
-        dd($nuevoPedido);
+        $nuevoPedido->save();
 
-        return redirect('venta')->with('mensaje', 'Venta agregada con exito!');
+        return redirect('carrito-compra');
+    }
+
+    public function leercarrito(){
+
+        $productoventas = ProductoVenta::paginate(5);
+
+        return view('pagina.carrito-compra', compact('productoventas'));
     }
 
 }

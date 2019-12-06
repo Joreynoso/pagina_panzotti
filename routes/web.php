@@ -288,5 +288,7 @@ Route::get('/venta-principal/{id}', 'ProductoVentaController@leerprincipal')->na
 
 Route::post('/venta-principal', 'ProductoVentaController@pedido')->name('pedido');
 
+Route::get('/carrito-compra', 'ProductoVentaController@leercarrito')->name('carrito');
+
 
 

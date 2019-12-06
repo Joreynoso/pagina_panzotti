@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Montserrat:400,700);
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -493,4 +494,122 @@ hr.hr-text::before {
     border: 0;
     width: 30px;
     box-shadow: none;
+}
+
+.carrito-titulo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 2em;
+    padding: 1em 0;
+    border-bottom: 1px solid #dadada;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.carrito-letra {
+    font-family: "Droid Serif", serif;
+    font-weight: normal;
+    font-style: italic;
+    text-transform: lowercase;
+    color: #777;
+}
+
+.Micarrito {
+    font-family: "Droid Serif", serif;
+    font-size: 2em;
+    float: left;
+}
+
+.carrito-btn {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: -.015em;
+    font-size: .75em;
+    padding: 1em;
+    color: #fff;
+    background: #D66E38;
+    font-weight: bold;
+    border-radius: 50px;
+    float: right;
+    text-align: right;
+}
+
+.carrito-btn:hover {
+    text-decoration: none;
+    background: #b88a65;
+    color: white;
+}
+
+.wrap {
+    width: 75%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 5% 0;
+    margin-bottom: 5em;
+}
+
+.precio {
+    font-weight: bold;
+    font-size: 1.25em;
+}
+
+.borrar {
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    color: #ffffff;
+    font-weight: bold;
+    background: #e2b3b3;
+    padding: .6em;
+    font-size: .75em;
+    display: inline-block;
+    border-radius: 100%;
+    line-height: .85;
+    margin-left: 30px;
+}
+
+.borrar:hover {
+    text-decoration: none;
+    background: #ce6e6e;
+    color: white;
+}
+
+.carrito-img {
+    width: 150px;
+    padding-right: 1em;
+}
+
+.carrito-codigo {
+    font-size: .75em;
+    color: rgb(160, 159, 159);
+    margin-bottom: .5em;
+}
+
+.carrito-producto {
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: .025em;
+    margin: 0;
+}
+
+.carrito-kilos {
+    display: inline-block;
+    font-size: .85em;
+    color: #777777;
+    font-family: "Montserrat", sans-serif;
+}
+
+.sub-total {
+    font-family: "Montserrat", sans-serif;
+    font-size: .85em;
+    text-transform: uppercase;
+    color: #777;
+}
+
+.monserrat {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    letter-spacing: .025em;
 }
