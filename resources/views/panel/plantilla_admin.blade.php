@@ -77,6 +77,14 @@
                     <a class="dropdown-item active" href="blank.html">Blank Page</a>
                 </div>
             </li>
+
+
+            <li class="nav-item">
+                    <a href="{{route('user')}}" class="nav-link">
+                        <i class="fas fa-donate"></i>
+                        <span>Usuarios</span></a>
+            </li>
+
             <li class="nav-item">
                 <a href="{{route('notas')}}" class="nav-link">
                     <i class="fas fa-sticky-note"></i>
@@ -171,6 +179,8 @@
                     <i class="fas fa-donate"></i>
                     <span>Stock</span></a>
             </li>
+
+
 
         </ul>
 

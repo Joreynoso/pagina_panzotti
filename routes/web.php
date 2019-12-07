@@ -276,6 +276,18 @@ Route::put('/stock_editar/{id}', 'StockController@update')->name('updateStock');
 
 Route::delete('/bajaStock/{id}', 'StockController@baja')->name('bajaStock');
 
+// Usuarios
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/user', 'UsuarioController@leer')->name('user');
+
+Route::get('/user_editar/{id}', 'UsuarioController@editar')->name('editarUser');
+
+Route::put('/user_editar/{id}', 'UsuarioController@update')->name('updateUser');
+
+Route::delete('/bajaUser/{id}', 'UsuarioController@baja')->name('bajaUser');
+
+Route::get('/userpdf', 'UsuarioController@exporPdf')->name('userpdf');
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal Panzotti

@@ -6,6 +6,13 @@ use Illuminate\Http\Request;
 
 class EjemploController extends Controller
 {
+
+    // Comando de seguridad para que este registrado para acceder a la pagina
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
+
     /**
      * Display a listing of the resource.
      *
