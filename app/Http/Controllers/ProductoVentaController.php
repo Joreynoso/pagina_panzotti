@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Producto;
 use App\Venta;
 use App\ProductoVenta;
+use App\Foto;
 
 class ProductoVentaController extends Controller
 {
@@ -100,7 +102,15 @@ class ProductoVentaController extends Controller
 
        $producto = Producto::findOrFail($id);
 
-       return view('pagina.venta-principal', compact('producto'));
+       $id = $producto->id;
+
+       $fotos = DB::select('SELECT * 
+       FROM `fotos` 
+       INNER JOIN productos 
+       on fotos.producto_id = productos.id 
+       where fotos.producto_id = '.$id);;
+
+       return view('pagina.venta-principal', compact('producto','fotos'));
 
      }
 

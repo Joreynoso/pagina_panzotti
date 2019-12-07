@@ -73,9 +73,9 @@
                         </li>
 
                         @if(auth()->check() && auth()->user()->is_admin)
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{route('principal')}}">Administrar</a>
-                             </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('principal')}}">Administrar</a>
+                        </li>
                         @endif
 
                         <!-- Authentication Links -->
@@ -108,6 +108,14 @@
                             </div>
                         </li>
                         @endguest
+
+                        <li class="nav-item">
+                            <a class="nav-link mr-2" href="{{route('receta-principal')}}">
+                                MiCarrito
+                                <i class="fa fa-shopping-cart"></i>
+                            </a>
+                        </li>
+
                         <li class="nav-item">
                             <button class="btn btn-rojo text-white">pedidos: 3834-7799661</button>
                         </li>
@@ -146,7 +154,8 @@
                     </div>
                     <div class="col-md-6 item text">
                         <h3 class="font-beyond">Pastas Panzotti</h3>
-                        <p style="text-align: justify">La empresa Panzotti está ubicada en la calle prado 135, es una empresa familiar la
+                        <p style="text-align: justify">La empresa Panzotti está ubicada en la calle prado 135, es una
+                            empresa familiar la
                             cual produce pastas caseras, dentro de su producción elaboran ravioles, fetuccini y
                             espaguetis los cuales tienen una gran aceptación en el público.</p>
                     </div>

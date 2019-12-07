@@ -50,7 +50,7 @@
 
             @endforeach
 
-            <p class="text-center mt-5">En Panzotti Pastas Trabajamos día a día para brindar servicio,
+            <p class="text-center  carrito-kilos2 mt-5">En Panzotti Pastas Trabajamos día a día para brindar servicio,
                 atención y valor a nuestros clientes que confían en nosotros y nos eligen.
 
                 Buscamos satisfacer todas las necesidades que el cliente solicita y seguir creciendo en líneas de

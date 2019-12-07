@@ -492,7 +492,6 @@ hr.hr-text::before {
 
 .input-precio {
     border: 0;
-    width: 30px;
     box-shadow: none;
 }
 
@@ -541,13 +540,6 @@ hr.hr-text::before {
     color: white;
 }
 
-.wrap {
-    width: 75%;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 5% 0;
-    margin-bottom: 5em;
-}
 
 .precio {
     font-weight: bold;
@@ -581,8 +573,9 @@ hr.hr-text::before {
 
 .carrito-codigo {
     font-size: .75em;
-    color: rgb(160, 159, 159);
+    color: rgb(190, 190, 190);
     margin-bottom: .5em;
+    font-weight: bold;
 }
 
 .carrito-producto {
@@ -611,5 +604,36 @@ hr.hr-text::before {
 .monserrat {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
+}
+
+.carrito-kilos2 {
+    display: inline-block;
+    font-size: .90em;
+    color: #505050;
+    font-family: "Montserrat", sans-serif;
+}
+
+.carrito-producto2 {
+    font-size: 1.25em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
     letter-spacing: .025em;
+    margin: 0;
+}
+
+.largo{
+    width: 100%;
+}
+
+.propaganda {
+    background: url(../img/propaganda.png) no-repeat center;
+
+}
+
+.cover{
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
 }

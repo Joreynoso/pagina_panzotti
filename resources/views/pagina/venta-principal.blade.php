@@ -208,28 +208,33 @@
 	</div>
 </section> --}}
 
-<section class="bg-light">
+<section class=" bg-light">
 	<div class="container">
 		<div class="card">
 			<div class="row">
 
 				<!-- carousel -->
 				<div class="col-5 p-4 border-right">
-					<div class="card-body p-2">
+					<div class="card-body p-2" style="width: 100%;">
+
 						<div id="carouselExampleControls" class="carousel slide mb-4" data-ride="carousel">
 							<div class="carousel-inner">
 
-								<div class="carousel-item active">
-									<img class="d-block w-100" src="{{ asset('img/'.$foto->producto->ruta)}}"
-										alt="First slide">
+								@foreach ($fotos as $item)
+								<div class="carousel-item {{ $loop->first ? 'active' : '' }}">
+									<img class="d-block w-100 cover" src="{{ asset('img/'.$item->ruta)}}" alt="First slide">
 								</div>
+								@endforeach
+
+								@foreach ($fotos as $item)
 								<div class="carousel-item">
-									<img class="d-block w-100" src="{{ asset('img/'.$producto->foto->ruta)}}" alt="Second slide">
+									<img class="d-block w-100 cover" src="{{ asset('img/'.$item->ruta)}}" alt="Second slide">
 								</div>
-								<div class="carousel-item">
-									<img class="d-block w-100" src="{{ asset('img/'.$producto->foto->ruta)}}" alt="Third slide">
-								</div>
+								@endforeach
+
 							</div>
+
+							<!-- botones adelante, atras -->
 							<a class="carousel-control-prev" href="#carouselExampleControls" role="button"
 								data-slide="prev">
 								<span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -240,8 +245,7 @@
 								<span class="carousel-control-next-icon" aria-hidden="true"></span>
 								<span class="sr-only">Next</span>
 							</a>
-						</div>
-						<img class="img-fluid" alt="Responsive image" src="img/publicidad.jpeg">
+						</div><!-- final carrusel -->
 					</div>
 				</div>
 
@@ -259,33 +263,32 @@
 
 							<input type="hidden" name="id" value="{{$producto->id}}" />
 
-							<h3 class="tittle mb-3">{{$producto->nombre}}</h3>
+							<h3 class="mb-3 carrito-producto2">{{$producto->nombre}}</h3>
 
 							<!-- detalle precio -->
 							<p>
+								<span class="price h5 monserrat">p/kg</span>
 								<span class="price h3 text-warning">
-									<span>$</span><input
-										class="input-precio price h3 noselect text-warning"
-										name="precio"
-										value="{{$producto->productoprecio->precio}}"
-										readonly="true">
+									<span class="monserrat h5">$</span><input
+										class="input-precio price h5 noselect text-warning" name="precio"
+										value="{{$producto->productoprecio->precio}}" readonly="true">
 								</span>
-
 								<span id="precio" style="font-size: 0">{{$producto->productoprecio->precio}}</span>
-
-								<span class="price h5">p/kg</span>
 							</p>
 
 							<!-- descripcion del producto -->
-							<p>Descripcion:</p>
-							<p>{{$producto->descripcion}}</p>
-							<p>Nuestras pastas son un producto de elaboración propia. Están hechos con materia
+							<p class=""><strong>Descripcion:</strong></p>
+							<p class="carrito-kilos">{{$producto->descripcion}}</p>
+							<p class="carrito-kilos">Nuestras pastas son un producto de elaboración propia. Están
+								hechos
+								con materia
 								prima cien porcientos naturales. Contiene huevos caseros y harína 0000.</p>
 
 							<hr>
 							<!-- cantidad de kilos -->
 							<div class="form-group">
-								<label for="exampleFormControlSelect1"><strong>cantidad kilos</strong></label>
+								<label for="exampleFormControlSelect1" class="carrito-kilos2"><strong>cantidad
+										kilos</strong></label>
 								<select class="form-control" id="kilo" name="cantidad">
 									<option value="1">1</option>
 									<option value="2">2</option>
@@ -296,7 +299,7 @@
 							</div>
 
 							<!-- fecha retiro producto -->
-							<strong>que fecha que desea retirar el producto ?</strong>
+							<strong class="carrito-kilos2">que fecha que desea retirar el producto ?</strong>
 							<div class="form-group">
 								<input class="form-control" type="date" value="" id="example-date-input" name="fecha">
 							</div>
@@ -305,18 +308,18 @@
 							<!-- precio total -->
 							<p>
 								<span class="price h3 text-warning">
-									<span>Total $ </span><span id="total">{{$producto->productoprecio->precio}}</span>
+									<span class="monserrat h5">Total $ </span><span class="monserrat h5"
+										id="total">{{$producto->productoprecio->precio}}</span>
 								</span>
 							</p>
 
-							<button title="hacer pedido" class="btn btn-rojo text-white mb-3" type="submit">hacer
-								pedido</button>
-							<a href="" title="agregar al carrito" class="btn btn-outline-primary mb-3">
-								<i class="fa fa-shopping-cart"></i>
-								agregar al carrito
-							</a>
+							<button title="hacer pedido" class="btn btn-rojo text-white mb-3 largo" type="submit">
+								hacer pedido
+								<i class="fas fa-shopping-cart mr-1"></i>
+							</button>
 
 						</form>
+
 					</div>
 				</div>
 			</div>

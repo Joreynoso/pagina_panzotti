@@ -71,6 +71,13 @@
         </div>
 
     </div>
+
+    <div class="text-center m-5">
+        <p class="carrito-kilos2"> al confirmar la compra estas comprometiendote 
+            a retirar el producto en la fecha acordada, <br> recorda que podes cancelar tus pedidos
+            de compra con 48hs de anticipacion <br> a la fecha de retiro del mismo. atte Empresa Panzotti.
+        </p>
+    </div>
 </section>
 
 @endsection
