@@ -302,5 +302,8 @@ Route::post('/venta-principal', 'ProductoVentaController@pedido')->name('pedido'
 
 Route::get('/carrito-compra', 'ProductoVentaController@leercarrito')->name('carrito');
 
+// Stock
+// ────────────────────────────────────────────────────────────────────────────────
+Route::get('/stock', 'PlantillaController@stock')->name('stock');
 
 

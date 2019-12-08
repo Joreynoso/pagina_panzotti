@@ -80,9 +80,9 @@
 
 
             <li class="nav-item">
-                    <a href="{{route('user')}}" class="nav-link">
-                        <i class="fas fa-donate"></i>
-                        <span>Usuarios</span></a>
+                <a href="{{route('user')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Usuarios</span></a>
             </li>
 
             <li class="nav-item">
@@ -162,25 +162,22 @@
             </li>
 
             <li class="nav-item">
-                <a href="{{route('materiaprimareceta')}}" class="nav-link">
-                    <i class="fas fa-donate"></i>
-                    <span>Materia Prima-Receta</span></a>
-            </li>
-
-
-            <li class="nav-item">
-                <a href="{{route('mpplanillaingresoegresodetalle')}}" class="nav-link">
-                    <i class="fas fa-donate"></i>
-                    <span>Materia Prima-Ingreso Egreso</span></a>
-            </li>
-
-            <li class="nav-item">
                 <a href="{{route('stock')}}" class="nav-link">
                     <i class="fas fa-donate"></i>
                     <span>Stock</span></a>
             </li>
 
+            {{-- <li class="nav-item">
+                <a href="{{route('stock')}}" class="nav-link">
+            <i class="fas fa-donate"></i>
+            <span>Stock</span></a>
+            </li> --}}
 
+            {{-- <li class="nav-item">
+                <a href="{{route('materiaprimareceta')}}" class="nav-link">
+            <i class="fas fa-donate"></i>
+            <span>Materia Prima-Receta</span></a>
+            </li> --}}
 
         </ul>
 

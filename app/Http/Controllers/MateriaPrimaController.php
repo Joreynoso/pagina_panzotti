@@ -68,7 +68,7 @@ class MateriaPrimaController extends Controller
             'nombre' => 'required'
         ]);
 
-        $materiaprimaUpdate = new MateriaPrima;
+        $materiaprimaUpdate = MateriaPrima::findOrFail($id);
 
         $materiaprimaUpdate->nombre = $request->nombre;
         $materiaprimaUpdate->tipomateriaprima_id = $request->input('tipomateriaprima_id');

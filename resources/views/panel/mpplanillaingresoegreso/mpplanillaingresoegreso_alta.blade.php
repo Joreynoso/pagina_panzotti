@@ -32,16 +32,34 @@
             </div>
             @enderror
 
+            @error('cantidad')
+            <div class="alert alert-danger" role="alert">
+                la cantidad es obligatoria.
+            </div>
+            @enderror
+
             <label for="fecha">Fecha</label>
             <input type="text" name="fecha" placeholder="ingrese la fecha.." class="form-control mb-2">
 
             <label for="observacion">Observacion</label>
             <input type="text" name="observacion" placeholder="ingrese la observacion.." class="form-control mb-2">
 
+            <label for="fecha">Cantidad</label>
+            <input type="text" name="cantidad" placeholder="ingrese la cantidad.." class="form-control mb-2">
+
             <div class="form-group">
                 <label for="mpplanillaingresoegreso">seleccione un tipo de movimiento</label>
                 <select class="form-control" id="tipomovimiento_id" name="tipomovimiento_id">
                     @foreach ($tipomovimientos as $item)
+                    <option value="{{$item->id}}"> {{$item->nombre}} </option>
+                    @endforeach
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mpplanillaingresoegreso">seleccione una materia prima</label>
+                <select class="form-control" id="materiaprima_id" name="materiaprima_id">
+                    @foreach ($materiaprimas as $item)
                     <option value="{{$item->id}}"> {{$item->nombre}} </option>
                     @endforeach
                 </select>

@@ -15,4 +15,9 @@ class Planilla extends Model
     {
         return $this->hasOne('App\Empleado', 'id', 'empleado_id');
     }
+
+    public function materiaprima()
+    {
+        return $this->hasOne('App\MateriaPrima', 'id', 'materiaprima_id');
+    }
 }

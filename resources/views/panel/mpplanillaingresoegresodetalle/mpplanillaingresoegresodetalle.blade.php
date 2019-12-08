@@ -21,13 +21,6 @@
 </div>
 @endif
 
-<!-- nuevo -->
-<div class="container-btn">
-  <a href="{{route('mpplanillaingresoegresodetalle_alta')}}" class="btn btn-info mb-2" href="#" role="button">
-    <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
-  </a>
-</div>
-
 <!-- buscador -->
 <div class="row">
   <div class="col-xl-12 col-sm-12 mb-3">
@@ -39,9 +32,9 @@
 </div>
 
 <!-- existen elementos? -->
-@if  ($materiaprimaplanillas->count() == 0)
+@if  ($planillas->count() == 0)
 <div class="alert alert-info">
-  no existe ninguna materia prima ingreso egreso, agrega uno.
+  no existen materias primas en el stock aun.
 </div>
 
 @else

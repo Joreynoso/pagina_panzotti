@@ -59,6 +59,8 @@
           <th scope="col">#</th>
           <th scope="col">Fecha</th>
           <th scope="col">Observacion</th>
+          <th scope="col">Cantidad</th>
+          <th scope="col">Materia Prima</th>
           <th scope="col">Tipo movimiento</th>
           <th scope="col">Empleado</th>
           <th scope="col">Acciones</th>
@@ -70,6 +72,8 @@
             <td>{{$item->id}}</td>
             <td>{{$item->fecha}}</td>
             <td>{{$item->observacion}}</td>
+            <td>{{$item->cantidad}}</td>
+            <td>{{$item->materiaprima->nombre}}</td>
             <td>{{$item->tipomovimiento->nombre}}</td>
             <td>{{$item->empleado->nombre}}</td>
             <td class="td-btn">

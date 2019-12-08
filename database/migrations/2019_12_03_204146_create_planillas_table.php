@@ -17,11 +17,14 @@ class CreatePlanillasTable extends Migration
             $table->bigIncrements('id');
             $table->String('fecha');
             $table->String('observacion');
+            $table->integer('cantidad');
             $table->bigInteger('tipomovimiento_id')->unsigned();
+            $table->bigInteger('materiaprima_id')->unsigned();
             $table->bigInteger('empleado_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('tipomovimiento_id')->references('id')->on('tipo_movimientos');
+            $table->foreign('materiaprima_id')->references('id')->on('materia_primas');
             $table->foreign('empleado_id')->references('id')->on('empleados');
         });
     }

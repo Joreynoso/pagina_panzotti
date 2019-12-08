@@ -60,8 +60,8 @@
             <th scope="col">monto</th>
             <th scope="col">producto</th>
             <th scope="col">cliente</th>
-            <th scope="col">fehca del pedido</th>
-            <th scope="col">fehca de entrega</th>
+            <th scope="col">fecha del pedido</th>
+            <th scope="col">feche de entrega</th>
             <th scope="col">acciones</th>
           </tr>
         </thead>
