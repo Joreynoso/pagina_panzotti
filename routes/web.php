@@ -288,6 +288,21 @@ Route::delete('/bajaUser/{id}', 'UsuarioController@baja')->name('bajaUser');
 
 Route::get('/userpdf', 'UsuarioController@exporPdf')->name('userpdf');
 
+// Empleado
+// ────────────────────────────────────────────────────────────────────────────────
+
+Route::get('/empleado', 'UsuarioController@leerEmpleado')->name('empleado');
+
+Route::get('/empleado_alta', 'UsuarioController@accederEmpleado')->name('empleado_alta');
+
+Route::post('/altaEmpleado', 'UsuarioController@altaEmpleado')->name('altaEmpleado');
+
+Route::get('/empleado_editar/{id}', 'UsuarioController@editarEmpleado')->name('editarEmpleado');
+
+Route::put('/empleado_editar/{id}', 'UsuarioController@updateEmpleado')->name('updateEmpleado');
+
+Route::delete('/bajaEmpleado/{id}', 'UsuarioController@bajaEmpleado')->name('bajaEmpleado');
+
 
 //--------------------------------------------------------------------------
 // Pagina Principal Panzotti

@@ -20,13 +20,15 @@ class UsuarioController extends Controller
     //     return view('panel.user.user', compact('usuarios'));
     // }
 
+
+    //ABM Usuario
+
     //leer
     public function leer(){
         $usuarios = User::paginate(5);
 
         return view('panel.user.user', compact('usuarios'));
     }
-
 
     //acceder editar
     public function editar($id){
@@ -81,5 +83,94 @@ class UsuarioController extends Controller
 
         return $pdf->download('usuarios-panzotti-lista.pdf');
 
+    }
+
+
+    //ABM Empleado
+
+      //leer
+      public function leerEmpleado(){
+        $empleados = User::paginate(5);
+
+        return view('panel.user.empleado', compact('empleados'));
+    }
+
+    //acceder editar
+    public function editarEmpleado($id){
+
+        $empleado = User::findOrFail($id);
+
+        return view('panel.user.empleado_editar',compact('empleado'));
+    }
+
+    //update
+    public function updateEmpleado(Request $request, $id){
+
+        //validacion
+        $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'apellido' => 'required',
+            'domicilio' => 'required',
+            'tel'=>'required'
+        ]);
+
+        $EmpleadoUpdate = User::findOrFail($id);
+
+        $EmpleadoUpdate->name = $request->name;
+        $EmpleadoUpdate->email = $request->email;
+        $EmpleadoUpdate->apellido = $request->apellido;
+        $EmpleadoUpdate->domicilio = $request->domicilio;
+        $EmpleadoUpdate->tel = $request->tel;
+
+
+        $EmpleadoUpdate->save();
+
+        return redirect('empleado')->with('mensaje', 'Empleado actualizado con exito!');
+
+    }
+
+    //baja
+    public function bajaEmpleado($id){
+
+        $empleadoEliminar = User::findOrFail($id);
+        $empleadoEliminar->delete();
+
+        return redirect('empleado')->with('mensaje', 'Empleado eliminado con exito!');
+    }
+
+     //acceder alta
+     public function accederEmpleado(){
+
+        return view('panel.user.empleado_alta');
+    }
+
+    //alta
+    public function altaEmpleado(Request $request){
+
+        //return $request->all();  verificar los datos antes de almacenarlos
+
+        //validacion
+         //validacion
+         $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'apellido' => 'required',
+            'domicilio' => 'required',
+            'tel'=>'required'
+        ]);
+
+
+        $nuevoEmpleado = new User();
+
+        $nuevoEmpleado->name = $request->name;
+        $nuevoEmpleado->email = $request->email;
+        $nuevoEmpleado->apellido = $request->apellido;
+        $nuevoEmpleado->domicilio = $request->domicilio;
+        $nuevoEmpleado->tel = $request->tel;
+
+        $nuevoEmpleado->save();
+
+        return redirect('empleado')->with('mensaje', 'Empleado agregado con exito!');
     }
 }
