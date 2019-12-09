@@ -18,7 +18,16 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-users"></i>
         </div>
-        <div class="mr-5">26 Nuevos Clientes!</div>
+        <!-- existen usuarios? -->
+        @if ($usuarios->count() == 0)
+
+        <div class="mr-5">No hay clientes registrados!</div>
+
+        @else
+
+        <div class="mr-5">Clientes registrados: {{$usuarios->total()}}</div>
+
+        @endif
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
         <span class="float-left">Ver Detalles</span>
@@ -34,10 +43,21 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-user-plus"></i>
         </div>
-        <div class="mr-5">11 New Tasks!</div>
+
+        <!-- existen notas? -->
+        @if ($notas->count() == 0)
+
+        <div class="mr-5">No hay tareas pendientes!</div>
+
+        @else
+
+        <div class="mr-5">Tareas pendientes: {{$notas->total()}}</div>
+
+        @endif
+
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">View Details</span>
+        <span class="float-left">Ver detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
         </span>
@@ -50,10 +70,20 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-shopping-cart"></i>
         </div>
-        <div class="mr-5">15 Pedidos Nuevos!</div>
+
+        <!-- existen pedidos? -->
+        @if ($pedidos->count() == 0)
+
+        <div class="mr-5">No hay nuevos pedidos!</div>
+
+        @else
+
+        <div class="mr-5">Pedidos nuevos: {{$pedidos->total()}}</div>
+
+        @endif
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">View Details</span>
+        <span class="float-left">Ver detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
         </span>
@@ -66,10 +96,20 @@
         <div class="card-body-icon">
           <i class="fas fa-fw fa-comments"></i>
         </div>
-        <div class="mr-5">13 Nuevos Comentarios!</div>
+
+        <!-- existen comentarios? -->
+        @if ($comentarios->count() == 0)
+
+        <div class="mr-5">No hay nuevos comentarios!</div>
+
+        @else
+
+        <div class="mr-5">Cantidad comentarios: {{$comentarios->total()}}</div>
+
+        @endif
       </div>
       <a class="card-footer text-white clearfix small z-1" href="#">
-        <span class="float-left">View Details</span>
+        <span class="float-left">Ver detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
         </span>
@@ -82,8 +122,6 @@
 <div class="jumbotron jumbotron-fluid bg-white overflow card">
   <div class="container">
     <h1 class="display-3 text-responsive">Administracion Panzotti!</h1>
-    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
-    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
     <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
     <hr class="my-4">
     <p>si tenes alguna duda sobre el funcionamiento de este panel de administracion no dudes en escribirnos.</p>

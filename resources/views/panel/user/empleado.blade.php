@@ -65,7 +65,7 @@
             <th scope="col">Domicilio</th>
             <th scope="col">Telefono</th>
             <th scope="col">Correo</th>
-            <th scope="col">Administrador</th>
+            <th scope="col">Fecha Ingreso</th>
             <th scope="col">Acciones</th>
           </tr>
         </thead>
@@ -78,7 +78,7 @@
             <td>{{$item->domicilio}}</td>
             <td>{{$item->tel}}</td>
             <td>{{$item->email}}</td>
-            <td>{{$item->is_admin}}</td>
+            <td>{{$item->created_at}}</td>
             <td>
               <a href="{{route('editarEmpleado', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
               <form action="{{route('bajaEmpleado',$item)}}" class="d-inline" method="POST">

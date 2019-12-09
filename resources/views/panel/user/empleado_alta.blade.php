@@ -52,25 +52,44 @@
             @enderror
 
             <label for="name">Nombre</label>
-            <input  type="text" name="name" placeholder="name"
-                class="form-control mb-2">
+            <input type="text" name="name" placeholder="nombre.." class="form-control mb-2">
 
             <label for="email">Correo</label>
-            <input  type="text" name="email" placeholder="email"
-                class="form-control mb-2">
+            <input type="text" name="email" placeholder="email.." class="form-control mb-2">
 
             <label for="telefono">Apellido</label>
-            <input  type="text" name="apellido" placeholder="apellido"
-                class="form-control mb-2">
+            <input type="text" name="apellido" placeholder="apellido.." class="form-control mb-2">
 
             <label for="domicilio">Domicilio</label>
-            <input  type="text" name="domicilio" placeholder="domicilio"
-                class="form-control mb-2">
+            <input type="text" name="domicilio" placeholder="domicilio.." class="form-control mb-2">
 
             <label for="tel">Telefono</label>
-            <input type="text" name="tel" placeholder="tel"
-                class="form-control mb-2">
+            <input type="text" name="tel" placeholder="tel" class="form-control mb-2">
 
+            <div class="form-group row">
+                <label for="password" class="ml-3">{{ __('contraseña') }}</label>
+
+                <div class="col-md-12">
+                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
+                        name="password" required autocomplete="new-password">
+
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="password-confirm"
+                    class="ml-3">{{ __('repetir Contraseña') }}</label>
+
+                <div class="col-md-12">
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
+                        required autocomplete="new-password">
+                </div>
+            </div>
 
             <button type="submit" class="btn btn-warning text-white mt-3">agregar empleado</button>
         </form>

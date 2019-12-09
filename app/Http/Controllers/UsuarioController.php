@@ -25,7 +25,8 @@ class UsuarioController extends Controller
 
     //leer
     public function leer(){
-        $usuarios = User::paginate(5);
+
+        $usuarios = User::where('is_empleado','0')->where('is_admin','0')->paginate(5);
 
         return view('panel.user.user', compact('usuarios'));
     }
@@ -87,10 +88,10 @@ class UsuarioController extends Controller
 
 
     //ABM Empleado
+    //leer
+    public function leerEmpleado(){
 
-      //leer
-      public function leerEmpleado(){
-        $empleados = User::paginate(5);
+        $empleados = User::where('is_empleado','1')->paginate(5);
 
         return view('panel.user.empleado', compact('empleados'));
     }
@@ -167,6 +168,8 @@ class UsuarioController extends Controller
         $nuevoEmpleado->email = $request->email;
         $nuevoEmpleado->apellido = $request->apellido;
         $nuevoEmpleado->domicilio = $request->domicilio;
+        $nuevoEmpleado->password = $request->password;
+        $nuevoEmpleado->is_empleado = 1;
         $nuevoEmpleado->tel = $request->tel;
 
         $nuevoEmpleado->save();
