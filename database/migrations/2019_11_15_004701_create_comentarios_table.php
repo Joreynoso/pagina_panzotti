@@ -20,7 +20,8 @@ class CreateComentariosTable extends Migration
             $table->String('fecha');
             $table->timestamps();
 
-            $table->foreign('cliente_id')->references('id')->on('clientes');
+            $table->foreign('cliente_id')->references('id')->on('clientes')->onUdpate('cascade')
+            ->onDelete('cascade');
         });
     }
 
