@@ -5,8 +5,8 @@
 <!-- ruta  -->
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-bullet">
-    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Panel</a></li>
-    <li class="breadcrumb-item"><a href="#" class="text-uppercase">Proveedores</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('principal')}}" class="text-uppercase">Panel</a></li>
+    <li class="breadcrumb-item"><a href="{{ route('proveedor')}}" class="text-uppercase">Proveedores</a></li>
     <li aria-current="page" class="breadcrumb-item active text-uppercase">Alta</li>
   </ol>
 </nav>
@@ -50,7 +50,7 @@
       </div>
       @enderror
 
-      
+
       <label for="apellido">Nombre</label>
       <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
 

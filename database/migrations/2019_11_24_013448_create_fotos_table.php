@@ -19,7 +19,8 @@ class CreateFotosTable extends Migration
             $table->bigInteger('producto_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('producto_id')->references('id')->on('productos');
+            $table->foreign('producto_id')->references('id')->on('productos')->onUdpate('cascade')
+            ->onDelete('cascade');
         });
     }
 

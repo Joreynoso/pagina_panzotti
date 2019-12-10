@@ -20,7 +20,8 @@ class CreateProductosTable extends Migration
             $table->bigInteger('receta_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('receta_id')->references('id')->on('recetas');
+            $table->foreign('receta_id')->references('id')->on('recetas')->onUdpate('cascade')
+            ->onDelete('cascade');
         });
     }
 
