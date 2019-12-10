@@ -17,12 +17,12 @@ class CreateVentasTable extends Migration
             $table->bigIncrements('id');
             $table->String('fecha');
             $table->String('montototal')->NULL;
-            $table->bigInteger('cliente_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
 
-            $table->foreign('cliente_id')
+            $table->foreign('user_id')
             ->references('id')
-            ->on('clientes')
+            ->on('users')
             ->onUdpate('cascade')
             ->onDelete('cascade');
         });

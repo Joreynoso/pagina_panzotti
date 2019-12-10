@@ -69,7 +69,7 @@
           @foreach ($productoventas as $item)
           <tr>
             <td>{{$item->id}}</td>
-            <td>{{$item->peso}}</td>
+            <td>{{$item->peso}} kg</td>
             <td>${{$item->monto}}</td>
 
                @foreach ($item->productos as $producto)
@@ -77,7 +77,7 @@
                @endforeach
 
                @foreach ($item->ventas as $venta)
-                   <td>{{$venta->cliente->nombre}}</td>
+                   <td>{{$venta->cliente->name}}</td>
                @endforeach
 
                 @foreach ($item->ventas as $venta)

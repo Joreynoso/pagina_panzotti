@@ -568,6 +568,7 @@ hr.hr-text::before {
 
 .carrito-img {
     width: 150px;
+    height: 100px;
     padding-right: 1em;
 }
 
@@ -592,7 +593,17 @@ hr.hr-text::before {
     font-size: .85em;
     color: #777777;
     font-family: "Montserrat", sans-serif;
+    margin-top: 5px;
+    margin-bottom: 0;
 }
+
+.carrito-kilos3 {
+    font-size: .85em;
+    color: #777777;
+    font-family: "Montserrat", sans-serif;
+    margin-top: 5px;
+}
+
 
 .sub-total {
     font-family: "Montserrat", sans-serif;

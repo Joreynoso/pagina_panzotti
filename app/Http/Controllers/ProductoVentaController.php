@@ -122,17 +122,19 @@ class ProductoVentaController extends Controller
             'fecha' => 'required'
         ]);
 
+        $user_id = auth()->user()->id;
+
         $nuevaVenta = new Venta;
 
         $nuevaVenta->fecha = $request->input('fecha');
-        $nuevaVenta->cliente_id = $request->cliente_id = 1;
+        $nuevaVenta->user_id = $request->user_id = $user_id;
 
         $nuevaVenta->save();
 
         //alta pedido
         $cantidad = $request->input('cantidad');
         $precio = $request->input('precio');
-        $id_cliente = $request->input('id');
+        $producto_id = $request->input('id');
 
         $total = $precio * $cantidad;
 
@@ -140,19 +142,40 @@ class ProductoVentaController extends Controller
 
         $nuevoPedido->peso = $request->input('cantidad');
         $nuevoPedido->monto = $request->monto = $total;
-        $nuevoPedido->producto_id = $request->producto_id = $id_cliente;
+        $nuevoPedido->producto_id = $request->producto_id = $producto_id;
         $nuevoPedido->venta_id = $request->venta_id = $nuevaVenta->id;
 
         $nuevoPedido->save();
-
+        
         return redirect('carrito-compra');
     }
 
     public function leercarrito(){
 
-        $productoventas = ProductoVenta::paginate(5);
+        $user_registrado = auth()->user()->id;
 
-        return view('pagina.carrito-compra', compact('productoventas'));
+        $pedido = DB::table('ventas')
+        ->join('producto_ventas', 'ventas.id', '=', 'producto_ventas.venta_id')
+        ->join('productos', 'productos.id', '=', 'producto_ventas.producto_id')
+        ->join('fotos', 'fotos.id', '=', 'producto_ventas.producto_id')
+        ->join('users', 'users.id', '=', 'ventas.user_id')
+        ->where('users.id', '=', $user_registrado)
+        ->select('ventas.fecha as fechaEntrega',
+        'productos.nombre as nombre',
+        'productos.id as codigo',
+        'producto_ventas.peso as peso',
+        'producto_ventas.monto as monto',
+        'users.name as nombreCliente',
+        'fotos.ruta as ruta')->get(); 
+
+        $total = DB::table('ventas')
+        ->join('producto_ventas', 'ventas.id', '=', 'producto_ventas.venta_id')
+        ->join('productos', 'productos.id', '=', 'producto_ventas.producto_id')
+        ->join('users', 'users.id', '=', 'ventas.user_id')
+        ->where('users.id', '=', $user_registrado)
+        ->select(DB::raw('SUM(producto_ventas.monto) as total'))->get(); 
+
+        return view('pagina.carrito-compra', compact('pedido','total'));
     }
 
 }
