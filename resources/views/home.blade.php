@@ -14,10 +14,14 @@
                     </div>
                     @endif
 
-                    @if(auth()->check() && auth()->user()->is_admin)
+                    @if (auth()->check() && auth()->user()->is_admin)
                     iniciaste como administrador
-                    @else
-                    Bienvenido a panzotti!
+                     @else
+                         @if (auth()->check() && auth()->user()->is_empleado)
+                         iniciaste como empleado
+                      @else
+                      Bienvenido a panzotti!
+                     @endif
                     @endif
 
                 </div>

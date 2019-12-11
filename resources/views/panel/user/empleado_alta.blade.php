@@ -11,67 +11,96 @@
     </ol>
 </nav>
 
-
 <!-- formulario -->
 <div class="card shadow rounded">
-    <div class="card-header clearfix">
-        <div class="card-title">Formulario Empleado</div>
-    </div>
+    <div class="card-header clearfix">{{ __('formulario empleado panzotti') }}</div>
+
     <div class="card-body">
-        <form class="form-group" action="{{ route('altaEmpleado') }}" method="POST">
+        <form method="POST" action="{{ route('register') }}">
             @csrf
 
-            @error('name')
-            <div class="alert alert-danger" role="alert">
-                el nombre es obligatorio.
+            <div class="form-group">
+                <label for="name"" class=" ml-3">{{ __('nombre') }}</label>
+
+                <div class="col-md-12">
+                    <input id="name" type="text" class="form-control mb-2 @error('name') is-invalid @enderror"
+                        name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+
+                    @error('name')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
             </div>
-            @enderror
 
-            @error('email')
-            <div class="alert alert-danger" role="alert">
-                el correo es obligatorio.
+            <div class="form-group">
+                <label for="apellido" class="ml-3">{{ __('apellido') }}</label>
+
+                <div class="col-md-12">
+                    <input id="apellido" type="text" class="form-control mb-2 @error('apellido') is-invalid @enderror"
+                        name="apellido" value="{{ old('apellido') }}" required autocomplete="apellido" autofocus>
+
+                    @error('apellido')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
             </div>
-            @enderror
 
-            @error('apellido')
-            <div class="alert alert-danger" role="alert">
-                el apellido es obligatorio.
+            <div class="form-group">
+                <label for="domicilio" class="ml-3">{{ __('domicilio') }}</label>
+
+                <div class="col-md-12">
+                    <input id="domicilio" type="text" class="form-control mb-2 @error('domicilio') is-invalid @enderror"
+                        name="domicilio" value="{{ old('domicilio') }}" required autocomplete="domicilio" autofocus>
+
+                    @error('domicilio')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
             </div>
-            @enderror
 
-            @error('direccion')
-            <div class="alert alert-danger" role="alert">
-                la direccion es obligatorio.
+            <div class="form-group">
+                <label for="tel" class="ml-3">{{ __('tel') }}</label>
+
+                <div class="col-md-12">
+                    <input id="tel" type="text" class="form-control mb-2 @error('tel') is-invalid @enderror" name="tel"
+                        value="{{ old('tel') }}" required autocomplete="tel" autofocus>
+
+                    @error('tel')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
             </div>
-            @enderror
 
-            @error('tel')
-            <div class="alert alert-danger" role="alert">
-                el telefono es obligatorio.
+            <div class="form-group">
+                <label for="email" class="ml-3">{{ __('email') }}</label>
+
+                <div class="col-md-12">
+                    <input id="email" type="email" class="form-control mb-2 @error('email') is-invalid @enderror"
+                        name="email" value="{{ old('email') }}" required autocomplete="email">
+
+                    @error('email')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
             </div>
-            @enderror
 
-            <label for="name">Nombre</label>
-            <input type="text" name="name" placeholder="nombre.." class="form-control mb-2">
-
-            <label for="email">Correo</label>
-            <input type="text" name="email" placeholder="email.." class="form-control mb-2">
-
-            <label for="telefono">Apellido</label>
-            <input type="text" name="apellido" placeholder="apellido.." class="form-control mb-2">
-
-            <label for="domicilio">Domicilio</label>
-            <input type="text" name="domicilio" placeholder="domicilio.." class="form-control mb-2">
-
-            <label for="tel">Telefono</label>
-            <input type="text" name="tel" placeholder="tel" class="form-control mb-2">
-
-            <div class="form-group row">
+            <div class="form-group">
                 <label for="password" class="ml-3">{{ __('contraseña') }}</label>
 
                 <div class="col-md-12">
-                    <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                        name="password" required autocomplete="new-password">
+                    <input id="password" type="password"
+                        class="form-control mb-2 @error('password') is-invalid @enderror" name="password" required
+                        autocomplete="new-password">
 
                     @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -81,9 +110,8 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="password-confirm"
-                    class="ml-3">{{ __('repetir Contraseña') }}</label>
+            <div class="form-group">
+                <label for="password-confirm" class="ml-3">{{ __('repetir Contraseña') }}</label>
 
                 <div class="col-md-12">
                     <input id="password-confirm" type="password" class="form-control" name="password_confirmation"
@@ -91,7 +119,13 @@
                 </div>
             </div>
 
-            <button type="submit" class="btn btn-warning text-white mt-3">agregar empleado</button>
+            <div class="form-group">
+                <div class="">
+                    <button type="submit" class="btn btn-warning text-white mt-3 ml-3">
+                        {{ __('agregar empleado') }}
+                    </button>
+                </div>
+            </div>
         </form>
     </div>
 </div>

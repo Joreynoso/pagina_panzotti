@@ -61,7 +61,7 @@
             <th scope="col">producto</th>
             <th scope="col">cliente</th>
             <th scope="col">fecha del pedido</th>
-            <th scope="col">feche de entrega</th>
+            <th scope="col">fecha de entrega</th>
             <th scope="col">acciones</th>
           </tr>
         </thead>
@@ -72,20 +72,20 @@
             <td>{{$item->peso}} kg</td>
             <td>${{$item->monto}}</td>
 
-               @foreach ($item->productos as $producto)
-                   <td>{{$producto->nombre}}</td>
-               @endforeach
+            @foreach ($item->productos as $producto)
+            <td>{{$producto->nombre}}</td>
+            @endforeach
 
-               @foreach ($item->ventas as $venta)
-                   <td>{{$venta->cliente->name}}</td>
-               @endforeach
+            @foreach ($item->ventas as $venta)
+            <td>{{$venta->cliente->name}}</td>
+            @endforeach
 
-                @foreach ($item->ventas as $venta)
-                    <td>{{$venta->created_at->format('d M Y - H:i:s')}}</td>
-                @endforeach
+            @foreach ($item->ventas as $venta)
+            <td>{{$venta->created_at->format('d M Y - H:i:s')}}</td>
+            @endforeach
 
-                @foreach ($item->ventas as $venta)
-                <td>{{$venta->fecha}}</td>
+            @foreach ($item->ventas as $venta)
+            <td>{{$venta->fecha}}</td>
             @endforeach
 
             <td class="td-btn">

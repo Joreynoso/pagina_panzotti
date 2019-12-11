@@ -13,6 +13,18 @@
 <!-- tarjetas productos -->
 <section id="services" class="bg-light">
     <div class="container">
+
+        <!-- mensaje -->
+        @if (Session::has('mensaje'))
+        <div class="alert alert-success" role="alert">
+            {{Session::get('mensaje')}}
+        </div>
+        @elseif (Session::has('error'))
+        <div class="alert alert-warning" role="alert">
+            {{Session::get('error')}}
+        </div>
+        @endif
+        
         <div class="row">
             <div class="col-lg-8 mx-auto">
                 <div class="heading">

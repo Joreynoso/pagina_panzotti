@@ -53,15 +53,15 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-            <ul class="sidebar navbar-nav panzotti-nav">
-                <li class="nav-item">
-                    <a href="{{ route('principal')}}" class="nav-link">
-                        <i class="fas fa-home azul"></i>
-                        <span>Inicio</span>
-                    </a>
-                </li>
+        <ul class="sidebar navbar-nav panzotti-nav">
+            <li class="nav-item">
+                <a href="{{ route('principal')}}" class="nav-link">
+                    <i class="fas fa-home azul"></i>
+                    <span>Inicio</span>
+                </a>
+            </li>
 
-                {{-- <li class="nav-item dropdown">
+            {{-- <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"
                     aria-haspopup="true" aria-expanded="false">
                     <i class="fas fa-fw fa-folder"></i>
@@ -80,109 +80,109 @@
             </li> --}}
 
 
-                <li class="nav-item">
-                    <a href="{{route('user')}}" class="nav-link">
-                        <i class="fas fa-users"></i>
-                        <span>Clientes</span></a>
-                </li>
+            <li class="nav-item">
+                <a href="{{route('user')}}" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span></a>
+            </li>
 
-                <li class="nav-item">
-                    <a href="{{route('notas')}}" class="nav-link">
-                        <i class="fas fa-sticky-note"></i>
-                        <span>MisNotas</span></a>
-                </li>
+            <li class="nav-item">
+                <a href="{{route('notas')}}" class="nav-link">
+                    <i class="fas fa-sticky-note"></i>
+                    <span>MisNotas</span></a>
+            </li>
 
-                <li class="nav-item">
-                    <a href="{{route('tipomov')}}" class="nav-link" href="tables.html">
-                        <i class="fas fa-fw fa-sync"></i>
-                        <span>Tipo Movimiento</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('comentario')}}" class="nav-link">
-                        <i class="fas fa-comments"></i>
-                        <span>Comentarios</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('proveedor')}}" class="nav-link">
-                        <i class="fas fa-truck"></i>
-                        <span>Proveedores</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('empleado')}}" class="nav-link">
-                        <i class="fas fa-address-card"></i>
-                        <span>Empleados</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('tipomp')}}" class="nav-link">
-                        <i class="fas fa-weight"></i>
-                        <span>Tipo Materia Prima</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('materiaprima')}}" class="nav-link">
-                        <i class="fas fa-cube"></i>
-                        <span>Materia Prima</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('mpplanillaingresoegresos')}}" class="nav-link">
-                        <i class="fas fa-paste"></i>
-                        <span>Planilla Ingreso/Egreso</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('receta')}}" class="nav-link">
-                        <i class="fas fa-receipt"></i>
-                        <span>Recetas</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('producto')}}" class="nav-link">
-                        <i class="fas fa-seedling"></i>
-                        <span>Producto</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('foto')}}" class="nav-link">
-                        <i class="fas fa-images"></i>
-                        <span>Foto</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('productoprecio')}}" class="nav-link">
-                        <i class="fas fa-images"></i>
-                        <span>Producto Precio</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('venta')}}" class="nav-link">
-                        <i class="fas fa-donate"></i>
-                        <span>Ventas</span></a>
-                </li>
-                <li class="nav-item">
-                    <a href="{{route('productoventa')}}" class="nav-link">
-                        <i class="fas fa-donate"></i>
-                        <span>Producto-Ventas</span></a>
-                </li>
+            <li class="nav-item">
+                <a href="{{route('tipomov')}}" class="nav-link" href="tables.html">
+                    <i class="fas fa-fw fa-sync"></i>
+                    <span>Tipo Movimiento</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('comentario')}}" class="nav-link">
+                    <i class="fas fa-comments"></i>
+                    <span>Comentarios</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('proveedor')}}" class="nav-link">
+                    <i class="fas fa-truck"></i>
+                    <span>Proveedores</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('empleado')}}" class="nav-link">
+                    <i class="fas fa-address-card"></i>
+                    <span>Empleados</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('tipomp')}}" class="nav-link">
+                    <i class="fas fa-weight"></i>
+                    <span>Tipo Materia Prima</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('materiaprima')}}" class="nav-link">
+                    <i class="fas fa-cube"></i>
+                    <span>Materia Prima</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('mpplanillaingresoegresos')}}" class="nav-link">
+                    <i class="fas fa-paste"></i>
+                    <span>Planilla Ingreso/Egreso</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('receta')}}" class="nav-link">
+                    <i class="fas fa-receipt"></i>
+                    <span>Recetas</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('producto')}}" class="nav-link">
+                    <i class="fas fa-seedling"></i>
+                    <span>Producto</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('foto')}}" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Foto</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('productoprecio')}}" class="nav-link">
+                    <i class="fas fa-images"></i>
+                    <span>Producto Precio</span></a>
+            </li>
+            <li class="nav-item">
+                <a href="{{route('productoventa')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Producto-Ventas</span></a>
+            </li>
 
-                <li class="nav-item">
-                    <a href="{{route('stock')}}" class="nav-link">
-                        <i class="fas fa-donate"></i>
-                        <span>Stock</span></a>
-                </li>
-
-                {{-- <li class="nav-item">
+            <li class="nav-item">
                 <a href="{{route('stock')}}" class="nav-link">
-                <i class="fas fa-donate"></i>
-                <span>Stock</span></a>
-                </li> --}}
+                    <i class="fas fa-donate"></i>
+                    <span>Stock</span></a>
+            </li>
 
-                {{-- <li class="nav-item">
+            {{-- <li class="nav-item">
+                <a href="{{route('stock')}}" class="nav-link">
+            <i class="fas fa-donate"></i>
+            <span>Stock</span></a>
+            </li> --}}
+
+            {{-- <li class="nav-item">
                 <a href="{{route('materiaprimareceta')}}" class="nav-link">
-                <i class="fas fa-donate"></i>
-                <span>Materia Prima-Receta</span></a>
-                </li> --}}
+            <i class="fas fa-donate"></i>
+            <span>Materia Prima-Receta</span></a>
+            </li> --}}
 
-                {{-- <li class="nav-item">
+            {{-- <li class="nav-item">
                 <a href="{{route('cliente')}}" class="nav-link">
-                <i class="fas fa-users"></i>
-                <span>Clientes</span></a>
-                </li> --}}
+            <i class="fas fa-users"></i>
+            <span>Clientes</span></a>
+            </li> --}}
 
-            </ul>
+            {{-- <li class="nav-item">
+                <a href="{{route('venta')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Ventas</span></a>
+            </li> --}}
+        </ul>
 
         <div id="content-wrapper">
             <div class="container-fluid">

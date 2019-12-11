@@ -31,8 +31,15 @@
                         <p class="carrito-kilos">fecha entrega: {{$item->fechaEntrega}}</p>
                     </div>
                     <div class="col-4">
-                        <a href="" class="borrar float-right mt-3">x</a>
+                        <a href="" class="borrar float-right mt-3" type="submit">x</a>
                         <h1 class="precio float-right mt-3">${{$item->monto}}</h1>
+
+                        <form action="{{route('bajaProductoVenta2',$item->id)}}" class="d-inline" method="POST">
+                            @method('DELETE')
+                            @csrf
+                            <button title="borarr" class="borrar float-right mt-3" type="submit"><i
+                                    class="fa fa-trash red mb-2"></i></button>
+                        </form>
                     </div>
                 </div>
                 @endforeach
@@ -46,7 +53,8 @@
                     @foreach ($total as $item)
                     <p class="sub-total monserrat">Total: ${{$item->total}} </p>
                     @endforeach
-                    <a href="" class="carrito-btn mb-2">confirmar compra!</a>
+                    
+                    <a href="{{route('ConfirmarCompra')}}" class="carrito-btn mb-2">confirmar compra!</a>
                 </div>
             </div>
         </div>

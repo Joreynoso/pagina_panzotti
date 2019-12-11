@@ -17,6 +17,7 @@ class CreateProductoVentaTable extends Migration
             $table->bigIncrements('id');
             $table->String('peso');
             $table->String('monto');
+            $table->boolean('estado')->default(false);
             $table->bigInteger('producto_id')->unsigned();
             $table->bigInteger('venta_id')->unsigned();
             $table->timestamps();

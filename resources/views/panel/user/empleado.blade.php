@@ -22,7 +22,7 @@
 @endif
 
 <!-- nuevo -->
-<div class="container-btn">
+<div class="container-btn mb-2">
     <a href="{{route('empleado_alta')}}" class="btn btn-info mb-2" href="#" role="button">
       <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
     </a>
@@ -30,7 +30,7 @@
 
 
 <!-- buscador -->
-<form class="form-inline mb-3">
+<form class="form-inline mb-3 ml-1">
   <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
     <option>nombre</option>
   </select>

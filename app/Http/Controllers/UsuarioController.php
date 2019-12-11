@@ -4,25 +4,60 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\User;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Validator;
+
 
 class UsuarioController extends Controller
 {
-    // public function leer(Request $request){
+    use RegistersUsers;
 
-    //     $buscar = $request->get('buscarpor');
+    /**
+     * Where to redirect users after registration.
+     *
+     * @var string
+     */
+    protected $redirectTo = '/home';
 
-    //     $tipo = $request->get('tipo');
+    /**
+     * Get a validator for an incoming registration request.
+     *
+     * @param  array  $data
+     * @return \Illuminate\Contracts\Validation\Validator
+     */
+    protected function validator(array $data)
+    {
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'apellido' => ['required', 'string',],
+            'domicilio' => ['required', 'string',],
+            'tel' => ['required', 'string',],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+        ]);
+    }
 
-    //     $variablesurl = $request->all();
-
-    //     $usuarios = User::buscarpor($tipo, $buscar)->paginate(5)->appends($variablesurl);
-
-    //     return view('panel.user.user', compact('usuarios'));
-    // }
-
+    /**
+     * Create a new user instance after a valid registration.
+     *
+     * @param  array  $data
+     * @return \App\User
+     */
+    protected function create(array $data)
+    {
+        return User::create([
+            'name' => $data['name'],
+            'apellido' => $data['apellido'],
+            'domicilio' => $data['domicilio'],
+            'tel' => $data['tel'],
+            'email' => $data['email'],
+            'password' => Hash::make($data['password']),
+            'is_empleado' => 1
+        ]);
+    }
 
     //ABM Usuario
-
     //leer
     public function leer(){
 
@@ -149,10 +184,6 @@ class UsuarioController extends Controller
     //alta
     public function altaEmpleado(Request $request){
 
-        //return $request->all();  verificar los datos antes de almacenarlos
-
-        //validacion
-         //validacion
          $request->validate([
             'name' => 'required',
             'email' => 'required',
@@ -160,7 +191,6 @@ class UsuarioController extends Controller
             'domicilio' => 'required',
             'tel'=>'required'
         ]);
-
 
         $nuevoEmpleado = new User();
 

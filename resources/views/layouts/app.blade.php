@@ -78,6 +78,12 @@
                         </li>
                         @endif
 
+                        @if(auth()->check() && auth()->user()->is_empleado)
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('principal')}}">Administrar</a>
+                        </li>
+                        @endif
+
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
