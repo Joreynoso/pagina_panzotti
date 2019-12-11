@@ -23,7 +23,7 @@
 <body id="page-top">
 
     <nav class="navbar navbar-expand navbar-dark panzotti-nav static-top">
-        <a class="navbar-brand mr-1" href="index.html">Panzotti Admin</a>
+        <a class="navbar-brand mr-1" href="{{ route('principal')}}">Panzotti Admin</a>
         <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
             <i class="fas fa-bars"></i>
         </button>
@@ -151,7 +151,7 @@
             </li>
             <li class="nav-item">
                 <a href="{{route('productoprecio')}}" class="nav-link">
-                    <i class="fas fa-images"></i>
+                    <i class="fas fa-dollar-sign"></i>
                     <span>Producto Precio</span></a>
             </li>
             <li class="nav-item">
@@ -162,7 +162,7 @@
 
             <li class="nav-item">
                 <a href="{{route('stock')}}" class="nav-link">
-                    <i class="fas fa-donate"></i>
+                    <i class="fas fa-boxes"></i>
                     <span>Stock</span></a>
             </li>
 
@@ -197,7 +197,7 @@
 
             <li class="nav-item">
                 <a href="{{route('stock')}}" class="nav-link">
-                    <i class="fas fa-donate"></i>
+                    <i class="fas fa-boxes"></i>
                     <span>Stock</span></a>
             </li>
 
