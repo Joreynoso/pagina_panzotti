@@ -59,7 +59,7 @@
             <td>{{$item->id}}</td>
             <td>{{$item->nombre}}</td>
             <td>{{$item->stock}}</td>
-            <td>{{$item->fecha}}</td>
+            <td>{{$item->updated_at}}</td>
           @endforeach
         </tbody>
       </table>

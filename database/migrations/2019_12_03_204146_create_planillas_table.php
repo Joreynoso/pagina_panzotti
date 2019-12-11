@@ -20,14 +20,14 @@ class CreatePlanillasTable extends Migration
             $table->integer('cantidad');
             $table->bigInteger('tipomovimiento_id')->unsigned();
             $table->bigInteger('materiaprima_id')->unsigned();
-            $table->bigInteger('empleado_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
 
             $table->foreign('tipomovimiento_id')->references('id')->on('tipo_movimientos')->onUdpate('cascade')
             ->onDelete('cascade');
             $table->foreign('materiaprima_id')->references('id')->on('materia_primas')->onUdpate('cascade')
             ->onDelete('cascade');
-            $table->foreign('empleado_id')->references('id')->on('empleados')->onUdpate('cascade')
+            $table->foreign('user_id')->references('id')->on('users')->onUdpate('cascade')
             ->onDelete('cascade');
         });
     }

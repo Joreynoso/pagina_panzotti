@@ -35,8 +35,14 @@
 
         <!-- Navbar -->
         <ul class="navbar-nav ml-auto ml-md-0">
+
+
+            <li style="margin: 5px" class="mt-3 text-white salir span">
+                {{ Auth::user()->name }}
+            </li>
+
             <li class="mt-3 text-white salir">
-                Volver a la pagina
+                    | Volver a la pagina
             </li>
             <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}">
@@ -151,7 +157,7 @@
             <li class="nav-item">
                 <a href="{{route('productoventa')}}" class="nav-link">
                     <i class="fas fa-donate"></i>
-                    <span>Producto-Ventas</span></a>
+                    <span>Pedidos</span></a>
             </li>
 
             <li class="nav-item">

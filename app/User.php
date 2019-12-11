@@ -47,4 +47,9 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Venta', 'id', 'user_id');
     }
+
+    public function usuario()
+    {
+        return $this->belongsTo('App\Planilla', 'id', 'user_id');
+    }
 }

@@ -6,7 +6,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-bullet">
     <li class="breadcrumb-item"><a href="{{ route('principal')}}" class="text-uppercase">Panel</a></li>
-    <li aria-current="page" class="breadcrumb-item active text-uppercase">Producto Venta</li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Pedidos</li>
   </ol>
 </nav>
 
@@ -21,12 +21,12 @@
 </div>
 @endif
 
-<!-- nuevo -->
+{{-- <!-- nuevo -->
 <div class="container-btn">
   <a href="{{route('productoventa_alta')}}" class="btn btn-info mb-2" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
-</div>
+</div> --}}
 
 <!-- buscador -->
 <div class="row">
@@ -41,16 +41,16 @@
 <!-- existen elementos? -->
 @if ($productoventas->count() == 0)
 <div class="alert alert-info">
-  no existe ninguna producto venta, agrega uno.
+  no existe ningun pedido.
 </div>
 
 @else
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
-    <h6 class="text-uppercase mb-0">producto venta | administrar</h6>
+    <h6 class="text-uppercase mb-0">Pedido | administrar</h6>
   </div>
   <div class="card-body">
-    <p class="card-text">Cantidad de Producto Venta: {{$productoventas->total()}}</p>
+    <p class="card-text">Cantidad de Pedidos: {{$productoventas->total()}}</p>
     <div class="table-responsive">
       <table class="table table-hover">
         <thead>
@@ -77,7 +77,7 @@
             @endforeach
 
             @foreach ($item->ventas as $venta)
-            <td>{{$venta->cliente->name}}</td>
+            <td>{{$venta->cliente->name." ".$venta->cliente->apellido}}</td>
             @endforeach
 
             @foreach ($item->ventas as $venta)
