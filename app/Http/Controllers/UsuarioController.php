@@ -59,9 +59,19 @@ class UsuarioController extends Controller
 
     //ABM Usuario
     //leer
-    public function leer(){
+    public function leer(Request $request){
 
-        $usuarios = User::where('is_empleado','0')->where('is_admin','0')->paginate(5);
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $variablesurl = $request->all();
+
+        $usuarios = User::isempleado()
+        ->isadmin()
+        ->buscarpor($tipo, $buscar)
+        ->paginate(5)
+        ->appends($variablesurl);
 
         return view('panel.user.user', compact('usuarios'));
     }
@@ -122,16 +132,24 @@ class UsuarioController extends Controller
     }
 
 
-    //ABM Empleado
-    //leer
-    public function leerEmpleado(){
+    //-- ABM EMPLEADO -- //
+    public function leerEmpleado(Request $request){
 
-        $empleados = User::where('is_empleado','1')->paginate(5);
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $variablesurl = $request->all();
+
+        $empleados = User::empleado()
+        ->buscarpor($tipo, $buscar)
+        ->paginate(5)
+        ->appends($variablesurl);
 
         return view('panel.user.empleado', compact('empleados'));
     }
 
-    //acceder editar
+    //-- ACCEDER EDITAR -- //
     public function editarEmpleado($id){
 
         $empleado = User::findOrFail($id);
@@ -139,7 +157,7 @@ class UsuarioController extends Controller
         return view('panel.user.empleado_editar',compact('empleado'));
     }
 
-    //update
+    //-- UPDATE EMPLEADO -- //
     public function updateEmpleado(Request $request, $id){
 
         //validacion
@@ -166,7 +184,7 @@ class UsuarioController extends Controller
 
     }
 
-    //baja
+    //-- BAJA EMPLEADO -- //
     public function bajaEmpleado($id){
 
         $empleadoEliminar = User::findOrFail($id);
@@ -175,13 +193,13 @@ class UsuarioController extends Controller
         return redirect('empleado')->with('mensaje', 'Empleado eliminado con exito!');
     }
 
-     //acceder alta
+    //-- ACCEDER ALTA EMPLEADO -- //
      public function accederEmpleado(){
 
         return view('panel.user.empleado_alta');
     }
 
-    //alta
+    //-- ALTA EMPLEADO -- //
     public function altaEmpleado(Request $request){
 
          $request->validate([

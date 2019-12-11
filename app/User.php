@@ -47,4 +47,26 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Venta', 'id', 'user_id');
     }
+
+    //query scopes (buscador)
+    public function scopeBuscarpor($query, $tipo, $buscar) {
+    	if ( ($tipo) && ($buscar) ) {
+    		return $query->where($tipo,'like',"%$buscar%");
+    	}
+    }
+
+    public function scopeIsempleado($query){
+
+        return $query->where('is_empleado','0');
+    }
+
+    public function scopeIsadmin($query){
+
+        return $query->where('is_admin','0');
+    }
+
+    public function scopeEmpleado($query){
+
+        return $query->where('is_empleado','1');
+    }
 }

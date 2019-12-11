@@ -12,7 +12,7 @@
 </nav>
 
 <!-- formulario -->
-<div class="card shadow rounded">
+<div class="card shadow rounded mb-4">
     <div class="card-header clearfix">{{ __('formulario empleado panzotti') }}</div>
 
     <div class="card-body">

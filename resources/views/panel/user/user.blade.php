@@ -22,11 +22,14 @@
 @endif
 
 
-
 <!-- buscador -->
 <form class="form-inline mb-3">
   <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
-    <option>nombre</option>
+    <option value="name">nombre</option>
+    <option value="apellido">apellido</option>
+    <option value="tel">telefono</option>
+    <option value="email">email</option>
+    <option value="domicilio">domicilio</option>
   </select>
 
   <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
@@ -38,7 +41,7 @@
 @if ($usuarios->count() == 0)
 
 <div class="alert alert-info">
-  no existe ningun usuario, agrega uno.
+  no existe ningun cliente aun.
 </div>
 
 @else

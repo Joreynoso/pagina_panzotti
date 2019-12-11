@@ -12,9 +12,19 @@ use App\Foto;
 class ProductoVentaController extends Controller
 {
     //leer
-    public function leer()
+    public function leer(Request $request)
     {
-        $productoventas = ProductoVenta::paginate(5);
+
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $variablesurl = $request->all();
+
+        $productoventas = ProductoVenta::buscarpor($tipo, $buscar)
+        ->clientepedido($buscar)
+        ->paginate(5)
+        ->appends($variablesurl);
 
         return view('panel.productoventa.productoventa', compact('productoventas'));
     }
