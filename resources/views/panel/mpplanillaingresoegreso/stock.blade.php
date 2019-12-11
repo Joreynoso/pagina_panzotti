@@ -40,7 +40,7 @@
 {{-- @else --}}
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
-    <h6 class="text-uppercase mb-0">materia prima ingreso egreso | administrar</h6>
+    <h6 class="text-uppercase mb-0">Control | Stock</h6>
   </div>
   <div class="card-body">
     <div class="table-responsive">

@@ -116,7 +116,7 @@
                         @endguest
 
                         <li class="nav-item">
-                            <a class="nav-link mr-2" href="{{route('receta-principal')}}">
+                            <a class="nav-link mr-2" href="{{route('carrito')}}">
                                 MiCarrito
                                 <i class="fa fa-shopping-cart"></i>
                             </a>
