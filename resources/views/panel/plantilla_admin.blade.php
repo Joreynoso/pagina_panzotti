@@ -79,6 +79,7 @@
                 </div>
             </li> --}}
 
+            @if (auth()->check() && auth()->user()->is_admin)
 
             <li class="nav-item">
                 <a href="{{route('user')}}" class="nav-link">
@@ -159,6 +160,45 @@
                     <span>Stock</span></a>
             </li>
 
+            @endif
+
+            @if (auth()->check() && auth()->user()->is_empleado)
+
+            <li class="nav-item">
+                <a href="{{route('user')}}" class="nav-link">
+                    <i class="fas fa-users"></i>
+                    <span>Clientes</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{route('proveedor')}}" class="nav-link">
+                    <i class="fas fa-truck"></i>
+                    <span>Proveedores</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{route('mpplanillaingresoegresos')}}" class="nav-link">
+                    <i class="fas fa-paste"></i>
+                    <span>Planilla Ingreso/Egreso</span></a>
+            </li>
+
+
+            <li class="nav-item">
+                <a href="{{route('productoventa')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Producto-Ventas</span></a>
+            </li>
+
+            <li class="nav-item">
+                <a href="{{route('stock')}}" class="nav-link">
+                    <i class="fas fa-donate"></i>
+                    <span>Stock</span></a>
+            </li>
+
+            @endif
+
+
+
             {{-- <li class="nav-item">
                 <a href="{{route('stock')}}" class="nav-link">
             <i class="fas fa-donate"></i>
@@ -179,8 +219,8 @@
 
             {{-- <li class="nav-item">
                 <a href="{{route('venta')}}" class="nav-link">
-                    <i class="fas fa-donate"></i>
-                    <span>Ventas</span></a>
+            <i class="fas fa-donate"></i>
+            <span>Ventas</span></a>
             </li> --}}
         </ul>
 

@@ -1,9 +1,8 @@
 <?php
 
 //--------------------------------------------------------------------------
-// Pagina web panzotti pastas
+// RUTAS PARA VISITANTE DE LA PAGINA
 //--------------------------------------------------------------------------
-
 
 Route::get('/', function () {
     return view('welcome');
@@ -13,17 +12,20 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
 
+Route::get('/receta-principal', 'RecetaController@leerprincipal')->name('receta-principal');
+
+
+//--------------------------------------------------------------------------
+// RUTAS CON AUTENTIFICACION 
+//--------------------------------------------------------------------------
+
+Route::group(['middleware' => 'auth'], function(){
 // principal
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/principal', 'AdminController@mostrar')->name('principal');
 
-
-//--------------------------------------------------------------------------
-// ADMIN RUTAS
-//--------------------------------------------------------------------------
-Route::group(['middleware' => 'admin'], function () {
- 
 // Usuarios
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/user', 'UsuarioController@leer')->name('user');
@@ -190,10 +192,6 @@ Route::put('/productoprecio_editar/{id}', 'ProductoPrecioController@update')->na
 Route::delete('/bajaProductoPrecio/{id}', 'ProductoPrecioController@baja')->name('bajaProductoPrecio');
 
 
-Route::get('/receta-principal', 'RecetaController@leerprincipal')->name('receta-principal');
-
-Route::get('/productoWeb', 'ProductoController@leerWeb')->name('productoWeb');
-
 Route::get('/venta-principal/{id}', 'ProductoVentaController@leerprincipal')->name('venta-principal');
 
 Route::post('/venta-principal', 'ProductoVentaController@pedido')->name('pedido');
@@ -209,19 +207,19 @@ Route::get('/confirmarcompra', 'ProductoVentaController@ConfirmarCompra')->name(
 Route::get('/stock', 'PlantillaController@stock')->name('stock');
 
 
-// Stock
-// ────────────────────────────────────────────────────────────────────────────────
-Route::get('/stock', 'StockController@leer')->name('stock');
+// // Stock
+// // ────────────────────────────────────────────────────────────────────────────────
+// Route::get('/stock', 'StockController@leer')->name('stock');
 
-Route::get('/stock_alta', 'StockController@acceder')->name('stock_alta');
+// Route::get('/stock_alta', 'StockController@acceder')->name('stock_alta');
 
-Route::post('/altaStock', 'StockController@alta')->name('altaStock');
+// Route::post('/altaStock', 'StockController@alta')->name('altaStock');
 
-Route::get('/stock_editar/{id}', 'StockController@editar')->name('editarStock');
+// Route::get('/stock_editar/{id}', 'StockController@editar')->name('editarStock');
 
-Route::put('/stock_editar/{id}', 'StockController@update')->name('updateStock');
+// Route::put('/stock_editar/{id}', 'StockController@update')->name('updateStock');
 
-Route::delete('/bajaStock/{id}', 'StockController@baja')->name('bajaStock');
+// Route::delete('/bajaStock/{id}', 'StockController@baja')->name('bajaStock');
 
 
 // Venta
