@@ -13,9 +13,17 @@ class PlantillaController extends Controller
 {
 
     //leer
-    public function leer()
-    {
-        $planillas = Planilla::paginate(5);
+    public function leer(Request $request){
+
+        $buscar = $request->get('buscarpor');
+
+        $tipo = $request->get('tipo');
+
+        $variablesurl = $request->all();
+
+        $planillas = Planilla::buscarpor($tipo, $buscar)
+        ->paginate(5)
+        ->appends($variablesurl);
 
         return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso', compact('planillas'));
     }
@@ -54,6 +62,7 @@ class PlantillaController extends Controller
 
             $resultado = $cantidad;
         }
+
         $empleado_id = auth()->user()->id;
 
         $nuevaPlanilla->fecha = $request->fecha;
@@ -62,7 +71,6 @@ class PlantillaController extends Controller
         $nuevaPlanilla->tipomovimiento_id = $request->input('tipomovimiento_id');
         $nuevaPlanilla->user_id = $request->user_id = $empleado_id;
         $nuevaPlanilla->materiaprima_id = $request->input('materiaprima_id');
-
 
         $nuevaPlanilla->save();
 

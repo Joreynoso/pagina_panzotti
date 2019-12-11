@@ -20,4 +20,12 @@ class Planilla extends Model
     {
         return $this->hasOne('App\MateriaPrima', 'id', 'materiaprima_id');
     }
+
+    //query scopes (buscador)
+    public function scopeBuscarpor($query, $tipo, $buscar) {
+    	if ( ($tipo) && ($buscar) ) {
+    		return $query->where($tipo,'like',"%$buscar%");
+    	}
+    }
+
 }

@@ -38,7 +38,7 @@
 
 
             <li style="margin: 5px" class="mt-3 text-white salir span">
-                {{ Auth::user()->name }}
+               <span style="color: #2494be;"> {{ Auth::user()->name }}</span>
             </li>
 
             <li class="mt-3 text-white salir">

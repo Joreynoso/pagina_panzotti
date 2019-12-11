@@ -24,20 +24,23 @@
 
 <!-- nuevo -->
 <div class="container-btn">
-  <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-info mb-2" href="#" role="button">
+  <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-info mb-3" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
 </div>
 
 <!-- buscador -->
-<div class="row">
-  <div class="col-xl-12 col-sm-12 mb-3">
-    <div class="search-box">
-      <i class="fa fa-search"></i>
-      <input type="text" class="form-control" placeholder="Buscar..">
-    </div>
-  </div>
-</div>
+<form class="form-inline mb-3">
+  <select name="tipo" class="form-control mr-sm-2" id="exampleFormControlSelect1">
+    <option value="observacion">observacion</option>
+    <option value="cantidad">cantidad</option>
+    <option value="tel">materia prima</option>
+  </select>
+
+  <input name="buscarpor" class="form-control mr-sm-2" type="search" placeholder="Buscar.." aria-label="Search">
+
+  <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Buscar</button>
+</form>
 
 <!-- existen elementos? -->
 @if ($planillas->count() == 0)
