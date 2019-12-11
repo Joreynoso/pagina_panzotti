@@ -28,7 +28,7 @@
 
         @endif
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="#">
+      <a class="card-footer text-white clearfix small z-1" href="{{route('user')}}">
         <span class="float-left">Ver Detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
@@ -55,7 +55,7 @@
         @endif
 
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="#">
+      <a class="card-footer text-white clearfix small z-1" href="{{route('notas')}}">
         <span class="float-left">Ver detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
@@ -82,7 +82,7 @@
 
         @endif
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="#">
+      <a class="card-footer text-white clearfix small z-1" href="{{route('productoventa')}}">
         <span class="float-left">Ver detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
@@ -109,7 +109,7 @@
 
         @endif
       </div>
-      <a class="card-footer text-white clearfix small z-1" href="#">
+      <a class="card-footer text-white clearfix small z-1" href="{{route('comentario')}}">
         <span class="float-left">Ver detalles</span>
         <span class="float-right">
           <i class="fas fa-angle-right"></i>
