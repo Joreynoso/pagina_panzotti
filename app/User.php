@@ -69,4 +69,9 @@ class User extends Authenticatable
 
         return $query->where('is_empleado','1');
     }
+
+    public function usuario()
+    {
+        return $this->belongsTo('App\Planilla', 'id', 'user_id');
+    }
 }

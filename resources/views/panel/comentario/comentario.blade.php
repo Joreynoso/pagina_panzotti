@@ -10,12 +10,12 @@
   </ol>
 </nav>
 
-<!-- nuevo -->
+{{-- <!-- nuevo -->
 <div class="container-btn">
   <a href="" class="btn btn-info mb-2" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
   </a>
-</div>
+</div> --}}
 
 <!-- buscador -->
 <div class="row">

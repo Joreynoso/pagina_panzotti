@@ -75,7 +75,7 @@
             <td>{{$item->cantidad}}</td>
             <td>{{$item->materiaprima->nombre}}</td>
             <td>{{$item->tipomovimiento->nombre}}</td>
-            <td>{{$item->empleado->nombre}}</td>
+            <td>{{$item->usuario->name." ".$item->usuario->apellido }}</td>
             <td class="td-btn">
               <a href="{{route('editarmpplanillaingresoegresos', $item)}}" title="editar"><i
                   class="fa fa-pen yellow"></i></a>

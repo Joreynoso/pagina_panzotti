@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Planilla;
 use App\TipoMovimiento;
-use App\Empleado;
+use App\User;
 use App\MateriaPrima;
 
 class PlantillaController extends Controller
@@ -25,12 +25,10 @@ class PlantillaController extends Controller
     {
         $tipomovimientos = TipoMovimiento::all();
 
-        $empleados = Empleado::all();
-
         $materiaprimas = MateriaPrima::all();
 
-        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_alta', 
-        compact('tipomovimientos', 'empleados','materiaprimas'));
+        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_alta',
+        compact('tipomovimientos', 'materiaprimas'));
     }
 
     //alta
@@ -52,17 +50,19 @@ class PlantillaController extends Controller
 
             $resultado = -$cantidad;
 
-        }else{  
+        }else{
 
             $resultado = $cantidad;
         }
+        $empleado_id = auth()->user()->id;
 
         $nuevaPlanilla->fecha = $request->fecha;
         $nuevaPlanilla->observacion = $request->observacion;
         $nuevaPlanilla->cantidad = $request->cantidad = $resultado;
         $nuevaPlanilla->tipomovimiento_id = $request->input('tipomovimiento_id');
-        $nuevaPlanilla->empleado_id = $request->input('empleado_id');
+        $nuevaPlanilla->user_id = $request->user_id = $empleado_id;
         $nuevaPlanilla->materiaprima_id = $request->input('materiaprima_id');
+
 
         $nuevaPlanilla->save();
 
@@ -76,9 +76,8 @@ class PlantillaController extends Controller
 
         $tipomovimientos = TipoMovimiento::all();
 
-        $empleados = Empleado::all();
 
-        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_editar',compact('planillas','tipomovimientos', 'empleados'));
+        return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_editar',compact('planillas','tipomovimientos'));
         }
 
        //update
@@ -93,10 +92,12 @@ class PlantillaController extends Controller
 
         $PlanillaUpdate = new Planilla();
 
+        $empleado_id = auth()->user()->id;
+
         $PlanillaUpdate->fecha = $request->fecha;
         $PlanillaUpdate->observacion = $request->observacion;
         $PlanillaUpdate->tipomovimiento_id = $request->input('tipomovimiento_id');
-        $PlanillaUpdate->empleado_id = $request->input('empleado_id');
+        $PlanillaUpdate->user_id = $request->user_id = $empleado_id;
 
         $PlanillaUpdate->save();
 
@@ -115,13 +116,13 @@ class PlantillaController extends Controller
 
       public function stock(){
 
-        $stock = DB::select('SELECT materia_primas.id, materia_primas.nombre, planillas.fecha, sum(cantidad) as stock 
-        FROM `planillas` 
-        INNER JOIN materia_primas 
-        ON planillas.materiaprima_id = materia_primas.id 
+        $stock = DB::select('SELECT materia_primas.id, materia_primas.nombre, planillas.updated_at, sum(cantidad) as stock
+        FROM `planillas`
+        INNER JOIN materia_primas
+        ON planillas.materiaprima_id = materia_primas.id
         GROUP BY materia_primas.nombre');
 
- 
+
         return view('panel.mpplanillaingresoegreso.stock',['stock' => $stock]);
       }
 }

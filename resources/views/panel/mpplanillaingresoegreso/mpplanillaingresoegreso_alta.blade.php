@@ -65,14 +65,14 @@
                 </select>
             </div>
 
-            <div class="form-group">
+            {{-- <div class="form-group">
                 <label for="mpplanillaingresoegreso">seleccionar un empleado</label>
                 <select class="form-control" id="" name="empleado_id" name="empleado_id">
                     @foreach ($empleados as $item)
                     <option value="{{$item->id}}"> {{$item->nombre}} </option>
                     @endforeach
                 </select>
-            </div>
+            </div> --}}
 
             <button type="submit" class="btn btn-success mt-3">agregar planilla ingreso/egreso</button>
         </form>

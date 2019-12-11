@@ -11,9 +11,9 @@ class Planilla extends Model
         return $this->hasOne('App\TipoMovimiento', 'id', 'tipomovimiento_id');
     }
 
-    public function empleado()
+    public function usuario()
     {
-        return $this->hasOne('App\Empleado', 'id', 'empleado_id');
+        return $this->hasOne('App\User', 'id', 'user_id');
     }
 
     public function materiaprima()
