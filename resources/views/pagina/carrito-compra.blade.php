@@ -22,7 +22,7 @@
 
                 @foreach ($pedido as $item)
                 <div class="row p-2 mt-2 border-bottom">
-                    <div class="col-8">
+                    <div class="col-8 ">
                         <img src="{{ asset('img/'.$item->ruta)}}" alt="" class="carrito-img float-left">
                         <p class="carrito-codigo"># codigo producto: {{$item->codigo}}</p>
                         <p class="carrito-producto">{{$item->nombre}}</p>
@@ -31,15 +31,15 @@
                         <p class="carrito-kilos">fecha entrega: {{$item->fechaEntrega}}</p>
                     </div>
                     <div class="col-4">
-                        <a href="" class="borrar float-right mt-3" type="submit">x</a>
+                            <form action="{{route('bajaProductoVenta2',$item->id)}}" class="d-inline" method="POST">
+                                    @method('DELETE')
+                                    @csrf
+                                    <button
+                                    title="borarr"
+                                    class="btn btn-danger-outline rounded-circle float-right mt-2"
+                                    type="submit">x</button>
+                           </form>
                         <h1 class="precio float-right mt-3">${{$item->monto}}</h1>
-
-                        <form action="{{route('bajaProductoVenta2',$item->id)}}" class="d-inline" method="POST">
-                            @method('DELETE')
-                            @csrf
-                            <button title="borarr" class="borrar float-right mt-3" type="submit"><i
-                                    class="fa fa-trash red mb-2"></i></button>
-                        </form>
                     </div>
                 </div>
                 @endforeach
@@ -53,7 +53,7 @@
                     @foreach ($total as $item)
                     <p class="sub-total monserrat">Total: ${{$item->total}} </p>
                     @endforeach
-                    
+
                     <a href="{{route('ConfirmarCompra')}}" class="carrito-btn mb-2">confirmar compra!</a>
                 </div>
             </div>

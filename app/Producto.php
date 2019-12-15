@@ -18,7 +18,7 @@ class Producto extends Model
 
     public function productoprecio()
     {
-        return $this->belongsTo('App\ProductoPrecio', 'id', 'id');
+        return $this->belongsTo('App\ProductoPrecio', 'id', 'producto_id');
     }
 
     public function ventas()
