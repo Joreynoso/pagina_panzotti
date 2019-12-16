@@ -11,5 +11,4 @@ class Foto extends Model
         return $this->hasOne('App\Producto', 'id', 'producto_id');
     }
 
-    //prueba de git comentario en el modelo foto
 }

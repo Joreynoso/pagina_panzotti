@@ -12,10 +12,7 @@ body {
     background: none;
 }
 
-h1,
-h2,
-h3,
-.font-beyond {
+h1, h2, h3, .font-beyond {
     font-family: "beyond_the_mountainsregular", sans-serif;
 }
 
@@ -59,7 +56,6 @@ h3,
 .texto {
     font-size: 50px;
 }
-
 
 /* footer */
 
@@ -153,7 +149,6 @@ h3,
     margin-bottom: 0;
 }
 
-
 /* tarjetas producto*/
 
 .heading {
@@ -217,7 +212,6 @@ h3,
     background-color: #ac2533;
 }
 
-
 /*mapa de google*/
 
 .map-clean {
@@ -249,7 +243,6 @@ h3,
     margin: 0 auto 40px;
 }
 
-
 /*galeria de instagram*/
 
 .gallery {
@@ -277,7 +270,6 @@ h3,
     transform: scale(1.08);
     opacity: 0.8;
 }
-
 
 /* presentacion */
 
@@ -355,7 +347,6 @@ h3,
     right: 0;
 }
 
-
 /* RESPONSIVE */
 
 @media only screen and (max-width: 992px) {
@@ -405,7 +396,6 @@ h3,
     color: red;
 }
 
-
 /*separadores*/
 
 hr.dashed {
@@ -442,7 +432,6 @@ hr.hr-text::before {
     transform: translate(-50%, -50%);
 }
 
-
 /* RECETAS
 ------------------------- */
 
@@ -463,7 +452,6 @@ hr.hr-text::before {
     }
 }
 
-
 /* Pagination */
 
 .blog-pagination {
@@ -473,7 +461,6 @@ hr.hr-text::before {
 .blog-pagination>.btn {
     border-radius: 2rem;
 }
-
 
 /*
    * Blog posts
@@ -545,6 +532,7 @@ hr.hr-text::before {
     border-radius: 50px;
     float: right;
     text-align: right;
+    cursor: pointer;
 }
 
 .carrito-btn:hover {
@@ -665,4 +653,15 @@ hr.hr-text::before {
     color: white;
     font-style: bold;
     margin-left: 15px;
+}
+
+.detalle-titulo {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 1.75em;
+    padding: 0.75em 0;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
 }

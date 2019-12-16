@@ -22,6 +22,8 @@
             <h2 class="font-beyond">Quienes somos?</h2>
         </div>
 
+        
+
         <div class="row">
             <div class="col-md-6">
                 <p style="text-align: justify" class="mb-30">Pastas Panzotti es una empresa familiar, que se dedica a la elaboración de Pastas
@@ -155,3 +157,4 @@
 </section>
 
 @endsection
+

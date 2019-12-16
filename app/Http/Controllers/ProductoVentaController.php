@@ -8,6 +8,7 @@ use App\Producto;
 use App\Venta;
 use App\ProductoVenta;
 use App\Foto;
+use Carbon\Carbon;
 
 class ProductoVentaController extends Controller
 {
@@ -127,10 +128,11 @@ class ProductoVentaController extends Controller
     //alta pedido
     public function pedido(Request $request)
     {
+        $date = Carbon::now()->toDateString();
 
         //alta venta
         $request->validate([
-            'fecha' => 'required'
+            'fecha' => 'required|after_or_equal:'.$date
         ]);
 
         $user_id = auth()->user()->id;
@@ -206,6 +208,8 @@ class ProductoVentaController extends Controller
 
     public function ConfirmarCompra(){
 
+        $fecha = Carbon::now()->format('d/m/Y');
+
         $user_registrado = auth()->user()->id;
 
         $estado = 1;
@@ -221,8 +225,9 @@ class ProductoVentaController extends Controller
             'producto_ventas.estado' => $estado,
         ]);
 
+        
+
         return redirect('productoWeb')->with('mensaje', 'Su compra se registro con exito!');
 
     }
-
 }
