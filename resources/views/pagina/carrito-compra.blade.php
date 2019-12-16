@@ -121,8 +121,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                <a href="{{route('ConfirmarCompra')}}" type="submit" class="btn btn-primary circle">Confirmar Compra</a>
+                <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Cancelar</button>
+                <a href="{{route('ConfirmarCompra')}}" type="submit" class="btn btn-rojo2">Confirmar Compra</a>
             </div>
         </div>
     </div>

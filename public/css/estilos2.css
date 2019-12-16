@@ -205,7 +205,7 @@ h1, h2, h3, .font-beyond {
     background-color: #D66E38;
     border: 1px solid rgba(220, 53, 69, 0.75);
     min-width: 200px;
-    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 25px 0 rgba(51, 50, 50, 0.19);
+    border: none;
 }
 
 .btn-rojo:hover {
@@ -665,3 +665,17 @@ hr.hr-text::before {
     text-transform: uppercase;
     margin-bottom: 0px;
 }
+
+.btn-rojo2 {
+    color: #fff;
+    background-color: #D66E38;
+    border: 1px solid rgba(220, 53, 69, 0.75);
+    min-width: 200px;
+    border: none;
+}
+
+.btn-rojo2:hover{
+    color: #fff;
+    background-color: rgb(179, 81, 28);
+}
+
