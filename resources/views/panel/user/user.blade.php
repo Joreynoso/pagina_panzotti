@@ -75,12 +75,28 @@
             <td>{{$item->tel}}</td>
             <td>{{$item->email}}</td>
             <td>
-              <a href="{{route('editarUser', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
-              <form action="{{route('bajaUser',$item)}}" class="d-inline" method="POST">
-                @method('DELETE')
-                @csrf
-                <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
-              </form>
+
+              @if(auth()->check() && auth()->user()->is_admin)
+
+                <a href="{{route('editarUser', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>
+                <form action="{{route('bajaUser',$item)}}" class="d-inline" method="POST">
+                  @method('DELETE')
+                  @csrf
+                  <button title="borarr" class="btn btn-link" type="submit"><i
+                      class="fa fa-trash red mb-2"></i></button>
+                </form>
+              @endif
+
+              @if(auth()->check() && auth()->user()->is_empleado)
+
+                <a title="borarr" class="btn btn-link disabled" type="submit">
+                  <i class="fa fa-pen gris"></i></a>
+
+                <button title="borarr" class="btn btn-link disabled" type="submit">
+                  <i class="fa fa-trash gris mb-2">
+                  </i></button>
+              @endif
+
             </td>
           </tr>
           @endforeach

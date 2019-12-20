@@ -7,7 +7,9 @@ use Illuminate\Support\Facades\DB;
 use App\Planilla;
 use App\TipoMovimiento;
 use App\User;
+use Carbon\Carbon;
 use App\MateriaPrima;
+use PDF;
 
 class PlantillaController extends Controller
 {
@@ -132,5 +134,33 @@ class PlantillaController extends Controller
 
 
         return view('panel.mpplanillaingresoegreso.stock',['stock' => $stock]);
+      }
+
+      public function imprimir(){
+
+        $today = Carbon::now()->format('d/m/Y');
+
+        $stock = DB::select('SELECT materia_primas.id, materia_primas.nombre, planillas.updated_at, sum(cantidad) as stock
+        FROM `planillas`
+        INNER JOIN materia_primas
+        ON planillas.materiaprima_id = materia_primas.id
+        GROUP BY materia_primas.nombre');
+
+        $pdf = \PDF::loadView('panel.mpplanillaingresoegreso.pdf_stock', compact('stock','today'));
+
+        return $pdf->download('planilla_stock.pdf');
+
+      }
+
+      public function imprimir2(){
+
+        $today = Carbon::now()->format('d/m/Y');
+
+        $planillas = Planilla::all();
+
+        $pdf = \PDF::loadView('panel.mpplanillaingresoegreso.pdf_planilla', compact('planillas','today'));
+
+        return $pdf->download('planilla_ingresos_egresos_mp.pdf');
+
       }
 }

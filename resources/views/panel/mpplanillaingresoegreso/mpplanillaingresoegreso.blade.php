@@ -6,7 +6,7 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb breadcrumb-bullet">
     <li class="breadcrumb-item"><a href="{{ route('principal')}}" class="text-uppercase">Panel</a></li>
-    <li aria-current="page" class="breadcrumb-item active text-uppercase">Planilla Ingreso, Egreso</li>
+    <li aria-current="page" class="breadcrumb-item active text-uppercase">Planilla Ingreso, Egreso Matria Prima</li>
   </ol>
 </nav>
 
@@ -52,7 +52,7 @@
 <!-- tabla -->
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
-    <h6 class="text-uppercase mb-0">planilla ingreso, egreso | administrar</h6>
+    <h6 class="text-uppercase mb-0">planilla ingreso, egreso materia prima | administrar</h6>
   </div>
   <div class="card-body">
     <p class="card-text">Cantidad de ingreso, egreso: {{$planillas->total()}}</p>
@@ -101,7 +101,7 @@
 
 <!-- exportar a pdf -->
 <div class="container-btn">
-  <a href="" class="btn btn-success mb-3 float-right" href="#" role="button">
+  <a href="{{route('imprimir2')}}" class="btn btn-success mb-3 float-right" href="#" role="button">
     <i class="fa fa-file-alt mr-2 fa-xs"></i>exportar a pdf
   </a>
 </div>

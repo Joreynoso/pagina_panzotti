@@ -131,6 +131,10 @@ Route::put('/mpplanillaingresoegreso_editar/{id}', 'PlantillaController@update')
 
 Route::delete('/bajampplanillaingresoegreso/{id}', 'PlantillaController@baja')->name('bajampplanillaingresoegresos');
 
+Route::get('/imprimir', 'PlantillaController@imprimir')->name('imprimir');
+
+Route::get('/imprimir2', 'PlantillaController@imprimir2')->name('imprimir2');
+
 
 // receta
 // ────────────────────────────────────────────────────────────────────────────────

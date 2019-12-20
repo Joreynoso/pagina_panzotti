@@ -52,16 +52,22 @@
             </div>
             @enderror
 
-            <input value="{{ $usuario->name }}" type="text" name="name" placeholder="name"
-                class="form-control mb-2">
-            <input value="{{ $usuario->email }}" type="text" name="email" placeholder="email"
-                class="form-control mb-2">
+            <label for="">name</label>
+            <input value="{{ $usuario->name }}" type="text" name="name" placeholder="name" class="form-control mb-2">
+
+            <label for="">email</label>
+            <input value="{{ $usuario->email }}" type="text" name="email" placeholder="email" class="form-control mb-2">
+
+            <label for="">apellido</label>
             <input value="{{ $usuario->apellido }}" type="text" name="apellido" placeholder="apellido"
                 class="form-control mb-2">
+
+            <label for="">domicilio</label>
             <input value="{{ $usuario->domicilio }}" type="text" name="domicilio" placeholder="domicilio"
                 class="form-control mb-2">
-            <input value="{{ $usuario->tel }}" type="text" name="tel" placeholder="tel"
-                class="form-control mb-2">
+
+            <label for="">telefono</label>
+            <input value="{{ $usuario->tel }}" type="text" name="tel" placeholder="tel" class="form-control mb-2">
 
 
             <button type="submit" class="btn btn-warning text-white mt-3">guardar cambios</button>

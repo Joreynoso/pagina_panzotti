@@ -396,6 +396,10 @@ h1, h2, h3, .font-beyond {
     color: red;
 }
 
+.gris{
+    color:rgb(156, 154, 154);
+}
+
 /*separadores*/
 
 hr.dashed {
