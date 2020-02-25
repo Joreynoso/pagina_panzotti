@@ -14,6 +14,7 @@ use PDF;
 class PlantillaController extends Controller
 {
 
+
     //leer
     public function leer(Request $request){
 
@@ -26,6 +27,7 @@ class PlantillaController extends Controller
         $planillas = Planilla::buscarpor($tipo, $buscar)
         ->paginate(5)
         ->appends($variablesurl);
+
 
         return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso', compact('planillas'));
     }
@@ -56,10 +58,12 @@ class PlantillaController extends Controller
         $cantidad = $request->input('cantidad');
         $movimiento = $request->input('tipomovimiento_id');
 
+        //egreso
         if ($movimiento == 2) {
 
             $resultado = -$cantidad;
 
+        //ingreso
         }else{
 
             $resultado = $cantidad;
@@ -74,9 +78,29 @@ class PlantillaController extends Controller
         $nuevaPlanilla->user_id = $request->user_id = $empleado_id;
         $nuevaPlanilla->materiaprima_id = $request->input('materiaprima_id');
 
-        $nuevaPlanilla->save();
+        //comprobar si la cantidad que egresa no es superior a la cantidad existente gorriao
+        $stock = DB::table('materia_primas')
+        ->join('planillas', 'materia_primas.id', '=', 'planillas.materiaprima_id')
+        ->where('materia_primas.id', '=', $nuevaPlanilla->materiaprima_id)
+        ->select(DB::raw('SUM(cantidad) as cantidad')
+        ,'materia_primas.nombre as nombre')
+        ->first();
 
-        return redirect('mpplanillaingresoegreso')->with('mensaje', 'Planilla Ingreso/Egreso agregado con exito!');
+        $total = $stock->cantidad;
+
+        if ($total > 0) {
+
+          return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
+          operacion ya que la cantidad disponible de '.$stock->nombre.' es de: '.$stock->cantidad.' usted ingreso
+           :'.$nuevaPlanilla->cantidad);
+
+        }else{
+
+          $nuevaPlanilla->save();
+
+          return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado!');
+        }
+  
     }
 
      //acceder editar
@@ -88,7 +112,7 @@ class PlantillaController extends Controller
 
 
         return view('panel.mpplanillaingresoegreso.mpplanillaingresoegreso_editar',compact('planillas','tipomovimientos'));
-        }
+    }
 
        //update
        public function update(Request $request, $id){
@@ -113,10 +137,11 @@ class PlantillaController extends Controller
 
         return redirect('mpplanillaingresoegreso')->with('mensaje', 'Planilla Ingreso/Egreso editada con exito!');
 
-        }
+    }
 
       //baja
       public function baja($id){
+
 
         $PlanillaEliminar = Planilla::findOrFail($id);
         $PlanillaEliminar->delete();
@@ -132,9 +157,8 @@ class PlantillaController extends Controller
         ON planillas.materiaprima_id = materia_primas.id
         GROUP BY materia_primas.nombre');
 
-
         return view('panel.mpplanillaingresoegreso.stock',['stock' => $stock]);
-      }
+    }
 
       public function imprimir(){
 
@@ -150,7 +174,7 @@ class PlantillaController extends Controller
 
         return $pdf->download('planilla_stock.pdf');
 
-      }
+    }
 
       public function imprimir2(){
 
@@ -162,5 +186,5 @@ class PlantillaController extends Controller
 
         return $pdf->download('planilla_ingresos_egresos_mp.pdf');
 
-      }
+    }
 }

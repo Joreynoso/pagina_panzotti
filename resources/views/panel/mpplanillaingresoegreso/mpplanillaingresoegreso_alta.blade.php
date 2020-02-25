@@ -11,6 +11,14 @@
     </ol>
 </nav>
 
+<!-- mensaje -->
+@if (Session::has('mensaje'))
+<div class="alert alert-danger" role="alert">
+  {{Session::get('mensaje')}}
+</div>
+@endif
+
+
 <!-- formulario -->
 <div class="card shadow rounded">
     <div class="card-header clearfix">

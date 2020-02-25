@@ -10,17 +10,6 @@
   </ol>
 </nav>
 
-<!-- mensaje -->
-@if (Session::has('mensaje'))
-<div class="alert alert-success" role="alert">
-  {{Session::get('mensaje')}}
-</div>
-@elseif (Session::has('error'))
-<div class="alert alert-warning" role="alert">
-  {{Session::get('error')}}
-</div>
-@endif
-
 <!-- buscador -->
 <div class="row">
   <div class="col-xl-12 col-sm-12 mb-3">
@@ -31,13 +20,6 @@
   </div>
 </div>
 
-<!-- existen elementos? -->
-{{-- @if  ($planillas->count() == 0) --}}
-<div class="alert alert-info">
-  no existen materias primas en el stock aun.
-</div>
-
-{{-- @else --}}
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
     <h6 class="text-uppercase mb-0">Control | Stock</h6>
@@ -76,5 +58,4 @@
   </a>
 </div>
 
-{{-- @endif --}}
 @endsection
