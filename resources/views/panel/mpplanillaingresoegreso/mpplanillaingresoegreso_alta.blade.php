@@ -47,13 +47,13 @@
             @enderror
 
             <label for="fecha">Fecha</label>
-            <input type="text" name="fecha" placeholder="ingrese la fecha.." class="form-control mb-2">
+            <input type="text" name="fecha" placeholder="ingrese la fecha.." class="form-control mb-2" value="{{old('fecha')}}"> 
 
             <label for="observacion">Observacion</label>
-            <input type="text" name="observacion" placeholder="ingrese la observacion.." class="form-control mb-2">
+            <input type="text" name="observacion" placeholder="ingrese la observacion.." class="form-control mb-2" value="{{old('observacion')}}">
 
             <label for="fecha">Cantidad</label>
-            <input type="text" name="cantidad" placeholder="ingrese la cantidad.." class="form-control mb-2">
+            <input type="text" name="cantidad" placeholder="ingrese la cantidad.." class="form-control mb-2" value="{{old('cantidad')}}">
 
             <div class="form-group">
                 <label for="mpplanillaingresoegreso">seleccione un tipo de movimiento</label>
@@ -72,15 +72,6 @@
                     @endforeach
                 </select>
             </div>
-
-            {{-- <div class="form-group">
-                <label for="mpplanillaingresoegreso">seleccionar un empleado</label>
-                <select class="form-control" id="" name="empleado_id" name="empleado_id">
-                    @foreach ($empleados as $item)
-                    <option value="{{$item->id}}"> {{$item->nombre}} </option>
-                    @endforeach
-                </select>
-            </div> --}}
 
             <button type="submit" class="btn btn-success mt-3">agregar planilla ingreso/egreso</button>
         </form>

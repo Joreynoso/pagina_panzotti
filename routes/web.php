@@ -135,6 +135,8 @@ Route::get('/imprimir', 'PlantillaController@imprimir')->name('imprimir');
 
 Route::get('/imprimir2', 'PlantillaController@imprimir2')->name('imprimir2');
 
+Route::post('/altaNota', 'PlantillaController@notastock')->name('notastock');
+
 
 // receta
 // ────────────────────────────────────────────────────────────────────────────────

@@ -20,6 +20,14 @@
   </div>
 </div>
 
+<!-- mensaje -->
+@if (Session::has('mensaje'))
+<div class="alert alert-success" role="alert">
+  <button type="button" class="close" data-dismiss="alert">×</button> 
+  {{Session::get('mensaje')}}
+</div>
+@endif
+
 <div class="card mb-3 shadow">
   <div class="card-header fondo-tabla text-white">
     <h6 class="text-uppercase mb-0">Control | Stock</h6>
@@ -32,17 +40,45 @@
             <th scope="col">#codigo producto</th>
             <th scope="col">materia prima</th>
             <th scope="col">stock</th>
+            <th scope="col">Acciones</th>
             <th scope="col">fecha ultima modificacion</th>
           </tr>
         </thead>
         <tbody>
+
           @foreach ($stock as $item)
-          <tr>
+
+          @if ($item->stock < 5) <tr style="background: #ffccbc">
             <td>{{$item->id}}</td>
-            <td>{{$item->nombre}}</td>
-            <td>{{$item->stock}}</td>
+            <td><b>{{$item->nombre}}</b></td>
+            <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>bajo</b></span>
+            </td>
+            <td>
+              <a href="" class="btn btn-light btn-sm">reponer</a>
+              <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
+                data-target="#exampleModal">
+                <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
+              </a>
+            </td>
             <td>{{$item->updated_at}}</td>
-          @endforeach
+
+            @else
+            <tr>
+              <td>{{$item->id}}</td>
+              <td>{{$item->nombre}}</td>
+              <td>{{$item->stock}}</td>
+              <td>
+                <a href="" class="btn btn-light btn-sm">reponer</a>
+                <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
+                  data-target="#exampleModal">
+                  <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
+                </a>
+              </td>
+              <td>{{$item->updated_at}}</td>
+
+              @endif
+              @endforeach
+
         </tbody>
       </table>
 
@@ -58,4 +94,49 @@
   </a>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Nota</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+
+        <div class="card-body">
+          <form class="form-group" action="{{route('notastock')}}" method="POST">
+            @csrf
+
+            @error('descripcion')
+            <div class="alert alert-danger" role="alert">
+              el apellido es obligatorio.
+            </div>
+            @enderror
+
+            <label for="descripcion">descripcion</label>
+            <input maxlength="150" type="text" name="descripcion" placeholder="describa su tarea.."
+              class="form-control mb-3">
+
+            <div class="form-group">
+              <label for="exampleFormControlSelect1">Que tan urgente es su tarea ?</label>
+              <select class="form-control" id="urgencia" name="urgencia">
+                <option>alta</option>
+                <option>baja</option>
+              </select>
+            </div>
+
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+            <button type="submit" class="btn btn-success mt-2">agregar tarea</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 @endsection
+

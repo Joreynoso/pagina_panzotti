@@ -38,11 +38,11 @@
 
 
             <li style="margin: 5px" class="mt-3 text-white salir span">
-               <span style="color: #2494be;"> {{ Auth::user()->name }}</span>
+                <span style="color: #2494be;"> {{ Auth::user()->name }}</span>
             </li>
 
             <li class="mt-3 text-white salir">
-                    | Volver a la pagina
+                | Volver a la pagina
             </li>
             <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}">
@@ -87,80 +87,91 @@
 
             @if (auth()->check() && auth()->user()->is_admin)
 
-            <li class="nav-item">
+            <li class="nav-item {{ (request()->is('user')) ? 'active' : '' }}">
                 <a href="{{route('user')}}" class="nav-link">
                     <i class="fas fa-users"></i>
                     <span>Clientes</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {{ (request()->is('notas')) ? 'active' : '' }}">
                 <a href="{{route('notas')}}" class="nav-link">
                     <i class="fas fa-sticky-note"></i>
                     <span>MisNotas</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {{ (request()->is('tipomov')) ? 'active' : '' }}">
                 <a href="{{route('tipomov')}}" class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-sync"></i>
                     <span>Tipo Movimiento</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('comentario')) ? 'active' : '' }}">
                 <a href="{{route('comentario')}}" class="nav-link">
                     <i class="fas fa-comments"></i>
                     <span>Comentarios</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('proveedor')) ? 'active' : '' }}">
                 <a href="{{route('proveedor')}}" class="nav-link">
                     <i class="fas fa-truck"></i>
                     <span>Proveedores</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('empleado')) ? 'active' : '' }}">
                 <a href="{{route('empleado')}}" class="nav-link">
                     <i class="fas fa-address-card"></i>
                     <span>Empleados</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('tipomp')) ? 'active' : '' }}">
                 <a href="{{route('tipomp')}}" class="nav-link">
                     <i class="fas fa-weight"></i>
                     <span>Tipo Materia Prima</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('materiaprima')) ? 'active' : '' }}">
                 <a href="{{route('materiaprima')}}" class="nav-link">
                     <i class="fas fa-cube"></i>
                     <span>Materia Prima</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('mpplanillaingresoegreso')) ? 'active' : '' }}">
                 <a href="{{route('mpplanillaingresoegresos')}}" class="nav-link">
                     <i class="fas fa-paste"></i>
                     <span>Planilla Ingreso/Egreso</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('receta')) ? 'active' : '' }}">
                 <a href="{{route('receta')}}" class="nav-link">
                     <i class="fas fa-receipt"></i>
                     <span>Recetas</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('producto')) ? 'active' : '' }}">
                 <a href="{{route('producto')}}" class="nav-link">
                     <i class="fas fa-seedling"></i>
                     <span>Producto</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('foto')) ? 'active' : '' }}">
                 <a href="{{route('foto')}}" class="nav-link">
                     <i class="fas fa-images"></i>
                     <span>Foto</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('productoprecio')) ? 'active' : '' }}">
                 <a href="{{route('productoprecio')}}" class="nav-link">
                     <i class="fas fa-dollar-sign"></i>
                     <span>Producto Precio</span></a>
             </li>
-            <li class="nav-item">
+
+            <li class="nav-item {{ (request()->is('productoventa')) ? 'active' : '' }}">
                 <a href="{{route('productoventa')}}" class="nav-link">
                     <i class="fas fa-donate"></i>
                     <span>Pedidos</span></a>
             </li>
 
-            <li class="nav-item">
+            <li class="nav-item {{ (request()->is('stock')) ? 'active' : '' }}">
                 <a href="{{route('stock')}}" class="nav-link">
                     <i class="fas fa-boxes"></i>
                     <span>Stock</span></a>
@@ -202,8 +213,6 @@
             </li>
 
             @endif
-
-
 
             {{-- <li class="nav-item">
                 <a href="{{route('stock')}}" class="nav-link">
