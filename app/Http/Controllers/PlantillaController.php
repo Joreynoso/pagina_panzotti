@@ -9,6 +9,7 @@ use App\TipoMovimiento;
 use App\User;
 use Carbon\Carbon;
 use App\MateriaPrima;
+use App\Nota;
 use PDF;
 
 class PlantillaController extends Controller
@@ -187,4 +188,23 @@ class PlantillaController extends Controller
         return $pdf->download('planilla_ingresos_egresos_mp.pdf');
 
     }
+
+    //alta
+    public function notastock(Request $request){
+
+      //validacion
+      $request->validate([
+          'descripcion' => 'required'
+      ]);
+
+      $nuevaNota = new Nota;
+
+      $nuevaNota->descripcion = $request->descripcion;
+      $nuevaNota->urgencia = $request->input('urgencia');
+
+      $nuevaNota->save();
+
+      return redirect('stock')->with('mensaje', 'Nueva Tarea agregada!');
+  }
+
 }
