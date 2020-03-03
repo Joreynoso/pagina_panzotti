@@ -22,7 +22,7 @@
 
             @error('descripcion')
             <div class="alert alert-danger" role="alert">
-                el apellido es obligatorio.
+                la descripcion es obligatoria.
             </div>
             @enderror
 

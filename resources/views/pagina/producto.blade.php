@@ -31,6 +31,7 @@
                     <img class="heading-img" src="img/heading_logo.png" alt="">
                     <h2 class="font-beyond">Nuestros Productos</h2>
                     <p class="text-center">elegi el producto que mas te guste y hace un pedido! </p>
+                    <p><em><b>Los pedidos solo se realizan en Catamarca Capital (Barrio Centro) y Localidad de Valle Viejo.</b></em></p>
                 </div>
 
                 <div class="mb-5">

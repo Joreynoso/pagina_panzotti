@@ -23,7 +23,7 @@
 <!-- mensaje -->
 @if (Session::has('mensaje'))
 <div class="alert alert-success" role="alert">
-  <button type="button" class="close" data-dismiss="alert">×</button> 
+  <button type="button" class="close" data-dismiss="alert">×</button>
   {{Session::get('mensaje')}}
 </div>
 @endif
@@ -48,10 +48,10 @@
 
           @foreach ($stock as $item)
 
-          @if ($item->stock < 5) <tr style="background: #ffccbc">
+          @if ($item->stock == 0) <tr style="background: #ffccbc">
             <td>{{$item->id}}</td>
             <td><b>{{$item->nombre}}</b></td>
-            <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>bajo</b></span>
+            <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>sin stock</b></span>
             </td>
             <td>
               <a href="" class="btn btn-light btn-sm">reponer</a>
@@ -63,6 +63,22 @@
             <td>{{$item->updated_at}}</td>
 
             @else
+            @if ($item->stock <= 5)
+            <tr style="background: #ffe0b2">
+              <td>{{$item->id}}</td>
+              <td><b>{{$item->nombre}}</b></td>
+              <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>bajo</b></span>
+              </td>
+              <td>
+                <a href="" class="btn btn-light btn-sm">reponer</a>
+                <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
+                  data-target="#exampleModal">
+                  <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
+                </a>
+              </td>
+              <td>{{$item->updated_at}}</td>
+
+              @else
             <tr>
               <td>{{$item->id}}</td>
               <td>{{$item->nombre}}</td>
@@ -77,8 +93,9 @@
               <td>{{$item->updated_at}}</td>
 
               @endif
-              @endforeach
+              @endif
 
+              @endforeach
         </tbody>
       </table>
 
@@ -139,4 +156,3 @@
 </div>
 
 @endsection
-

@@ -61,6 +61,8 @@
             <th scope="col">direccion</th>
             <th scope="col">tel</th>
             <th scope="col">cuit</th>
+            <th scope="col">rubro</th>
+            <th scope="col">descripcion (rubro)</th>
             <th scope="col">mail</th>
             <th scope="col">acciones</th>
           </tr>
@@ -73,6 +75,8 @@
             <td>{{$item->direccion}}</td>
             <td>{{$item->tel}}</td>
             <td>{{$item->cuit}}</td>
+            <td>{{$item->rubro}}</td>
+            <td>{{$item->rubro_descripcion}}</td>
             <td>{{$item->mail}}</td>
             <td class="td-btn">
               <a href="{{route('proveedor_editar', $item)}}" title="editar"><i class="fa fa-pen yellow"></i></a>

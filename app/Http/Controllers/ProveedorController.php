@@ -32,7 +32,9 @@ class ProveedorController extends Controller
             'direccion' => 'required',
             'tel' => 'required',
             'cuit' => 'required',
-            'mail' => 'required'
+            'mail' => 'required',
+            'rubro' => 'required',
+            'rubro_descripcion' => 'required'
         ]);
 
         $nuevoProveedor = new Proveedor;
@@ -42,6 +44,8 @@ class ProveedorController extends Controller
         $nuevoProveedor->tel = $request->tel;
         $nuevoProveedor->cuit = $request->cuit;
         $nuevoProveedor->mail = $request->mail;
+        $nuevoProveedor->rubro = $request->rubro;
+        $nuevoProveedor->rubro_descripcion = $request->rubro_descripcion;
 
         $nuevoProveedor->save();
 
@@ -65,7 +69,8 @@ class ProveedorController extends Controller
             'direccion' => 'required',
             'tel' => 'required',
             'cuit' => 'required',
-            'mail' => 'required'
+            'rubro' => 'required',
+            'rubro_descripcion' => 'required'
         ]);
 
         $proveedorUpdate = Proveedor::findOrFail($id);
@@ -75,6 +80,8 @@ class ProveedorController extends Controller
         $proveedorUpdate->tel = $request->tel;
         $proveedorUpdate->cuit = $request->cuit;
         $proveedorUpdate->mail = $request->mail;
+        $proveedorUpdate->rubro = $request->rubro;
+        $proveedorUpdate->rubro_descripcion = $request->rubro_descripcion;
 
         $proveedorUpdate->save();
 

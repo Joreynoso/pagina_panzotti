@@ -20,6 +20,8 @@ class CreateProveedorsTable extends Migration
             $table->string('tel');
             $table->string('cuit');
             $table->string('mail');
+            $table->string('rubro');
+            $table->string('rubro_descripcion');
             $table->timestamps();
         });
     }

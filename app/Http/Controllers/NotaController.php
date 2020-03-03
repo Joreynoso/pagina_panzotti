@@ -56,8 +56,6 @@ class NotaController extends Controller
     //alta
     public function alta(Request $request){
 
-        //return $request->all();  verificar los datos antes de almacenarlos
-
         //validacion
         $request->validate([
             'descripcion' => 'required'
@@ -79,8 +77,6 @@ class NotaController extends Controller
         $notaEliminar = Nota::findOrFail($id);
         $notaEliminar->delete();
 
-        return redirect('notas')->with('mensaje', 'Cliente eliminado con exito!');
+        return redirect('notas');
     }
-
-
 }

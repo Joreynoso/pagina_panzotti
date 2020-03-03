@@ -39,15 +39,6 @@
                 </select>
             </div>
 
-            <div class="form-group">
-                <label for="materiaprima">seleccionar un proveedor</label>
-                <select class="form-control" id="" name="proveedor_id">
-                    @foreach ($proveedores as $item)
-                    <option value="{{$item->id}}"> {{$item->nombre}} </option>
-                    @endforeach
-                </select>
-            </div>
-
             <button type="submit" class="btn btn-success mt-3">agregar materia prima</button>
         </form>
     </div>

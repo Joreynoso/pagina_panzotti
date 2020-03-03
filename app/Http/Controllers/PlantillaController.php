@@ -56,17 +56,6 @@ class PlantillaController extends Controller
 
         $nuevaPlanilla = new Planilla();
 
-        // //egreso
-        // if ($movimiento == 2) {
-
-        //     $resultado = -$cantidad;
-
-        // //ingreso
-        // }else{
-
-        //     $resultado = $cantidad;
-        // }
-
         $empleado_id = auth()->user()->id;
 
         $nuevaPlanilla->fecha = $request->fecha;
@@ -76,29 +65,17 @@ class PlantillaController extends Controller
         $nuevaPlanilla->user_id = $request->user_id = $empleado_id;
         $nuevaPlanilla->materiaprima_id = $request->input('materiaprima_id');
 
-        //comprobar si la cantidad que egresa no es superior a la cantidad existente gorriao
+        //comprobar si la cantidad que egresa no es superior a la cantidad existente
         $stock = DB::table('materia_primas')
         ->join('planillas', 'materia_primas.id', '=', 'planillas.materiaprima_id')
         ->where('materia_primas.id', '=', $nuevaPlanilla->materiaprima_id)
         ->select(DB::raw('SUM(cantidad) as cantidad')
         ,'materia_primas.nombre as nombre')
+        ->orderByRaw('updated_at - created_at DESC')
         ->first();
 
         //existencia de una mp
         $total = $stock->cantidad;
-
-        // if ($total > $nuevaPlanilla->cantidad) {
-
-        //   return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
-        //   operacion ya que la cantidad disponible de '.$stock->nombre.' es de: '.$stock->cantidad.' usted ingreso
-        //    :'.$nuevaPlanilla->cantidad);
-
-        // }else{
-
-        //   $nuevaPlanilla->save();
-
-        //   return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado!');
-        // }
 
         $movimiento = $request->input('tipomovimiento_id');
 
@@ -123,7 +100,7 @@ class PlantillaController extends Controller
                     //stock < cantidad de egreso, error
                     return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
                     operacion ya que la cantidad disponible de '.$stock->nombre.' es de: '.$stock->cantidad.' usted ingreso
-                 :'.$nuevaPlanilla->cantidad.'//stock <= cantidad de egreso, error');
+                 :'.$nuevaPlanilla->cantidad);
 
                 }
 
@@ -137,13 +114,13 @@ class PlantillaController extends Controller
                 //ingreso > 0
                 $nuevaPlanilla->save();
 
-                return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado! //ingreso > 0');
+                return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado!');
 
             } else {
 
                 //stock < cantidad de egreso, error
                 return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
-                operacion ya que la cantidad que usted ingreso debe ser mayor a 0:  //stock < cantidad de egreso, error');
+                operacion ya que la cantidad que usted ingreso debe ser mayor a 0: ');
             }
 
         }
@@ -157,7 +134,6 @@ class PlantillaController extends Controller
         //egreso > stock error
         //egreso == stock exito
         //egreso < stock exito
-
     }
 
      //acceder editar

@@ -50,6 +50,12 @@
       </div>
       @enderror
 
+      @error('rubro')
+      <div class="alert alert-danger" role="alert">
+        el rubro es obligatorio.
+      </div>
+      @enderror
+
 
       <label for="apellido">Nombre</label>
       <input type="text" name="nombre" placeholder="nombre" class="form-control mb-2">
@@ -65,6 +71,12 @@
 
       <label for="mail">mail</label>
       <input type="text" name="mail" placeholder="email" class="form-control mb-2">
+
+      <label for="mail">rubro</label>
+      <input type="text" name="rubro" placeholder="rubro" class="form-control mb-2">
+
+      <label for="mail">rubro descripcion (ejemplo lacteos)</label>
+      <input type="text" name="rubro_descripcion" placeholder="rubro descripcion" class="form-control mb-2">
 
       <button type="submit" class="btn btn-success mt-3">agregar proveedor</button>
 

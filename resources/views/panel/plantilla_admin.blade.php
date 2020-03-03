@@ -105,11 +105,11 @@
                     <span>Tipo Movimiento</span></a>
             </li>
 
-            <li class="nav-item {{ (request()->is('comentario')) ? 'active' : '' }}">
+            {{-- <li class="nav-item {{ (request()->is('comentario')) ? 'active' : '' }}">
                 <a href="{{route('comentario')}}" class="nav-link">
                     <i class="fas fa-comments"></i>
                     <span>Comentarios</span></a>
-            </li>
+            </li> --}}
 
             <li class="nav-item {{ (request()->is('proveedor')) ? 'active' : '' }}">
                 <a href="{{route('proveedor')}}" class="nav-link">

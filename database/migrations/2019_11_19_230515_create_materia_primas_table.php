@@ -17,7 +17,7 @@ class CreateMateriaPrimasTable extends Migration
             $table->bigIncrements('id');
             $table->String('nombre');
             $table->bigInteger('tipomateriaprima_id')->unsigned();
-            $table->bigInteger('proveedor_id')->unsigned();
+            $table->bigInteger('proveedor_id')->unsigned()->nullable();
             $table->timestamps();
 
             $table->foreign('tipomateriaprima_id')

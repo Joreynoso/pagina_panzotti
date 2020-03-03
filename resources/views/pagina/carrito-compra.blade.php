@@ -65,6 +65,7 @@
             a retirar el producto en la fecha acordada, <br> recorda que podes cancelar tus pedidos
             de compra con 48hs de anticipacion <br> a la fecha de retiro del mismo. atte Empresa Panzotti.
         </p>
+        <p><em><b>Los pedidos solo se realizan en Catamarca Capital (Barrio Centro) y Localidad de Valle Viejo.</b></em></p>
     </div>
 </section>
 
@@ -83,6 +84,7 @@
                     <!-- Dotted divider -->
                     <h1 class="text-center detalle-titulo">detalle de compra</h1>
                     <h2 class="font-italic carrito-letra text-center">panzotti</h2>
+                    
                     <div class="text-center">
                         <p style="font-weight: bold;">{{auth()->user()->name.' '.auth()->user()->apellido}}</p>
                     </div>
@@ -119,6 +121,11 @@
                     @endforeach
                 </div>
 
+            </div>
+            <div class="ml-2 mr-2 text-center">
+                <p style="font-size: 0.75em"><em><b>Los pedidos solo se realizan en Catamarca Capital 
+                    (Barrio Centro) y Localidad de Valle Viejo.</b>
+                    <span>ten en cuento esto antes de confirmar tu pedido</span></em></p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary text-white" data-dismiss="modal">Cancelar</button>
