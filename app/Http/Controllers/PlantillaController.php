@@ -71,7 +71,6 @@ class PlantillaController extends Controller
         ->where('materia_primas.id', '=', $nuevaPlanilla->materiaprima_id)
         ->select(DB::raw('SUM(cantidad) as cantidad')
         ,'materia_primas.nombre as nombre')
-        ->orderByRaw('updated_at - created_at DESC')
         ->first();
 
         //existencia de una mp
