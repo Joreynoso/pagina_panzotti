@@ -65,6 +65,7 @@
             <th scope="col">descripcion (rubro)</th>
             <th scope="col">mail</th>
             <th scope="col">acciones</th>
+            <th scope="col">estado</th>
           </tr>
         </thead>
         <tbody>
@@ -87,6 +88,16 @@
                 <button title="borarr" class="btn btn-link" type="submit"><i class="fa fa-trash red mb-2"></i></button>
               </form>
             </td>
+            <td>    <label class="label">
+              <div class="toggle">
+                <input class="toggle-state" type="checkbox" name="check" value="check" />
+                <div class="toggle-inner">
+                   <div class="indicator"></div>
+                </div>
+                <div class="active-bg"></div>
+              </div>
+              <div class="label-text">finalizado</div>
+            </label></td>
           </tr>
           @endforeach
         </tbody>

@@ -54,7 +54,7 @@
             <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>sin stock</b></span>
             </td>
             <td>
-              <a href="" class="btn btn-light btn-sm">reponer</a>
+              <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
               <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
                 data-target="#exampleModal">
                 <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
@@ -70,7 +70,7 @@
               <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>bajo</b></span>
               </td>
               <td>
-                <a href="" class="btn btn-light btn-sm">reponer</a>
+                <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
                 <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
                   data-target="#exampleModal">
                   <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
@@ -84,7 +84,7 @@
               <td>{{$item->nombre}}</td>
               <td>{{$item->stock}}</td>
               <td>
-                <a href="" class="btn btn-light btn-sm">reponer</a>
+                <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
                 <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
                   data-target="#exampleModal">
                   <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
