@@ -56,25 +56,22 @@ class PlantillaController extends Controller
 
         $nuevaPlanilla = new Planilla();
 
-        $cantidad = $request->input('cantidad');
-        $movimiento = $request->input('tipomovimiento_id');
+        // //egreso
+        // if ($movimiento == 2) {
 
-        //egreso
-        if ($movimiento == 2) {
+        //     $resultado = -$cantidad;
 
-            $resultado = -$cantidad;
+        // //ingreso
+        // }else{
 
-        //ingreso
-        }else{
-
-            $resultado = $cantidad;
-        }
+        //     $resultado = $cantidad;
+        // }
 
         $empleado_id = auth()->user()->id;
 
         $nuevaPlanilla->fecha = $request->fecha;
         $nuevaPlanilla->observacion = $request->observacion;
-        $nuevaPlanilla->cantidad = $request->cantidad = $resultado;
+        $nuevaPlanilla->cantidad = $request->input('cantidad');
         $nuevaPlanilla->tipomovimiento_id = $request->input('tipomovimiento_id');
         $nuevaPlanilla->user_id = $request->user_id = $empleado_id;
         $nuevaPlanilla->materiaprima_id = $request->input('materiaprima_id');
@@ -87,21 +84,80 @@ class PlantillaController extends Controller
         ,'materia_primas.nombre as nombre')
         ->first();
 
+        //existencia de una mp
         $total = $stock->cantidad;
 
-        if ($total > 0) {
+        // if ($total > $nuevaPlanilla->cantidad) {
 
-          return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
-          operacion ya que la cantidad disponible de '.$stock->nombre.' es de: '.$stock->cantidad.' usted ingreso
-           :'.$nuevaPlanilla->cantidad);
+        //   return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
+        //   operacion ya que la cantidad disponible de '.$stock->nombre.' es de: '.$stock->cantidad.' usted ingreso
+        //    :'.$nuevaPlanilla->cantidad);
 
+        // }else{
+
+        //   $nuevaPlanilla->save();
+
+        //   return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado!');
+        // }
+
+        $movimiento = $request->input('tipomovimiento_id');
+
+        //egreso
+        if ($movimiento == 2) {
+
+            if ($total >= $nuevaPlanilla->cantidad) {
+                //stock >= cantidad de egreso
+
+                $resultado = -$nuevaPlanilla->cantidad;
+
+                $nuevaPlanilla->cantidad = $request->cantidad = $resultado;
+
+                $nuevaPlanilla->save();
+
+                return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado!');
+
+            } else {
+
+                if ($total < $nuevaPlanilla->cantidad) {
+
+                    //stock < cantidad de egreso, error
+                    return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
+                    operacion ya que la cantidad disponible de '.$stock->nombre.' es de: '.$stock->cantidad.' usted ingreso
+                 :'.$nuevaPlanilla->cantidad.'//stock <= cantidad de egreso, error');
+
+                }
+
+            }
+
+        //ingreso
         }else{
 
-          $nuevaPlanilla->save();
+            if ($movimiento == 1 && $nuevaPlanilla->cantidad > 0) {
 
-          return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado!');
+                //ingreso > 0
+                $nuevaPlanilla->save();
+
+                return redirect('mpplanillaingresoegreso')->with('mensaje', 'movimiento realizado! //ingreso > 0');
+
+            } else {
+
+                //stock < cantidad de egreso, error
+                return redirect('mpplanillaingresoegreso_alta')->with('mensaje', 'no se pudo realizar la
+                operacion ya que la cantidad que usted ingreso debe ser mayor a 0:  //stock < cantidad de egreso, error');
+            }
+
         }
-  
+
+        //ingreso
+        //stock = 0
+        //stock > ingreso
+        //stock < ingreso
+
+        //egreso
+        //egreso > stock error
+        //egreso == stock exito
+        //egreso < stock exito
+
     }
 
      //acceder editar
