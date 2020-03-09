@@ -456,3 +456,15 @@
       .toggle-state:checked ~ .toggle-inner .indicator {
          transform: translate3d(25%, 0, 0);
       }
+
+      .referencia-bajo{
+          background-color: #ffe0b2;
+          width: 30px;
+          height: 30px;
+      }
+
+      .referencia-nostock{
+        background-color:  #5f4339;
+        width: 30px;
+        height: 30px;
+    }

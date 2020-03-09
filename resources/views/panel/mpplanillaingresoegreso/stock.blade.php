@@ -51,20 +51,19 @@
           @if ($item->stock == 0) <tr style="background: #ffccbc">
             <td>{{$item->id}}</td>
             <td><b>{{$item->nombre}}</b></td>
-            <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>sin stock</b></span>
+            <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>sin
+                    stock</b></span>
             </td>
             <td>
               <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
-              <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
-                data-target="#exampleModal">
+              <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal" data-target=".modalSkuy">
                 <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
               </a>
             </td>
             <td>{{$item->updated_at}}</td>
 
             @else
-            @if ($item->stock <= 5)
-            <tr style="background: #ffe0b2">
+            @if ($item->stock <= 5) <tr style="background: #ffe0b2">
               <td>{{$item->id}}</td>
               <td><b>{{$item->nombre}}</b></td>
               <td><b style="color: #5f4339">{{$item->stock}} </b><b><span class="badge badge-danger"><b>bajo</b></span>
@@ -72,30 +71,29 @@
               <td>
                 <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
                 <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
-                  data-target="#exampleModal">
+                  data-target=".modalSkuy">
                   <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
                 </a>
               </td>
               <td>{{$item->updated_at}}</td>
 
               @else
-            <tr>
-              <td>{{$item->id}}</td>
-              <td>{{$item->nombre}}</td>
-              <td>{{$item->stock}}</td>
-              <td>
-                <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
-                <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal"
-                  data-target="#exampleModal">
-                  <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
-                </a>
-              </td>
-              <td>{{$item->updated_at}}</td>
+          <tr>
+            <td>{{$item->id}}</td>
+            <td>{{$item->nombre}}</td>
+            <td>{{$item->stock}}</td>
+            <td>
+              <a href="{{route('mpplanillaingresoegresos_alta')}}" class="btn btn-light btn-sm">reponer</a>
+              <a href="" class="btn btn-light btn-sm" title="agregar nota" data-toggle="modal" data-target=".modalSkuy">
+                <i class="fas fa-sticky-note" style="color: #ffd54f"></i>
+              </a>
+            </td>
+            <td>{{$item->updated_at}}</td>
 
-              @endif
-              @endif
+            @endif
+            @endif
 
-              @endforeach
+            @endforeach
         </tbody>
       </table>
 
@@ -111,32 +109,27 @@
   </a>
 </div>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
+<div class="modal fade modalSkuy" tabindex="-1" role="dialog">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar Nota</h5>
+        <h5 class="modal-title">agregar nota</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
 
-        <div class="card-body">
-          <form class="form-group" action="{{route('notastock')}}" method="POST">
-            @csrf
+      <form action="{{route('notastock')}}" method="post">
+        @csrf
 
-            @error('descripcion')
-            <div class="alert alert-danger" role="alert">
-              el apellido es obligatorio.
-            </div>
-            @enderror
+        <div class="modal-body">
 
+          <div class="form-group">
             <label for="descripcion">descripcion</label>
-            <input maxlength="150" type="text" name="descripcion" placeholder="describa su tarea.."
-              class="form-control mb-3">
+            <input  maxlength="150" type="text" name="descripcion" placeholder="describa su tarea.." class="form-control mb-3">
+          </div>
+
+          <div class="form-group">
 
             <div class="form-group">
               <label for="exampleFormControlSelect1">Que tan urgente es su tarea ?</label>
@@ -145,12 +138,16 @@
                 <option>baja</option>
               </select>
             </div>
-
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-            <button type="submit" class="btn btn-success mt-2">agregar tarea</button>
-          </form>
+          </div>
         </div>
-      </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondray btn-sm p-2 shadow rounded-pill" data-dismiss="modal"
+            style="width: 100px">Cancelar</button>
+          <button type="submit" class="btn btn-success btn-sm p-2 shadow rounded-pill" style="width: 100px">guardar
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </div>
