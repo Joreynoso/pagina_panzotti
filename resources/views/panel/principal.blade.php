@@ -119,10 +119,10 @@
   </div>
 </div>
 
-<!-- mensaje de bienvenida -->
-<div class="jumbotron jumbotron-fluid bg-white overflow card">
+ @if (auth()->check() && auth()->user()->is_admin)
+ <div class="jumbotron jumbotron-fluid bg-white overflow card">
   <div class="container">
-    <h1 class="display-3 text-responsive">Administracion Panzotti!</h1>
+    <h1 class="display-3 text-responsive">Bienvenido Administrador de Panzotti!</h1>
     <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
     <hr class="my-4">
     <p>si tenes alguna duda sobre el funcionamiento de este panel de administracion no dudes en escribirnos.</p>
@@ -131,18 +131,18 @@
     <a href="">jalbornos@institutosanmartin.edu.ar</a>
   </div>
 </div>
-
-{{-- <!-- mensaje de bienvenida empleado -->
-<div class="jumbotron jumbotron-fluid bg-white overflow card">
+ @else
+ <div class="jumbotron jumbotron-fluid bg-white overflow card">
   <div class="container">
-    <h1 class="display-3 text-responsive">Bienvenido Empleado de Panzotti!!</h1>
-    <p class="lead">Desde este panel podras administrar todas tus tareas!.</p>
+    <h1 class="display-3 text-responsive">Bienvenido Empleado de Panzotti!</h1>
+    <p class="lead">Desde este panel podras administrar todas las secciones de la pagina!.</p>
     <hr class="my-4">
     <p>si tenes alguna duda sobre el funcionamiento de este panel de administracion no dudes en escribirnos.</p>
     <a href="">joreynoso@institutosanmartin.edu.ar</a>
     <br>
     <a href="">jalbornos@institutosanmartin.edu.ar</a>
   </div>
-</div> --}}
+</div>
+ @endif
 
 @endsection
