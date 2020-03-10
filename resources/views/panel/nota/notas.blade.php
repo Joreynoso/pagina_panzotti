@@ -10,9 +10,24 @@
     </ol>
 </nav>
 
+<!-- mensaje -->
+@if (Session::has('mensaje'))
+<div class="alert alert-success" role="alert">
+  {{Session::get('mensaje')}}
+</div>
+@elseif (Session::has('error'))
+<div class="alert alert-warning" role="alert">
+  {{Session::get('error')}}
+</div>
+@endif
+
 <!-- nuevo -->
 <a href="{{route('nota_alta')}}" class="btn btn-info mb-3" href="#" role="button">
     <i class="fa fa-plus mr-2 fa-xs"></i>nuevo
+</a>
+
+<a href="{{route('notas_archivo')}}" class="btn btn-dark mb-3" href="#" role="button">
+    <i class="fas fa-archive"></i> archivadas
 </a>
 
 <!-- filtros -->
@@ -51,11 +66,7 @@
                 <p class="mb-0 mt-2 font-italic non-selectable texto-nota">
                     {{$item->created_at->format('d M Y - H:i:s')}}</p>
                 <br>
-                <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
-                    @method('DELETE')
-                    @csrf
-                    <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</button>
-                </form>
+                <a href="{{route('archivarNota', $item)}}" title="editar" class="red">archivar esta nota</a>
             </footer>
         </blockquote>
     </div>
@@ -63,6 +74,7 @@
     @else
     <!-- urgencia = baja , nota color verde -->
     <div class="col-xl-3 col-sm-6 mb-3">
+
         <blockquote class="blockquote blockquote-custom nota-color3 p-5 shadow rounded">
             <div class="blockquote-custom-icon bg-info shadow-sm"><i class="fa fa-paperclip text-white"></i></div>
             <p class="mb-0 mt-2 font-italic non-selectable">"{{$item->descripcion}}."</p>
@@ -70,11 +82,7 @@
                 <p class="mb-0 mt-2 font-italic non-selectable texto-nota">
                     {{$item->created_at->format('d M Y - H:i:s')}}</p>
                 <br>
-                <form action="{{route('bajaNota',$item)}}" class="d-inline" method="POST">
-                    @method('DELETE')
-                    @csrf
-                    <button title="borarr" class="btn btn-link red" type="submit">eliminar esta nota</button>
-                </form>
+                <a href="{{route('archivarNota', $item)}}" title="editar" class="red">archivar esta nota</a>
             </footer>
         </blockquote>
     </div>

@@ -13,6 +13,18 @@ class Nota extends Model
         return $query->where();
         }
     }
+
+    //tarea terminado
+    public function scopeTerminado($query){
+
+        return $query->where('terminado','1');
+    }
+
+    //tarea sin terminar
+    public function scopeSinterminar($query){
+
+        return $query->where('terminado','0');
+    }
 }
 
 

@@ -225,8 +225,6 @@ class ProductoVentaController extends Controller
             'producto_ventas.estado' => $estado,
         ]);
 
-        
-
         return redirect('productoWeb')->with('mensaje', 'Su compra se registro con exito!');
 
     }

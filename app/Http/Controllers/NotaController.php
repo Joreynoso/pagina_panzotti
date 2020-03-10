@@ -16,35 +16,51 @@ class NotaController extends Controller
 
         if ($tipo == "mas reciente") {
 
-            $notas = Nota::orderBy('created_at', 'DESC')->paginate(8)->appends($variablesurl);
+            $notas = Nota::sinterminar()->orderBy('created_at', 'DESC')->paginate(8)->appends($variablesurl);
 
             return view('panel.nota.notas',compact('notas'));
         }
 
         if ($tipo == "menos reciente") {
 
-            $notas = Nota::orderBy('created_at', 'ASC')->paginate(8)->appends($variablesurl);
+            $notas = Nota::sinterminar()->orderBy('created_at', 'ASC')->paginate(8)->appends($variablesurl);
 
             return view('panel.nota.notas',compact('notas'));
         }
 
         if ($tipo == "mas urgente") {
 
-            $notas = Nota::orderBy('urgencia','ASC')->paginate(8)->appends($variablesurl);
+            $notas = Nota::sinterminar()->orderBy('urgencia', 'ASC')->paginate(8)->appends($variablesurl);
 
             return view('panel.nota.notas',compact('notas'));
         }
 
         if ($tipo == "menos urgente") {
 
-            $notas = Nota::orderBy('urgencia','DESC')->paginate(8)->appends($variablesurl);
+            $notas = Nota::sinterminar()->orderBy('urgencia', 'DESC')->paginate(8)->appends($variablesurl);
 
             return view('panel.nota.notas',compact('notas'));
         }
 
-        $notas = Nota::paginate(8);
+        $notas = Nota::sinterminar()->paginate(8);
 
         return view('panel.nota.notas',compact('notas'));
+    }
+
+    public function archivo(){
+
+        $notas = Nota::terminado()->paginate(8);
+
+        return view('panel.nota.archivo',compact('notas'));
+    }
+
+    public function archivarNota($id){
+
+        $nota = Nota::findOrFail($id);
+        $nota->terminado = 1;
+        $nota->save();
+
+        return redirect('notas')->with('mensaje', 'nota archivada!');
     }
 
     //acceder alta
@@ -77,6 +93,6 @@ class NotaController extends Controller
         $notaEliminar = Nota::findOrFail($id);
         $notaEliminar->delete();
 
-        return redirect('notas');
+        return redirect()->back()->with('mensaje', 'tarea eliminada con exito');
     }
 }

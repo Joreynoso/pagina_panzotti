@@ -58,11 +58,15 @@ Route::delete('/bajaEmpleado/{id}', 'UsuarioController@bajaEmpleado')->name('baj
 // ────────────────────────────────────────────────────────────────────────────────
 Route::get('/notas', 'NotaController@leer')->name('notas');
 
+Route::get('/notas-archivo', 'NotaController@archivo')->name('notas_archivo');
+
 Route::get('/nota_alta', 'NotaController@acceder')->name('nota_alta');
 
 Route::post('/altaNota', 'NotaController@alta')->name('altaNota');
 
 Route::delete('/bajaNota/{id}', 'NotaController@baja')->name('bajaNota');
+
+Route::get('/nota-archivar/{id}', 'NotaController@archivarNota')->name('archivarNota');
 
 
 // comentario

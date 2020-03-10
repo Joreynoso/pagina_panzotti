@@ -17,6 +17,7 @@ class CreateNotasTable extends Migration
             $table->bigIncrements('id');
             $table->string('descripcion');
             $table->string('urgencia');
+            $table->boolean('terminado')->default('0');
             $table->timestamps();
         });
     }
